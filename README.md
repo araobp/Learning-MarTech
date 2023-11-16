@@ -14,6 +14,11 @@ https://github.com/araobp/blender-3d でスキル強化中。
 - [大規模言語モデル入門](https://gihyo.jp/book/2023/978-4-297-13633-8)
 - [実践 自然言語処理](https://www.oreilly.co.jp/books/9784873119724/)
 
+## 学習環境
+
+- MacBook Air 16GBRAMモデル
+- Google Colab
+
 ## Transformersのモデル保存場所
 
 ```

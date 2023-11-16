@@ -6,6 +6,8 @@
 
 両者を結びつけて生成AI時代のマーケティングオートメーションが成立する。
 
+このプロジェクトではNLP/LLMスキル獲得のための自習を行う。
+
 ## Transformersのモデル保存場所
 
 /Users/<username>/.cache/huggingface/hub

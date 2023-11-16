@@ -8,14 +8,18 @@
 
 このプロジェクトではNLP/LLMスキル獲得のための自習を行う。
 
-## Transformersのモデル保存場所
-
-/Users/<username>/.cache/huggingface/hub
-
 ## 購入した参考書
 
 - [大規模言語モデル入門](https://gihyo.jp/book/2023/978-4-297-13633-8)
 - [実践 自然言語処理](https://www.oreilly.co.jp/books/9784873119724/)
+
+## Transformersのモデル保存場所
+
+```
+/Users/<username>/.cache/huggingface/hub
+```
+
+モデルのサイズが大きいので、用済み後は必要に応じ削除する。
 
 ## その他参考
 

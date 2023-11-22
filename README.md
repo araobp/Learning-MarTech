@@ -9,6 +9,13 @@ https://github.com/araobp/blender-3d でスキル強化中。
 
 このプロジェクトではNLP/LLMスキル獲得のための自習を行う。
 
+## Notebooks
+
+ChatGPTへネガポジコメント生成させChatGPTへネガポジ分析させる。精度がよくないので、他の手法でネガポジ分析させるため、ネガポジコメント文章を出力。
+
+=> [positive_negative.ipynb]
+
+
 ## 購入した教科書
 
 メインの教科書

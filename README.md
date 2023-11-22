@@ -9,10 +9,18 @@ https://github.com/araobp/blender-3d でスキル強化中。
 
 このプロジェクトではNLP/LLMスキル獲得のための自習を行う。
 
+## 二つのフレームワーク
+
+- 最初にspaCyを勉強する。学習済みモデルがたくさんあり軽量動作するとのこと。
+- 次にtransformersを勉強する。Deep Learningで動作が重いが精度は良いとのこと。
+
+たぶん、私の場合、大半の作業はspaCyで完結するものと予測。
+
 ## Notebooks
 
-[ChatGPTへネガポジコメント生成させChatGPTへネガポジ分析させる。精度がよくないので、他の手法でネガポジ分析させるため、ネガポジコメント文章を出力](./positive_negative.ipynb)
+1. [ChatGPTへネガポジコメント生成させChatGPTへネガポジ分析させる。精度がよくないので、他の手法でネガポジ分析させるため、ネガポジコメント文章を出力](./positive_negative.ipynb)
 
+2. spaCy + GiNZA でネガポジ分析
 
 ## 購入した教科書
 

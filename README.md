@@ -22,6 +22,10 @@ https://github.com/araobp/blender-3d でスキル強化中。
 
 ## 自習のためのNotebook
 
+### キーフレーズ抽出
+
+### ネガポジ分析
+
 1. [ChatGPTへネガポジコメント生成させChatGPTへネガポジ分析させる。精度がよくないので、他の手法でネガポジ分析させるため、ネガポジコメント文章を出力](./positive_negative.ipynb)
 
 2. spaCy + GiNZA でネガポジ分析

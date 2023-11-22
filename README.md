@@ -34,6 +34,7 @@ https://github.com/araobp/blender-3d でスキル強化中。
 
 メインの教科書
 - [実践 自然言語処理](https://www.oreilly.co.jp/books/9784873119724/)
+-- [サンプルコード](https://github.com/oreilly-japan/practical-nlp-ja)
 
 日本語LLMの参考として
 - [大規模言語モデル入門](https://gihyo.jp/book/2023/978-4-297-13633-8)

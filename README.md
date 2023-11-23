@@ -20,6 +20,10 @@ https://github.com/araobp/blender-3d でスキル強化中。
 
 https://spacy.io/
 
+### Transformers
+
+https://huggingface.co/docs/transformers
+
 ### ChatGPT
 
 数ヶ月使ってみて、生成や要約は得意だけど分類は苦手そう。毎度、出力される結果が異なり、期待しない結果が出力される時も多く、私にとっては使いにくい。ChatGPTはアシスタントとして使うと良い。機械的な自然言語処理には他の手法、出力される結果に一貫性あるものを適用したい。

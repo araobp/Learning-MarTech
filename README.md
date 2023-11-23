@@ -17,7 +17,7 @@ https://github.com/araobp/blender-3d でスキル強化中。
 ## 二つのフレームワーク
 
 - 最初にspaCyを勉強する。学習済みモデルがたくさんあり軽量動作するとのこと。
-- 次にtransformersを勉強する。Deep Learningで動作が重いが精度は良いとのこと。
+- 次にTransformersを勉強する。Deep Learningで動作が重いが精度は良いとのこと。
 
 たぶん、私の場合、大半の作業はspaCyで完結するものと予測。
 
@@ -29,11 +29,19 @@ https://spacy.io/
 
 https://huggingface.co/docs/transformers
 
+### GiNZA
+
+spaCy及びTransformers上で動作する日本語NLP。日本語TokenizerであるSudachiPy採用。
+
 ### ChatGPT
 
 数ヶ月使ってみて、生成や要約は得意だけど分類は苦手そう。毎度、出力される結果が異なり、期待しない結果が出力される時も多く、私にとっては使いにくい。ChatGPTはアシスタントとして使うと良い。機械的な自然言語処理には他の手法、出力される結果に一貫性あるものを適用したい。
 
 ## 自習のためのNotebook
+
+### spaCy
+
+1. [spaCyでNLPインスタンス生成](spacy.ipynb)
 
 ### キーフレーズ抽出
 

@@ -17,7 +17,7 @@ https://github.com/araobp/blender-3d でスキル強化中。
 ## 二つのフレームワーク
 
 - 最初にspaCyを勉強する。学習済みモデルがたくさんあり軽量動作するとのこと。
-- 次にtransformersを勉強する。Deep Learningで動作が重いが精度は良いとのこと。
+- 次にTransformersを勉強する。Deep Learningで動作が重いが精度は良いとのこと。
 
 たぶん、私の場合、大半の作業はspaCyで完結するものと予測。
 
@@ -28,6 +28,10 @@ https://spacy.io/
 ### Transformers
 
 https://huggingface.co/docs/transformers
+
+### GiNZA
+
+spaCy及びTransformers上で動作する日本語NLP。日本語TokenizerであるSudachiPy採用。
 
 ### ChatGPT
 

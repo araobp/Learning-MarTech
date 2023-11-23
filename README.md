@@ -21,6 +21,10 @@ https://github.com/araobp/blender-3d でスキル強化中。
 
 たぶん、私の場合、大半の作業はspaCyで完結するものと予測。
 
+## 英語と日本語
+
+英語と日本語が混在した環境で仕事する関係上、両言語に対応した手法を勉強する。
+
 ### spaCy
 
 https://spacy.io/

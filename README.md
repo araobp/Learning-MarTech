@@ -45,6 +45,9 @@ spaCy及びTransformers上で動作する日本語NLP。日本語Tokenizerであ
 
 spaCyのNLP結果をソーシャルグラフに乗せたい。マーケティングでは、誰が他の誰と繋がっているか、誰が何と繋がっているかが重要。グラフDBといえばneo4jだが、何か軽量動作するものはないか？昔使ったPythonのnetworkxをとりあえず使ってみて感触を掴む。
 
+参考
+- [Network of The Witcher | Relationship Extraction & Network Analysis with Spacy & NetworkX](https://youtu.be/fAHkJ_Dhr50)
+
 ## 自習のためのNotebook
 
 ### spaCy

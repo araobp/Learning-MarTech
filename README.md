@@ -24,6 +24,8 @@ https://github.com/araobp/blender-3d でスキル強化中。
 
 ### キーフレーズ抽出
 
+1. [キーフレーズ抽出](key_phrases.ipynb)
+
 ### ネガポジ分析
 
 1. [ChatGPTへネガポジコメント生成させChatGPTへネガポジ分析させる。精度がよくないので、他の手法でネガポジ分析させるため、ネガポジコメント文章を出力](./positive_negative.ipynb)

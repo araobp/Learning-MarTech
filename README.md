@@ -35,6 +35,10 @@ https://huggingface.co/docs/transformers
 
 ## 自習のためのNotebook
 
+### spaCy
+
+1. [spaCyでNLPインスタンス生成](spacy.ipynb)
+
 ### キーフレーズ抽出
 
 1. [キーフレーズ抽出](key_phrases.ipynb)

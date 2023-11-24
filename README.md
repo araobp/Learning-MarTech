@@ -53,7 +53,11 @@ spaCyのNLP結果をソーシャルグラフに乗せたい。マーケティン
 
 ### spaCy
 
-1. [spaCyでNLPインスタンス生成](spacy.ipynb)
+1. [spaCyでNLPインスタンス生成](spacy.ipynb) (Work in Progress)
+
+### spaCy and networkx
+
+1. [spaCy and NetworkX](spaCy_networkX.ipynb) (Work in Progress)
 
 ### キーフレーズ抽出
 

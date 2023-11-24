@@ -1,5 +1,29 @@
 # 生成AI時代マーケティング部門エンジニアとしてのNLP/LLM自習
 
+## 自習のためのNotebook
+
+### spaCy
+
+1. [spaCyでNLPインスタンス生成](spacy.ipynb) (Work in Progress)
+
+### spaCy and networkx
+
+1. [spaCy and NetworkX](spaCy_networkX.ipynb) (Work in Progress)
+
+### キーフレーズ抽出
+
+1. [キーフレーズ抽出](key_phrases.ipynb)
+
+### ネガポジ分析
+
+1. [ChatGPTへネガポジコメント生成させChatGPTへネガポジ分析させる。精度がよくないので、他の手法でネガポジ分析させるため、ネガポジコメント文章を出力](./positive_negative.ipynb)
+
+2. spaCy + GiNZA でネガポジ分析
+
+---
+
+## なぜマーケティング部門エンジニアがNLP/LLMを勉強する必要があるのか？
+
 これからのマーケティング部門エンジニアに要求されるスキルは、Python numpy/pandas/matplotlibと自然言語処理NLP/LLMによる非構造化データ処理。テキストデータ、音声データ、画像データ、動画など。NLP/LLMのスキルが必須になる。
 
 また、データ処理結果からコンテンツを半自動生成するプロセスも必要。よって画像処理や3DCG制作のスキルも必須。
@@ -49,26 +73,6 @@ spaCyのNLP結果をソーシャルグラフに乗せたい。マーケティン
 - [Network of The Witcher | Relationship Extraction & Network Analysis with Spacy & NetworkX](https://youtu.be/fAHkJ_Dhr50)
 - [How to create an Undirected Graph using Python](https://youtu.be/rldKl1CNx-A)
   
-## 自習のためのNotebook
-
-### spaCy
-
-1. [spaCyでNLPインスタンス生成](spacy.ipynb) (Work in Progress)
-
-### spaCy and networkx
-
-1. [spaCy and NetworkX](spaCy_networkX.ipynb) (Work in Progress)
-
-### キーフレーズ抽出
-
-1. [キーフレーズ抽出](key_phrases.ipynb)
-
-### ネガポジ分析
-
-1. [ChatGPTへネガポジコメント生成させChatGPTへネガポジ分析させる。精度がよくないので、他の手法でネガポジ分析させるため、ネガポジコメント文章を出力](./positive_negative.ipynb)
-
-2. spaCy + GiNZA でネガポジ分析
-
 ## 購入した教科書
 
 メインの教科書

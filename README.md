@@ -21,6 +21,10 @@ https://github.com/araobp/blender-3d でスキル強化中。
 
 たぶん、私の場合、大半の作業はspaCyで完結するものと予測。
 
+## 英語と日本語
+
+英語と日本語が混在した環境で仕事する関係上、両言語に対応した手法を勉強する。
+
 ### spaCy
 
 https://spacy.io/
@@ -37,6 +41,14 @@ spaCy及びTransformers上で動作する日本語NLP。日本語Tokenizerであ
 
 数ヶ月使ってみて、生成や要約は得意だけど分類は苦手そう。毎度、出力される結果が異なり、期待しない結果が出力される時も多く、私にとっては使いにくい。ChatGPTはアシスタントとして使うと良い。機械的な自然言語処理には他の手法、出力される結果に一貫性あるものを適用したい。
 
+### ソーシャルネットワーク
+
+spaCyのNLP結果をソーシャルグラフに乗せたい。マーケティングでは、誰が他の誰と繋がっているか、誰が何と繋がっているかが重要。グラフDBといえばneo4jだが、何か軽量動作するものはないか？昔使ったPythonのnetworkxをとりあえず使ってみて感触を掴む。
+
+参考
+- [Network of The Witcher | Relationship Extraction & Network Analysis with Spacy & NetworkX](https://youtu.be/fAHkJ_Dhr50)
+- [How to create an Undirected Graph using Python](https://youtu.be/rldKl1CNx-A)
+  
 ## 自習のためのNotebook
 
 ### spaCy

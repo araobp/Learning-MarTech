@@ -47,7 +47,8 @@ spaCyのNLP結果をソーシャルグラフに乗せたい。マーケティン
 
 参考
 - [Network of The Witcher | Relationship Extraction & Network Analysis with Spacy & NetworkX](https://youtu.be/fAHkJ_Dhr50)
-
+- [How to create an Undirected Graph using Python](https://youtu.be/rldKl1CNx-A)
+  
 ## 自習のためのNotebook
 
 ### spaCy

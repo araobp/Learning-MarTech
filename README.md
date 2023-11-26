@@ -2,6 +2,10 @@
 
 ## 自習のためのNotebook
 
+### NLTK
+
+- [NLTK Basics](NLTK_Basics.ipynb)
+
 ### spaCy
 
 - [spaCyでNLPインスタンス生成](spacy.ipynb)

@@ -10,7 +10,7 @@ PythonでNLP何たるかを知るためNLTKからNLP始めた。
 
 ### spaCy
 
-パシフィコ横浜で開催されたEdgeTech+2023展示会でO'Reillyの"実践 自然言語処理"を購入。展示会で買うと20%ディスカウントで良い。この本でspaCyの存在を知った。NLP実践のための良書。こん本をとかっかりにNLPの勉強を本格的に開始。
+パシフィコ横浜で開催されたEdgeTech+2023展示会でO'Reillyの"実践 自然言語処理"を購入。展示会で買うと20%ディスカウントで良い。この本でspaCyの存在を知った。NLP実践のための良書。この本をとかっかりにNLPの勉強を本格的に開始。
 
 - [spaCyでNLPインスタンス生成](spacy.ipynb)
 - [spaCy and networkx](spaCy_networkx.ipynb)

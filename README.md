@@ -2,6 +2,14 @@
 
 ## 自習のためのNotebook
 
+### re.sub(), split(), join()
+
+前処理で多用するので正規表現のところを勉強しておく。
+
+### pandas
+
+仕事ではCRM/SFA系SaaSからエキスポートされたcsv形式データのデータ分析にpandasを良く使う。pandasは、NLPの処理結果をテーブルとして表現したりチャート化するときにも使われる。
+
 ### NLTK
 
 PythonでNLP何たるかを知るためNLTKからNLP始めた。

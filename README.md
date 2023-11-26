@@ -4,21 +4,14 @@
 
 ### spaCy
 
-1. [spaCyでNLPインスタンス生成](spacy.ipynb)
-
-### spaCy and networkx
-
-1. [spaCy and networkx](spaCy_networkx.ipynb)
+- [spaCyでNLPインスタンス生成](spacy.ipynb)
+- [spaCy and networkx](spaCy_networkx.ipynb)
  
-### キーフレーズ抽出
+### Transformers
 
-1. [キーフレーズ抽出](key_phrases.ipynb)
-
-### ネガポジ分析
-
-1. [ChatGPTへネガポジコメント生成させChatGPTへネガポジ分析させる。精度がよくないので、他の手法でネガポジ分析させるため、ネガポジコメント文章を出力](./positive_negative.ipynb)
-
-2. spaCy + GiNZA でネガポジ分析
+- [ChatGPTへネガポジコメント生成させChatGPTへネガポジ分析させる。精度がよくないので、他の手法でネガポジ分析させるため、ネガポジコメント文章を出力](./positive_negative.ipynb)
+- [Tranformersでネガポジ分析など基本処理](TransformersBaics.ipynb)
+- [キーフレーズ抽出](key_phrases.ipynb)
 
 ---
 

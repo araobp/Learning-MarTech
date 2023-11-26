@@ -15,6 +15,7 @@ PythonでNLP何たるかを知るためNLTKからNLP始めた。
 - [spaCyでNLPインスタンス生成](spaCy/spacy.ipynb)
 - [spaCy and networkx](spaCy/spaCy_networkx.ipynb)
 - [キーフレーズ抽出](spaCy/key_phrases.ipynb)
+- [感情分析](spaCy/sentiment.ipyndb)
 
 ### Transformers
 

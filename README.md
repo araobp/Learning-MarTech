@@ -118,3 +118,4 @@ NLP教科書
 - [Natural Language Processing With Python's NLTK Package](https://realpython.com/nltk-nlp-python/#getting-started-with-pythons-nltk)
 - [Python による日本語自然言語処理](https://www.nltk.org/book-jp/ch12.html)
 - [感情分析のやり方が7割わかるようになる記事（初心者向け）（ソースコードあり）（GiNZA）](https://qiita.com/Mizuiro__sakura/items/94efccb5ba12046d17b0)
+- [How should I preprocess text for spaCy?](https://github.com/explosion/spaCy/discussions/10243)

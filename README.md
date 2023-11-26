@@ -48,15 +48,21 @@ https://github.com/araobp/blender-3d でスキル強化中。
 
 ### spaCy
 
+NLP開発環境 & NLPライブラリ
+
 https://spacy.io/
 
 ### Transformers
+
+NLP開発環境 & NLPライブラリ
 
 https://huggingface.co/docs/transformers
 
 ### GiNZA
 
 spaCy及びTransformers上で動作する日本語NLP。日本語TokenizerであるSudachiPy採用。
+
+https://megagonlabs.github.io/ginza/
 
 ### ChatGPT
 
@@ -72,14 +78,14 @@ spaCyのNLP結果をソーシャルグラフに乗せたい。マーケティン
   
 ## 購入した教科書
 
-メインの教科書
+NLP教科書
 - [実践 自然言語処理](https://www.oreilly.co.jp/books/9784873119724/)
 -- [サンプルコード](https://github.com/oreilly-japan/practical-nlp-ja)
 
 日本語LLMの参考として
 - [大規模言語モデル入門](https://gihyo.jp/book/2023/978-4-297-13633-8)
 
-## 学習環境
+## 学習/実行環境
 
 - MacBook Air 16GBRAMモデル
 - Google Colab

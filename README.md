@@ -24,6 +24,10 @@ LLMの勉強しようと書籍店で"大規模言語モデル入門"を購入。
 - [ChatGPTへネガポジコメント生成させChatGPTへネガポジ分析させる。精度がよくないので、他の手法でネガポジ分析させるため、ネガポジコメント文章を出力](./transformers/positive_negative.ipynb)
 - [Tranformersでネガポジ分析など基本処理](transformers/TransformersBasics.ipynb)
 
+### Tools
+
+- [PowerPointとPDFからデータ抽出](tools/ppt_pdf.ipynb)
+
 ---
 
 ## なぜマーケティング部門エンジニアがNLP/LLMを勉強する必要があるのか？

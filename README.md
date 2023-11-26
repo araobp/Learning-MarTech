@@ -12,16 +12,16 @@ PythonでNLP何たるかを知るためNLTKからNLP始めた。
 
 パシフィコ横浜で開催されたEdgeTech+2023展示会でO'Reillyの"実践 自然言語処理"を購入。展示会で買うと20%ディスカウントで良い。この本でspaCyの存在を知った。NLP実践のための良書。この本をとかっかりにNLPの勉強を本格的に開始。
 
-- [spaCyでNLPインスタンス生成](spacy.ipynb)
-- [spaCy and networkx](spaCy_networkx.ipynb)
-- [キーフレーズ抽出](key_phrases.ipynb)
+- [spaCyでNLPインスタンス生成](spaCy/spacy.ipynb)
+- [spaCy and networkx](spaCy/spaCy_networkx.ipynb)
+- [キーフレーズ抽出](spaCy/key_phrases.ipynb)
 
 ### Transformers
 
 LLMの勉強しようと書籍店で"大規模言語モデル入門"を購入。NLPの知識なく、いきなりこれを理解するのは無理。O'Reillyの"実践 自然言語処理"で勉強してからこの本を読む。これまで実践してきた音声処理や画像処理系AI(DNN/CNN)の経験が役にたちそう。AIって何？学習って何？学習ってすごく面倒で大変！その辺、十分に経験してきたので。
 
-- [ChatGPTへネガポジコメント生成させChatGPTへネガポジ分析させる。精度がよくないので、他の手法でネガポジ分析させるため、ネガポジコメント文章を出力](./positive_negative.ipynb)
-- [Tranformersでネガポジ分析など基本処理](TransformersBasics.ipynb)
+- [ChatGPTへネガポジコメント生成させChatGPTへネガポジ分析させる。精度がよくないので、他の手法でネガポジ分析させるため、ネガポジコメント文章を出力](./transformers/positive_negative.ipynb)
+- [Tranformersでネガポジ分析など基本処理](transformers/TransformersBasics.ipynb)
 
 ---
 

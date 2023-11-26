@@ -8,7 +8,7 @@
 
 ### spaCy and networkx
 
-1. [spaCy and NetworkX](spaCy_networkX.ipynb)
+1. [spaCy and networkx](spaCy_networkx.ipynb)
  
 ### キーフレーズ抽出
 

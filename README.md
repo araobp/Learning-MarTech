@@ -4,21 +4,14 @@
 
 ### spaCy
 
-1. [spaCyでNLPインスタンス生成](spacy.ipynb)
+- [spaCyでNLPインスタンス生成](spacy.ipynb)
+- [spaCy and networkx](spaCy_networkx.ipynb)
+- [キーフレーズ抽出](key_phrases.ipynb)
 
-### spaCy and networkx
+### Transformers
 
-1. [spaCy and networkx](spaCy_networkx.ipynb)
- 
-### キーフレーズ抽出
-
-1. [キーフレーズ抽出](key_phrases.ipynb)
-
-### ネガポジ分析
-
-1. [ChatGPTへネガポジコメント生成させChatGPTへネガポジ分析させる。精度がよくないので、他の手法でネガポジ分析させるため、ネガポジコメント文章を出力](./positive_negative.ipynb)
-
-2. spaCy + GiNZA でネガポジ分析
+- [ChatGPTへネガポジコメント生成させChatGPTへネガポジ分析させる。精度がよくないので、他の手法でネガポジ分析させるため、ネガポジコメント文章を出力](./positive_negative.ipynb)
+- [Tranformersでネガポジ分析など基本処理](TransformersBasics.ipynb)
 
 ---
 
@@ -26,7 +19,7 @@
 
 生成AIバズで数ヶ月生成AIを使い続けて気がついた。生成AIバカになるまえに、マーケティング部門エンジニアとして正しくデータ分析出来るようにならなければならない。
 
-昨年は構造化データを扱うSaaSの方で仕事したが、構造化データの限界を感じてきた。非構造化データの活用の時代が来ている。
+昨年は構造化データを扱うCRM/SFA系SaaSの方で仕事したが、構造化データの限界を感じてきた。非構造化データの活用の時代が来ている。非構造化データ、多くの企業ではBox上に存在するが、Box以外のSaaSにも存在し、データはSaaS間にまたがってバラバラに管理されている。こういうとき、ローコードやハブ型のPaaSで解決する動きもあるが、プログラミングに自信あるなら、実は、すべてのデータへアクセスする権限あるローカルPC上でNLP/LLMやったほうがセキュリティー上はうまく行く。
 
 これからのマーケティング部門エンジニアに要求されるスキルは、Python numpy/pandas/matplotlibと自然言語処理NLP/LLMによる非構造化データ処理。テキストデータ、音声データ、画像データ、動画など。NLP/LLMのスキルが必須になる。
 
@@ -55,15 +48,21 @@ https://github.com/araobp/blender-3d でスキル強化中。
 
 ### spaCy
 
+NLP開発環境 & NLPライブラリ
+
 https://spacy.io/
 
 ### Transformers
+
+NLP開発環境 & NLPライブラリ
 
 https://huggingface.co/docs/transformers
 
 ### GiNZA
 
 spaCy及びTransformers上で動作する日本語NLP。日本語TokenizerであるSudachiPy採用。
+
+https://megagonlabs.github.io/ginza/
 
 ### ChatGPT
 
@@ -79,14 +78,14 @@ spaCyのNLP結果をソーシャルグラフに乗せたい。マーケティン
   
 ## 購入した教科書
 
-メインの教科書
+NLP教科書
 - [実践 自然言語処理](https://www.oreilly.co.jp/books/9784873119724/)
 -- [サンプルコード](https://github.com/oreilly-japan/practical-nlp-ja)
 
 日本語LLMの参考として
 - [大規模言語モデル入門](https://gihyo.jp/book/2023/978-4-297-13633-8)
 
-## 学習環境
+## 学習/実行環境
 
 - MacBook Air 16GBRAMモデル
 - Google Colab

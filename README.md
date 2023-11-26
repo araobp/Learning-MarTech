@@ -6,12 +6,12 @@
 
 - [spaCyでNLPインスタンス生成](spacy.ipynb)
 - [spaCy and networkx](spaCy_networkx.ipynb)
- 
+- [キーフレーズ抽出](key_phrases.ipynb)
+
 ### Transformers
 
 - [ChatGPTへネガポジコメント生成させChatGPTへネガポジ分析させる。精度がよくないので、他の手法でネガポジ分析させるため、ネガポジコメント文章を出力](./positive_negative.ipynb)
 - [Tranformersでネガポジ分析など基本処理](TransformersBasics.ipynb)
-- [キーフレーズ抽出](key_phrases.ipynb)
 
 ---
 

@@ -4,12 +4,12 @@
 
 ### spaCy
 
-1. [spaCyでNLPインスタンス生成](spacy.ipynb) (Work in Progress)
+1. [spaCyでNLPインスタンス生成](spacy.ipynb)
 
 ### spaCy and networkx
 
-1. [spaCy and NetworkX](spaCy_networkX.ipynb) (Work in Progress)
-
+1. [spaCy and NetworkX](spaCy_networkX.ipynb)
+ 
 ### キーフレーズ抽出
 
 1. [キーフレーズ抽出](key_phrases.ipynb)

@@ -26,7 +26,7 @@ CRM/SFAの限界を感じる。いろいろな意味で、SaaSだと非構造化
 
 25年前、ドイツのベルリンに住んていた頃、ベルリンってドイツ北東部に位置するので、バッハの音楽を沢山聴いた。プロテスタント教会で聴いたオルガン音楽やクリスマスオラトリオ。Project Gutenbergよりバッハの本からspaCyによるNLPでバッハの人脈図をつくってみた。[Thu Vu](https://www.youtube.com/@Thuvu5)さんのYouTube上動画で勉強しながらつくった。本から人脈図がつくれてしまうなんて、The Vuさんへ感動！こういうのって、マーケティング部門の仕事へすごく使える。
 
-<img src="spaCy/bach_network.jpg" width=600>
+<img src="spaCy/bach_network.jpg" width=800>
 
 - [spaCyでNLPインスタンス生成](spaCy/spacy.ipynb)
 - [spaCy and networkx](spaCy/spaCy_networkx.ipynb)

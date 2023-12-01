@@ -2,6 +2,16 @@
 
 ## 自習のためのNotebook
 
+### re.sub(), split(), join()
+
+前処理で多用するので正規表現のところを勉強しておく。
+
+### pandas
+
+仕事ではCRM/SFA系SaaSからエキスポートされたcsv形式データのデータ分析にpandasを良く使う。pandasは、NLPの処理結果をテーブルとして表現したりチャート化するときにも使われる。
+
+非構造化データをNLPで処理してテーブルとして表現できるところが面白い。その辺、CRM/SFA系SaaSだと対応出来ない。なぜなら、SaaSに登録出来る非構造化データが、色々な理由で限られているから。ローカルPCこそ、全てのデータへアクセス出来る最強のデータ処理環境。AWSのKendra Searchもあるが、これは、各企業における情報システム部門のセキュリティーポリシーの影響を受ける。
+
 ### NLTK
 
 PythonでNLP何たるかを知るためNLTKからNLP始めた。
@@ -15,6 +25,7 @@ PythonでNLP何たるかを知るためNLTKからNLP始めた。
 - [spaCyでNLPインスタンス生成](spaCy/spacy.ipynb)
 - [spaCy and networkx](spaCy/spaCy_networkx.ipynb)
 - [キーフレーズ抽出](spaCy/key_phrases.ipynb)
+- [感情分析](spaCy/sentiment.ipynb)
 
 ### Transformers
 
@@ -22,6 +33,10 @@ LLMの勉強しようと書籍店で"大規模言語モデル入門"を購入。
 
 - [ChatGPTへネガポジコメント生成させChatGPTへネガポジ分析させる。精度がよくないので、他の手法でネガポジ分析させるため、ネガポジコメント文章を出力](./transformers/positive_negative.ipynb)
 - [Tranformersでネガポジ分析など基本処理](transformers/TransformersBasics.ipynb)
+
+### Tools
+
+- [PowerPointとPDFからデータ抽出](tools/ppt_pdf.ipynb)
 
 ---
 
@@ -113,3 +128,4 @@ NLP教科書
 - [Natural Language Processing With Python's NLTK Package](https://realpython.com/nltk-nlp-python/#getting-started-with-pythons-nltk)
 - [Python による日本語自然言語処理](https://www.nltk.org/book-jp/ch12.html)
 - [感情分析のやり方が7割わかるようになる記事（初心者向け）（ソースコードあり）（GiNZA）](https://qiita.com/Mizuiro__sakura/items/94efccb5ba12046d17b0)
+- [How should I preprocess text for spaCy?](https://github.com/explosion/spaCy/discussions/10243)

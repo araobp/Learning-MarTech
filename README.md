@@ -35,6 +35,8 @@ spaCyはAPIが綺麗で使いやすい。spaCyの開発者はドイツのベル�
 - [キーフレーズ抽出](spaCy/key_phrases.ipynb)
 - [感情分析](spaCy/sentiment.ipynb)
 
+ある程度慣れたら、このコースで網羅的に学習する：[Advanced NLP with spaCy](https://course.spacy.io/en)
+
 ### Transformers
 
 LLMの勉強しようと書籍店で"大規模言語モデル入門"を購入。NLPの知識なく、いきなりこれを理解するのは無理。O'Reillyの"実践 自然言語処理"で勉強してからこの本を読む。これまで実践してきた音声処理や画像処理系AI(DNN/CNN)の経験が役にたちそう。AIって何？学習って何？学習ってすごく面倒で大変！その辺、十分に経験してきたので。

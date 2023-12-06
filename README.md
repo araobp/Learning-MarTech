@@ -36,6 +36,7 @@ spaCyはAPIが綺麗で使いやすい。spaCyの開発者はドイツのベル�
 - [spaCy and networkx](spaCy/spaCy_networkx.ipynb)
 - [キーフレーズ抽出](spaCy/key_phrases.ipynb)
 - [感情分析](spaCy/sentiment.ipynb)
+- [何故regexで国名抽出するときにNERで前処理する必要があるか？](NER_with_regex.ipynb)
 
 ある程度慣れたら、このコースで網羅的に学習する：[Advanced NLP with spaCy](https://course.spacy.io/en)。add_extension(), nlp.pipe()など、NLP実践時には必須。
 

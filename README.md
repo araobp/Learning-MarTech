@@ -4,7 +4,7 @@ NLP勉強しておかないと、生成AIの使い所を正しく判断出来な
 
 ## 自習のためのNotebook
 
-### replace(), re.sub(), split(), join()
+### replace(), re.sub(), re.match(), re.finditer(), split(), join()
 
 前処理で多用するので勉強しておく。
 
@@ -39,6 +39,8 @@ spaCyはAPIが綺麗で使いやすい。spaCyの開発者はドイツのベル�
 - [何故regexで国名抽出するときにNERで前処理する必要があるか？](spaCy/NER_with_regex.ipynb)
 
 ある程度慣れたら、このコースで網羅的に学習する：[Advanced NLP with spaCy](https://course.spacy.io/en)。add_extension(), nlp.pipe()など、NLP実践時には必須。
+
+ある程度spaCyを実践で使ってみると、NERがとても使えることが分かった。しかし、うまく認識してくれない固有表現も多い。役職名や会社に固有な製品名など。その辺を改善するには、spaCyを再トレーニングする必要あり。
 
 ### Transformers
 

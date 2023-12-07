@@ -4,7 +4,7 @@ NLP勉強しておかないと、生成AIの使い所を正しく判断出来な
 
 ## 自習のためのNotebook
 
-### replace(), re.sub(), split(), join()
+### replace(), re.sub(), re.match(), re.finditer(), split(), join()
 
 前処理で多用するので勉強しておく。
 

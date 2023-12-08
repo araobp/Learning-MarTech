@@ -28,7 +28,7 @@ CRM/SFAの限界を感じる。いろいろな意味で、SaaSだと非構造化
 
 spaCyはAPIが綺麗で使いやすい。spaCyの開発者はドイツのベルリン在住者が多い。ドイツらしいシステマティックなAPI？
 
-25年前、私もドイツのベルリンに住んていた。ベルリンってドイツ北東部に位置するので、バッハの音楽を沢山聴いた。プロテスタント教会で聴いたオルガン音楽やクリスマスオラトリオ。Project Gutenbergよりバッハの本からspaCyによるNLPでバッハの人脈図をつくってみた。[Thu Vu](https://www.youtube.com/@Thuvu5)さんのYouTube上動画で勉強しながらつくった。本から人脈図がつくれてしまうなんて、The Vuさんへ感動！こういうのって、マーケティング部門の仕事へすごく使える。
+25年前、私もドイツのベルリンに住んていた。ベルリンってドイツ北東部に位置するので、バッハの音楽を沢山聴いた。プロテスタント教会で聴いたオルガン音楽やクリスマスオラトリオ。Project Gutenbergよりバッハの本からspaCyによるNLPでバッハの人脈図をつくってみた。[Thu Vu](https://www.youtube.com/@Thuvu5)さんのYouTube上動画で勉強しながらつくった。本から人脈図がつくれてしまうなんて、The Vuさんへ感動！こういうのって、マーケティング部門の仕事へすごく使える。人名が入力されているエクセルのテーブルから人脈図をつくれる。
 
 <img src="spaCy/bach_network.jpg" width=800>
 
@@ -40,7 +40,7 @@ spaCyはAPIが綺麗で使いやすい。spaCyの開発者はドイツのベル�
 
 ある程度慣れたら、このコースで網羅的に学習する：[Advanced NLP with spaCy](https://course.spacy.io/en)。add_extension(), nlp.pipe()など、NLP実践時には必須。
 
-ある程度spaCyを実践で使ってみると、NERがとても使えることが分かった。しかし、うまく認識してくれない固有表現も多い。役職名や会社に固有な製品名など。その辺を改善するには、spaCyを再トレーニングする必要あり。
+ある程度spaCyを実践で使ってみると、NERがとても使えることが分かった。しかし、うまく認識してくれない固有表現も多い。役職名や会社に固有な製品名など。その辺を改善するには、spaCyを再トレーニングする必要あり。ただし、自然言語処理は８０％の精度と言っている人たちが多い。状況によっては、辞書とPhraseMatcherで固有表現抽出の方が精度高くて良いかも。その場合、辞書のメンテナンスが重要になる。
 
 ### Transformers
 
@@ -119,3 +119,4 @@ NLP教科書
 - [How should I preprocess text for spaCy?](https://github.com/explosion/spaCy/discussions/10243)
 - [seabornで日本語が文字化けする時の対処](https://kiseno-log.com/2021/03/13/seaborn%E3%81%A7%E6%97%A5%E6%9C%AC%E8%AA%9E%E3%81%8C%E6%96%87%E5%AD%97%E5%8C%96%E3%81%91%E3%81%99%E3%82%8B%E6%99%82%E3%81%AE%E5%AF%BE%E5%87%A6/)
 - [NER graphs](https://medium.com/@anoopjohny2000/ner-graphs-e79fb5247a95)
+- [Knowledge Graph — A Powerful Data Science Technique to Mine Information from Text (with Python code)](https://prateekjoshi.medium.com/knowledge-graph-a-powerful-data-science-technique-to-mine-information-from-text-with-python-f8bfd217accc)

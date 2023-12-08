@@ -20,7 +20,7 @@ CRM/SFAの限界を感じる。いろいろな意味で、SaaSだと非構造化
 
 ### NLTK
 
-最初の第１歩。PythonでNLP何たるかを知るためNLTKからNLP始めた。しかし、後で、今はAI使ったNLPが主流だと知った。仕事でNLTK使う機会はないが、NLPの勉強始める時はNLTKから始めた方が良い。
+NLP自習の第１歩、NLP何たるかを知るためNLTKからNLP始めた。しかし、後で、今はAI使ったNLPが主流だと知った。仕事でNLTK使う機会はないが、NLPの勉強始める時はNLTKから始めた方が良い。
 
 - [NLTK Basics](NLTK_Basics.ipynb)
 

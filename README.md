@@ -67,6 +67,7 @@ LLMの勉強しようと書籍店で"大規模言語モデル入門"を購入。
 
 networkxだとブラウザ上での表現ができないので、networkxのデータを[vis.js](https://visjs.org/)へ取り込む必要あり。[pyvis](https://pyvis.readthedocs.io/en/latest/)もあるがvis.jsの機能をフルサポートしておらず、私にとっては都合が悪い。ここでは、pyvisとは逆で、vis.jsを埋め込んだHTML5からnetworx上のデータを取り込むアプローチを探る。JavaScriptのスクリプトを書けば実現できるはず。 
 
+以下のHTMLファイルは、Bach Network上のノードをクリックすると、その人物のWikipediaを開くもの。これ、結構使える！
 - [vis.js最初の第一歩: Bach Network](./visjs/bach_network.html)
 
 ### Tools

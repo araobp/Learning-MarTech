@@ -1,0 +1,45 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Bach Network</title>
+    <script type="text/javascript" src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"></script>
+    </script>
+
+    <script type="text/javascript" src="./network.js" charset="utf-8">
+    </script>
+
+    <style type="text/css">
+      #mynetwork {
+        width: 800px;
+        height: 600px;
+        border: 1px solid lightgray;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Bach Nework</h2>
+
+    <div id="mynetwork"></div>
+
+    <script type="text/javascript">
+      // create a network
+      var container = document.getElementById("mynetwork");
+      var data = {
+        nodes: nodes,
+        edges: edges,
+      };
+      var options = {};
+      var network = new vis.Network(container, data, options);
+
+      network.on( 'click', properties => {
+        var nodeId = properties.nodes[0];
+        // alert(properties.nodes[0]);
+        var charName = allChar[nodeId].replace(/ /g,"_");
+        var url = 'https://en.wikipedia.org/wiki/' + charName
+        window.open(url, '_blank').focus();
+      });
+
+    </script>
+  </body>
+</html>

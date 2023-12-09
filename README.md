@@ -41,7 +41,7 @@ spaCyはAPIが綺麗で使いやすい。spaCyの開発者はドイツのベル�
 <img src="spaCy/bach_network.jpg" width=800>
 
 - [spaCyでNLPインスタンス生成](spaCy/spacy.ipynb)
-- [spaCy and networkx](spaCy/spaCy_networkx.ipynb)
+- [spaCy and networkx](spaCy/spaCy_networkx.ipynb) ... 最後に"bach_network.html"(vis.js)向けJavaScript出力
 - [キーフレーズ抽出](spaCy/key_phrases.ipynb)
 - [感情分析](spaCy/sentiment.ipynb)
 - [何故regexで国名抽出するときにNERで前処理する必要があるか？](spaCy/NER_with_regex.ipynb)
@@ -67,7 +67,7 @@ LLMの勉強しようと書籍店で"大規模言語モデル入門"を購入。
 
 networkxだとブラウザ上での表現ができないので、networkxのデータを[vis.js](https://visjs.org/)へ取り込む必要あり。[pyvis](https://pyvis.readthedocs.io/en/latest/)もあるがvis.jsの機能をフルサポートしておらず、私にとっては都合が悪い。ここでは、pyvisとは逆で、vis.jsを埋め込んだHTML5からnetworx上のデータを取り込むアプローチを探る。JavaScriptのスクリプトを書けば実現できるはず。 
 
-- [vis.js最初の第一歩]()
+- [vis.js最初の第一歩: Bach Network](bach_network.html)
 
 ### Tools
 

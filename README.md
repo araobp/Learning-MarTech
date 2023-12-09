@@ -1,6 +1,16 @@
-# 生成AI時代マーケティング部門エンジニアとしてのNLP/LLM自習
+# マーケティング部門エンジニアとしてのNLP自習
 
-NLP勉強しておかないと、生成AIの使い所を正しく判断出来ない。NLP知らずして生成AI語るのは愚か。Excelだけでデータ分析で良い？AI使わないと時代遅れ。だからPython使わないと！
+## 自習途中だがNLP活用への個人的見解
+
+CRM/SFAの限界を感じる。いろいろな意味で、SaaSだと非構造化データをうまく扱えない。技術的な理由、秘密区分上の理由、組織構造上の理由など。
+
+Excelの限界を感じる。テキストデータが沢山入力されているのに、テーブルでのデータ表現だと、数値データ集計してピボットやチャートで表現して終わってしまう。これは、マーケティング部門の内向き作業。それなのに、なぜ、テキストデータ沢山入力するのか？きっと誰かが、将来、テキストデータのところのデータ処理をやってくれると信じているから。信じているだけだと、マーケティング部門の外向き作業に手がついていないに等しい。
+
+マーケティング部門が収集した非構造化データは個人情報や企業秘密を沢山含む。部署外へ公開できないデータ。ローカルPC上でNLP動作させることで、非構造化データの利活用が促進できる。
+
+ローカルPC上で動作するNLP、spaCy や Hugging Face 上の1GB以下NLPモデル。これらを使いこなせれば、これまで手がついていなかった非構造化データの利活用に踏み込める。各部署のデータサイエンティストが、部署特化の非構造化データ利活用を行える。ローカルPCとオープンソース、費用は全くかからない。
+
+注意点は、意味ある結果を得るには、ドメイン固有の特徴量エンジニアリングを注入すること。また、必ず、手作業が発生する。AIのためのアノテーション作業だったりドメイン固有の辞書作成だったり。手間のバランスを見て、AIで行くべきか、辞書で行くべきか考えること。
 
 ## 自習のためのNotebook
 
@@ -12,13 +22,11 @@ NLP勉強しておかないと、生成AIの使い所を正しく判断出来な
 
 仕事ではCRM/SFA系SaaSからエキスポートされたcsv形式データのデータ分析にpandasを良く使う。pandasは、NLPの処理結果をテーブルとして表現したりチャート化するときにも使われる。
 
-CRM/SFAの限界を感じる。いろいろな意味で、SaaSだと非構造化データをうまく扱えない。技術的な理由、秘密区分上の理由、組織構造上の理由など。NLPでは、部署内からはアクセス可能な非構造化データを構造化してテーブルとして表現できるところが面白い。なので、マーケティング部門エンジニアは、NLPを勉強しておく必要あり。
-
 - [Titanicデータセット](etc/Titanic.ipynb)
 
 ### NLTK
 
-最初の第１歩。PythonでNLP何たるかを知るためNLTKからNLP始めた。しかし、後で、今はAI使ったNLPが主流だと知った。仕事でNLTK使う機会はないが、NLPの勉強始める時はNLTKから始めた方が良い。
+NLP自習の第１歩、NLP何たるかを知るためNLTKからNLP始めた。しかし、後で、今はAI使ったNLPが主流だと知った。仕事でNLTK使う機会はないが、NLPの勉強始める時はNLTKから始めた方が良い。
 
 - [NLTK Basics](NLTK_Basics.ipynb)
 
@@ -28,19 +36,19 @@ CRM/SFAの限界を感じる。いろいろな意味で、SaaSだと非構造化
 
 spaCyはAPIが綺麗で使いやすい。spaCyの開発者はドイツのベルリン在住者が多い。ドイツらしいシステマティックなAPI？
 
-25年前、私もドイツのベルリンに住んていた。ベルリンってドイツ北東部に位置するので、バッハの音楽を沢山聴いた。プロテスタント教会で聴いたオルガン音楽やクリスマスオラトリオ。Project Gutenbergよりバッハの本からspaCyによるNLPでバッハの人脈図をつくってみた。[Thu Vu](https://www.youtube.com/@Thuvu5)さんのYouTube上動画で勉強しながらつくった。本から人脈図がつくれてしまうなんて、The Vuさんへ感動！こういうのって、マーケティング部門の仕事へすごく使える。
+25年前、私もドイツのベルリンに住んていた。ベルリンってドイツ北東部に位置するので、バッハの音楽を沢山聴いた。プロテスタント教会で聴いたオルガン音楽やクリスマスオラトリオ。Project Gutenbergよりバッハの本からspaCyによるNLPでバッハの人脈図をつくってみた。[Thu Vu](https://www.youtube.com/@Thuvu5)さんのYouTube上動画で勉強しながらつくった。
 
 <img src="spaCy/bach_network.jpg" width=800>
 
 - [spaCyでNLPインスタンス生成](spaCy/spacy.ipynb)
-- [spaCy and networkx](spaCy/spaCy_networkx.ipynb)
+- [spaCy and networkx](spaCy/spaCy_networkx.ipynb) ... 最後に"bach_network.html"(vis.js)向けJavaScript出力
 - [キーフレーズ抽出](spaCy/key_phrases.ipynb)
 - [感情分析](spaCy/sentiment.ipynb)
 - [何故regexで国名抽出するときにNERで前処理する必要があるか？](spaCy/NER_with_regex.ipynb)
 
 ある程度慣れたら、このコースで網羅的に学習する：[Advanced NLP with spaCy](https://course.spacy.io/en)。add_extension(), nlp.pipe()など、NLP実践時には必須。
 
-ある程度spaCyを実践で使ってみると、NERがとても使えることが分かった。しかし、うまく認識してくれない固有表現も多い。役職名や会社に固有な製品名など。その辺を改善するには、spaCyを再トレーニングする必要あり。
+ある程度spaCyを実践で使ってみると、NERがとても使えることが分かった。しかし、うまく認識してくれない固有表現も多い。役職名や会社に固有な製品名など。その辺を改善するには、spaCyを再トレーニングする必要あり。ただし、自然言語処理は８０％の精度と言っている人たちが多い。状況によっては、辞書とPhraseMatcherで固有表現抽出の方が精度高くて良いかも。その場合、辞書のメンテナンスが重要になる。
 
 ### Transformers
 
@@ -50,6 +58,16 @@ LLMの勉強しようと書籍店で"大規模言語モデル入門"を購入。
 
 - [ChatGPTへネガポジコメント生成させChatGPTへネガポジ分析させる。精度がよくないので、他の手法でネガポジ分析させるため、ネガポジコメント文章を出力](./transformers/positive_negative.ipynb)
 - [Tranformersでネガポジ分析など基本処理](transformers/TransformersBasics.ipynb)
+
+### vis.js
+
+自分がつくったものを、他のメンバーへ使ってもらわないと意味がない。プログラミング知識ない、Python触ったことない、それを前提に考えると、ブラウザから操作できるかたちにする必要あり。
+
+この自習での最終成果は、NERで抽出した固有表現のネットワークグラフにより、ある特定のコンテキストに所属するデータなりファイル(パワポ/PDF etc)へ容易にアクセス出来るようにすること。
+
+networkxだとブラウザ上での表現ができないので、networkxのデータを[vis.js](https://visjs.org/)へ取り込む必要あり。[pyvis](https://pyvis.readthedocs.io/en/latest/)もあるがvis.jsの機能をフルサポートしておらず、私にとっては都合が悪い。ここでは、pyvisとは逆で、vis.jsを埋め込んだHTML5からnetworx上のデータを取り込むアプローチを探る。JavaScriptのスクリプトを書けば実現できるはず。 
+
+- [vis.js最初の第一歩: Bach Network](bach_network.html)
 
 ### Tools
 
@@ -118,3 +136,5 @@ NLP教科書
 - [感情分析のやり方が7割わかるようになる記事（初心者向け）（ソースコードあり）（GiNZA）](https://qiita.com/Mizuiro__sakura/items/94efccb5ba12046d17b0)
 - [How should I preprocess text for spaCy?](https://github.com/explosion/spaCy/discussions/10243)
 - [seabornで日本語が文字化けする時の対処](https://kiseno-log.com/2021/03/13/seaborn%E3%81%A7%E6%97%A5%E6%9C%AC%E8%AA%9E%E3%81%8C%E6%96%87%E5%AD%97%E5%8C%96%E3%81%91%E3%81%99%E3%82%8B%E6%99%82%E3%81%AE%E5%AF%BE%E5%87%A6/)
+- [NER graphs](https://medium.com/@anoopjohny2000/ner-graphs-e79fb5247a95)
+- [Knowledge Graph — A Powerful Data Science Technique to Mine Information from Text (with Python code)](https://prateekjoshi.medium.com/knowledge-graph-a-powerful-data-science-technique-to-mine-information-from-text-with-python-f8bfd217accc)

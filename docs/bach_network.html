@@ -19,6 +19,7 @@
   </head>
   <body>
     <h2>Bach Nework</h2>
+    <p>Double click to open Wikipedia</p>
 
     <div id="mynetwork"></div>
 
@@ -29,10 +30,21 @@
         nodes: nodes,
         edges: edges,
       };
-      var options = {};
+      var options = {
+        nodes: {
+          shape: "dot",
+          scaling: {
+            customScalingFunction: function (min, max, total, value) {
+              return 2 * value / total;
+            },
+            min: 7,
+            max: 70,
+          },
+        },
+      };
       var network = new vis.Network(container, data, options);
 
-      network.on( 'click', properties => {
+      network.on( 'doubleClick', properties => {
         var nodeId = properties.nodes[0];
         // alert(properties.nodes[0]);
         var charName = allChar[nodeId].replace(/ /g,"_");

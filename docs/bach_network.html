@@ -47,6 +47,19 @@
       network.on( 'doubleClick', properties => {
         var nodeId = properties.nodes[0];
         // alert(properties.nodes[0]);
+
+        node = network.body.nodes[nodeId];
+        node.setOptions({
+          font: {
+            size: 20,
+            color: "#ff7f50"
+          },
+          color: {
+            highlight: "#ff7f50",
+            background: "#ff8f70"
+          }
+        });
+
         var charName = allChar[nodeId].replace(/ /g,"_");
         var url = 'https://en.wikipedia.org/wiki/' + charName
         window.open(url, '_blank').focus();

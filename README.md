@@ -126,8 +126,10 @@ NLP教科書
 
 ## 学習/実行環境
 
-- MacBook Air 16GBRAMモデル
+- MacBook Air 16GB RAMモデル
 - Google Colab
+
+※ Windows PC 8GB RAMモデルでも大半は動作する。
 
 ## Transformersのモデル保存場所
 

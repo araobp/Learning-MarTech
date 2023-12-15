@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <script src="lib/graphology.min.js"></script>
+  <script>
+    const graph = new graphology.Graph();
+    const { UndirectedGraph, DirectedGraph } = graphology;
+  </script>
+  <script src="lib/graphology-library.min.js"></script>
+  <script>
+    const density = graphologyLibrary.metrics.graph.density(graph);
+  </script>
+  <script type="text/javascript" src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"></script>
+  <style type="text/css">
+    #mynetwork {
+      width: 600px;
+      height: 400px;
+      border: 1px solid lightgray;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="mynetwork"></div>
+
+  <script>
+    // Adding some nodes
+    graph.addNode('Charlotte');
+    graph.addNode('Henry');
+    graph.addNode('Grace');
+    graph.addNode('William');
+    graph.addNode('Olivia');
+
+    // Adding an edge
+    graph.addEdge('Charlotte', 'Grace');
+    graph.addEdge('Charlotte', 'Henry');
+    graph.addEdge('Henry', 'William');
+    graph.addEdge('Henry', 'Olivia');
+
+    // Displaying useful information about your graph
+    console.log('Number of nodes', graph.order);
+    console.log('Number of edges', graph.size);
+
+    // Iterating over nodes
+    graph.forEachNode(node => {
+      console.log(node);
+    });
+
+  </script>
+
+  <script type="text/javascript">
+
+    // graphology.js to vis.js
+    const node_list = graph.mapNodes(node => {
+      return { id: node, label: node };
+    });
+
+    const edge_list = graph.mapEdges((edge, attr, source, target) => {
+      return {from: source, to: target};
+    });
+    
+    console.log(node_list);
+    console.log(edge_list);
+
+    // vis.js
+    var nodes = new vis.DataSet(node_list);
+    var edges = new vis.DataSet(edge_list);
+    
+    var container = document.getElementById('mynetwork');
+
+    var data = {
+      nodes: nodes,
+      edges: edges
+    };
+    var options = {};
+
+    var network = new vis.Network(container, data, options);
+  </script>
+</body>
+
+</html>

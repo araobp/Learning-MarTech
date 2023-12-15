@@ -70,6 +70,12 @@ networkxだとブラウザ上での表現ができないので、networkxのデ�
 以下のHTMLファイルは、Bach Network上のノードをクリックすると、その人物のWikipediaを開くもの。これ、結構使える！
 - [vis.js最初の第一歩: Bach Network](https://araobp.github.io/learning-nlp/bach_network.html)
 
+### Cytoscape.js
+
+vis.jsは可視化はできるがグラフ理論実装されておらず、実践上では不都合が出てきた。ブラウザ上の操作でサブグラフをつくれるようなライブラリが必要。
+
+[Cytoscape.js](https://js.cytoscape.org/)を評価する (Work in progress)
+
 ### Tools
 
 マーケティング部門にある非構造化データといえば、エクセルの顧客コメント資料、パワポやPDFの資料、そして、画像や動画コンテンツ。これらをAIで分析すれば有用な何かが得られるはず。

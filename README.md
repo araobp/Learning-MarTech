@@ -75,6 +75,7 @@ vis.jsは可視化はできるがグラフ理論実装されておらず、実�
 [Cytoscape.js](https://js.cytoscape.org/)にはグラフ理論とビジュアリゼーションの両方が含まれていて良いが、少し評価してみたところ、ビジュアリゼーションがいまいちだと感じた。vis.jsの方がインパクトあり。
 
 よって、[graphology.js](https://graphology.github.io/)でグラフ理論の処理 ＋ vis.jsでビジュアリゼーション の組み合わせに出来ないか検討中。
+- [graphology.js と vis.js 併用のテスト](https://araobp.github.io/learning-nlp/graphology_test.html)
 
 ### Tools
 

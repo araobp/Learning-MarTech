@@ -45,7 +45,7 @@ spaCyはAPIが綺麗で使いやすい。spaCyの開発者はドイツのベル�
 <img src="spaCy/bach_network.jpg" width=800>
 
 - [spaCyでNLPインスタンス生成](spaCy/spacy.ipynb)
-- [spaCy and networkx](spaCy/spaCy_networkx.ipynb) ... 最後に"bach_network.html"(vis.js)向けJavaScript出力
+- [spaCy and networkx](spaCy/spaCy_networkx.ipynb) ... 最後に"bach_network.html"向けJavaScript出力
 - [キーフレーズ抽出](spaCy/key_phrases.ipynb)
 - [感情分析](spaCy/sentiment.ipynb)
 - [何故regexで国名抽出するときにNERで前処理する必要があるか？](spaCy/NER_with_regex.ipynb)

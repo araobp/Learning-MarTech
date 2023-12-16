@@ -90,6 +90,8 @@ networkxだとブラウザ上での表現ができないので、networkxのデ�
 
 ---
 
+## 参考
+
 ### spaCy
 
 NLP開発環境 & NLPライブラリ

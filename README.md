@@ -61,18 +61,22 @@ LLMの勉強しようと書籍店で"大規模言語モデル入門"を購入。
 
 ### vis.js
 
-自分がつくったものを、他のメンバーへ使ってもらわないと意味がない。プログラミング知識ない、Python触ったことない、それを前提に考えると、ブラウザから操作できるかたちにする必要あり。
+自分がつくったものを、他のメンバーへ使ってもらわないと意味がない。プログラミング知識ない、Python触ったことない、それを前提に考えると、ブラウザから操作できるインタエースを提供する必要ある。
 
 この自習での最終成果は、NERで抽出した固有表現のネットワークグラフにより、ある特定のコンテキストに所属するデータなりファイル(パワポ/PDF etc)へ容易にアクセス出来るようにすること。
 
-networkxだとブラウザ上での表現ができないので、networkxのデータを[vis.js](https://visjs.org/)へ取り込む必要あり。[pyvis](https://pyvis.readthedocs.io/en/latest/)もあるがvis.jsの機能をフルサポートしておらず、私にとっては都合が悪い。ここでは、pyvisとは逆で、vis.jsを埋め込んだHTML5からnetworx上のデータを取り込むアプローチを探る。JavaScriptのスクリプトを書けば実現できるはず。 
+networkxだとブラウザ上での表現ができないので、networkxのデータを[vis.js](https://visjs.org/)へ取り込む必要あり。[pyvis](https://pyvis.readthedocs.io/en/latest/)もあるがvis.jsの機能をフルサポートしておらず、私にとっては都合が悪い。ここでは、pyvisとは逆で、vis.jsを埋め込んだHTML5からnetworx上のデータを取り込むアプローチを探る。JavaScriptのスクリプトを書けば実現できる。 
+
+しかし、vis.jsは可視化はできるがグラフ理論実装されておらず、実践上では不都合が出てきた。ブラウザ上の操作でサブグラフをつくれるようなライブラリが必要。
+
+[Cytoscape.js](https://js.cytoscape.org/)にはグラフ理論とビジュアリゼーションの両方が含まれていて良いが、少し評価してみたところビジュアリゼーションが弱い。vis.jsの方がインパクトあり。
+
+よって、以下の組み合わせにした：
+- [graphology.js](https://graphology.github.io/)でグラフ理論の処理
+- vis.jsでビジュアリゼーション処理
 
 以下のHTMLファイルは、Bach Network上のノードをクリックすると、その人物のWikipediaを開くもの。これ、結構使える！
 - [vis.js最初の第一歩: Bach Network](https://araobp.github.io/learning-nlp/bach_network.html)
-
-vis.jsは可視化はできるがグラフ理論実装されておらず、実践上では不都合が出てきた。ブラウザ上の操作でサブグラフをつくれるようなライブラリが必要。
-
-[Cytoscape.js](https://js.cytoscape.org/)にはグラフ理論とビジュアリゼーションの両方が含まれていて良いが、少し評価してみたところ、ビジュアリゼーションがいまいちだと感じた。vis.jsの方がインパクトあり。よって、１""[graphology.js](https://graphology.github.io/)でグラフ理論の処理 ＋ vis.jsでビジュアリゼーション にした。
 
 ### Tools
 

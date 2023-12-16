@@ -1,70 +1,102 @@
-
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>Bach Network</title>
-    <script type="text/javascript" src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"></script>
-    </script>
+<head>
+  <title>Bach Network</title>
 
-    <script type="text/javascript" src="./network.js" charset="utf-8">
-    </script>
+  <script src="graphology.min.js"></script>
+  <script>
+    //const graph = new graphology.Graph();
+    const { UndirectedGraph, DirectedGraph } = graphology;
+  </script>
+  <script src="graphology-library.min.js"></script>
+  <script>
+    //const density = graphologyLibrary.metrics.graph.density(graph);
+  </script>
+  <script src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"></script>
+  <script src="graph_data.js"></script>
+  <style type="text/css">
+    #mynetwork {
+      width: 800px;
+      height: 600px;
+      border: 1px solid lightgray;
+    }
+  </style>
+</head>
 
-    <style type="text/css">
-      #mynetwork {
-        width: 800px;
-        height: 600px;
-        border: 1px solid lightgray;
-      }
-    </style>
-  </head>
-  <body>
-    <h2>Bach Nework</h2>
-    <p>Double click to open Wikipedia</p>
+<body>
+  <h2>Bach Nework</h2>
+  <p>Double click to open Wikipedia</p>
 
-    <div id="mynetwork"></div>
+  <div id="mynetwork"></div>
 
-    <script type="text/javascript">
-      // create a network
-      var container = document.getElementById("mynetwork");
-      var data = {
-        nodes: nodes,
-        edges: edges,
-      };
-      var options = {
-        nodes: {
-          shape: "dot",
-          scaling: {
-            customScalingFunction: function (min, max, total, value) {
-              return 2 * value / total;
-            },
-            min: 7,
-            max: 70,
+  <script>
+
+    // graphology instance
+    data = {nodes: nodes, edges: edges};
+    const graph = UndirectedGraph.from(data);
+
+    // Some procedures with graphology.js
+    // ...
+    // ...
+
+    // graphology.js to vis.js
+    const node_list = graph.mapNodes((node, attr) => {
+      return { id: node, label: node, value: attr.value };
+    });
+
+    const edge_list = graph.mapEdges((edge, attr, source, target) => {
+      return {from: source, to: target, value: attr.value};
+    });
+    
+    //console.log(node_list);
+    //console.log(edge_list);
+
+    // vis.js
+    var nodes = new vis.DataSet(node_list);
+    var edges = new vis.DataSet(edge_list);
+    
+    var container = document.getElementById('mynetwork');
+
+    var data = {
+      nodes: nodes,
+      edges: edges
+    };
+
+    var options = {
+      nodes: {
+        shape: "dot",
+        scaling: {
+          customScalingFunction: function (min, max, total, value) {
+            return 2 * value / total;
           },
+          min: 7,
+          max: 70,
         },
-      };
-      var network = new vis.Network(container, data, options);
+      },
+    };
 
-      network.on( 'doubleClick', properties => {
-        var nodeId = properties.nodes[0];
-        // alert(properties.nodes[0]);
+    var network = new vis.Network(container, data, options);
 
-        node = network.body.nodes[nodeId];
-        node.setOptions({
-          font: {
-            size: 20,
-            color: "#ff7f50"
-          },
-          color: {
-            highlight: "#ff7f50",
-            background: "#ff8f70"
-          }
-        });
+    network.on( 'doubleClick', properties => {
+      var nodeId = properties.nodes[0];
+      // alert(properties.nodes[0]);
 
-        var charName = allChar[nodeId].replace(/ /g,"_");
-        var url = 'https://en.wikipedia.org/wiki/' + charName
-        window.open(url, '_blank').focus();
+      node = network.body.nodes[nodeId];
+      node.setOptions({
+        font: {
+          size: 20,
+          color: "#ff7f50"
+        },
+        color: {
+          highlight: "#ff7f50",
+          background: "#ff8f70"
+        }
       });
 
-    </script>
-  </body>
+      var url = 'https://en.wikipedia.org/wiki/' + nodeId
+      window.open(url, '_blank').focus();
+    });
+  </script>
+</body>
+
 </html>

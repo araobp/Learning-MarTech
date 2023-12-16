@@ -61,20 +61,10 @@
     const showNeighbors = () => {
       console.log(`currentNode: ${currentNode}`);
       if (currentNode !== null) {
-        const node_list_neighbors = graph.mapNeighbors(currentNode, (node, attr) => {
-          return { key: node, attributes: { value: attr.value } };
-        });
-        attr = graph.getNodeAttributes(currentNode);
-        node_list_neighbors.push({key: currentNode, attributes: attr});
-
-        console.log(node_list_neighbors);
-        const edge_list_neighbors = graph.mapEdges(currentNode, (edge, attr, source, target) => {
-          return { key: edge, source: source, target: target, attributes: { value: attr.value } };
-        });
-        console.log(edge_list_neighbors);
-        data = { nodes: node_list_neighbors, edges: edge_list_neighbors };
-        const graphNeighbors = UndirectedGraph.from(data);
-        createVisNetwork(graphNeighbors);
+        neighbors = graph.neighbors(currentNode);
+        neighbors.push(currentNode);
+        const sub = graphologyLibrary.operators.subgraph(graph, neighbors);
+        createVisNetwork(sub);
       }
     }
 
@@ -85,6 +75,7 @@
       createVisNetwork(graph);  
     }
 
+
   </script>
 
   <script>
@@ -92,7 +83,7 @@
     // graphology instance
     data = { nodes: nodes, edges: edges };
     const graph = UndirectedGraph.from(data);
-
+    //const sub = graphologyLibrary.operators.subgraph(graph, ['Handel', 'Johann Sebastian Bach']);
     // Some procedures with graphology.js
     // ...
     // ...

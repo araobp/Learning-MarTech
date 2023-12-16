@@ -75,6 +75,7 @@ vis.jsは可視化はできるがグラフ理論実装されておらず、実�
 [Cytoscape.js](https://js.cytoscape.org/)にはグラフ理論とビジュアリゼーションの両方が含まれていて良いが、少し評価してみたところ、ビジュアリゼーションがいまいちだと感じた。vis.jsの方がインパクトあり。
 
 よって、[graphology.js](https://graphology.github.io/)でグラフ理論の処理 ＋ vis.jsでビジュアリゼーション の組み合わせに出来ないか検討中。
+- [graphology.js と vis.js 併用のテスト](https://araobp.github.io/learning-nlp/graphology_test.html)
 
 ### Tools
 
@@ -125,8 +126,10 @@ NLP教科書
 
 ## 学習/実行環境
 
-- MacBook Air 16GBRAMモデル
+- MacBook Air 16GB RAMモデル
 - Google Colab
+
+※ Windows PC 8GB RAMモデルでも大半は動作する。
 
 ## Transformersのモデル保存場所
 

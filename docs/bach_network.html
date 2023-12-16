@@ -26,11 +26,18 @@
     }
 
     #buttons {
-      margin: 5px;
+      width: auto;
+      margin-bottom: 3px;
+      padding-left: 3px;
+      padding-right: 3px;
+      padding-top: 3px;
+      padding-bottom: 3px;
+      border: 1px solid lightgray;
+      text-align: right;
     }
 
     #mynetwork {
-      width: 100%;
+      width: auto;
       height: 80%;
       border: 1px solid lightgray;
     }
@@ -38,7 +45,12 @@
     .button {
       width: 6rem;
       height: 1.8rem;
-      margin: 3px;
+    }
+
+    #selectedNode {
+      width: 20em;
+      margin-right: 2px;
+      display:inline-block
     }
   </style>
 </head>
@@ -50,26 +62,37 @@
       <p>Click to select a node. Double click to open Wikipedia.</p>
     </div>
     <div id="buttons">
-      <button class="button" type="button" onclick="showNeighbors()">Neighbors</button>
+      <label id="selectedNode" for="neighbors"></label>
+      <button class="button" type="button" name="neighbors" onclick="showNeighbors()">Neighbors</button>
       <button class="button" type="button" onclick="reset()">Reset</button>
     </div>
     <div id="mynetwork"></div>
   </div>
   <script>
-    currentNode = null;
+    selectedNode = null;
+
+    const setSelectedNode = (text) => {
+      selectedNode = text;
+      p = document.getElementById("selectedNode");
+      if (text === null) {
+        p.innerText = `...`;
+      } else {
+        p.innerText = `${selectedNode}`;
+      }
+    }
 
     const showNeighbors = () => {
-      console.log(`currentNode: ${currentNode}`);
-      if (currentNode !== null) {
-        neighbors = graph.neighbors(currentNode);
-        neighbors.push(currentNode);
+      console.log(`selectedNode: ${selectedNode}`);
+      if (selectedNode !== null) {
+        neighbors = graph.neighbors(selectedNode);
+        neighbors.push(selectedNode);
         const sub = graphologyLibrary.operators.subgraph(graph, neighbors);
         createVisNetwork(sub);
       }
     }
 
     const reset = () => {
-      currentNode = null;
+      setSelectedNode(null);
       data = { nodes: nodes, edges: edges };
       const graph = UndirectedGraph.from(data);
       createVisNetwork(graph);  
@@ -131,7 +154,10 @@
       var network = new vis.Network(container, data, options);
 
       network.on('click', properties => {
-        currentNode = properties.nodes[0];
+        text = properties.nodes[0];
+        if (text !== undefined) {
+          setSelectedNode(text);
+        }
       });
 
       network.on('doubleClick', properties => {
@@ -156,6 +182,7 @@
     }
 
     createVisNetwork(graph);
+    setSelectedNode(null);
   </script>
 </body>
 

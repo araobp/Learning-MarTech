@@ -77,12 +77,6 @@ networkxだとブラウザ上での表現ができないので、networkxのデ�
 
 <img src="docs/bach_network_subgraph.jpg" width=500>
 
-### JavaScriptフレームワーク
-
-過去、Vue.js, React, OutSystems, Mendix, Salesforce sfdx等を使ってきたが、ここでは Svelte を使いたい。その理由は、Salesforce sfdxのHTML上でコーディングしている感覚が良かったから。Svelteも同じ感覚を提供してくれる。
-
-- [Svelte入門](svelte/intro)
-
 ---
 ## 個人的見解
 

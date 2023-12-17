@@ -95,6 +95,24 @@ networkxだとブラウザ上での表現ができないので、networkxのデ�
 
 <img src="docs/bach_network_subgraph.jpg" width=500>
 
+### graphology.js や graphlogy standard library で使えそうなメソッド
+
+#### [Subgraph](https://graphology.github.io/standard-library/operators.html#subgraph)
+
+グラフから一部を切り出すのに使える。元ネットワークエンジニアの私としてはSubnetなりVPNなりVLANを意味する。
+
+#### [Neigbors](https://graphology.github.io/iteration.html#neighbors-array)
+
+あるキーワードと直接関連ある他のキーワードをリストアップするのに使える。元ネットワークエンジニアの私としては隣接ノード(Adjacent Node)を意味する。
+
+#### [BFS](https://graphology.github.io/standard-library/traversal.html#bfs)
+
+あるキーワードと関連ある（直接/間接）他のキーワードを、半径を指定してリストアップするのに使える。
+
+#### [Shortest Path](https://graphology.github.io/standard-library/shortest-path.html) 
+
+マーケティングの観点では、何と何が最短距離で関連しているか探すのに使える。元ネットワークエンジニアの私としてはOPSF(OPen Shortest path Fast)を連想する。
+
 ---
 ## マーケティング部門データ利活用に対する個人的見解
 

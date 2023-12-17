@@ -1,6 +1,6 @@
 # マーケティング部門エンジニアとしてのNLP(自然言語処理)自習
 
-<a href=""><img src="docs/bach_network_all.jpg" width=700>https://araobp.github.io/learning-nlp/bach_network.html</a>
+<a href="https://araobp.github.io/learning-nlp/bach_network.html"><img src="docs/bach_network_all.jpg" width=700></a>
 
 ## 個人的見解
 

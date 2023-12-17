@@ -2,6 +2,17 @@
 
 <a href="https://araobp.github.io/learning-nlp/bach_network.html"><img src="docs/bach_network_all.jpg" width=600></a>
 
+## ここで自習するワークフロー
+
+```
+                 .......... pandasでドメイン固有の各種処理 ............
+                 ......... spaCy ...............    ... networkx ..    ......... graphology.js ............  .. vis.js..
+       [原文] => [トークン化] => [固有表現認識(NER)] => [ナレッジグラフ化] => [インメモリ グラフDB] => [サブグラフ抽出] => [可視化]
+任意のドキュメント         
+PowerpointやPDF含む
+
+```
+
 ## Jupyter Notebook
 
 ### pandas

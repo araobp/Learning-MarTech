@@ -120,6 +120,7 @@ networkxだとブラウザ上での表現ができないので、networkxのデ�
 マーケティング部門にある非構造化データといえば、エクセルの顧客コメント資料、パワポやPDFの資料、そして、画像や動画コンテンツ。これらをAIで分析すれば有用な何かが得られるはず。
 
 - [PowerPointとPDFからデータ抽出](tools/ppt_pdf.ipynb)
+- [言語認識](tools/LanguageIdentification.ipynb)
 
 
 ---

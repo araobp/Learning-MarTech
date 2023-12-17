@@ -1,5 +1,7 @@
 # マーケティング部門エンジニアとしてのNLP(自然言語処理)自習
 
+<a href="https://araobp.github.io/learning-nlp/bach_network.html"><img src="docs/bach_network_all.jpg" width=600></a>
+
 ## 個人的見解
 
 SaaSのCRM/SFA/MAに限界を感じる部分あり。いろいろな意味で、SaaSだと非構造化データをうまく扱えない。技術的な理由、秘密区分上の理由、組織構造上の理由など。
@@ -36,19 +38,17 @@ NLP自習の第１歩、NLP何たるかを知るためNLTKからNLP始めた。�
 
 ### spaCy
 
-パシフィコ横浜で開催されたEdgeTech+2023展示会でO'Reillyの[実践 自然言語処理](https://www.oreilly.co.jp/books/9784873119724/)を購入。展示会で買うと20%ディスカウントで良い。この本でspaCyの存在を知った。NLP実践のための良書。この本をとかっかりにNLPの勉強を本格的に開始。spaCy、マーケティングの仕事で結構使える。APIがシンプルで良い。認識精度上げたければTransformerモデル使うことも出来る。
-
-spaCyはAPIが綺麗で使いやすい。spaCyの開発者はドイツのベルリン在住者が多い。ドイツらしいシステマティックなAPI？
-
-25年前、私もドイツのベルリンに住んていた。ベルリンってドイツ北東部に位置するので、バッハの音楽を沢山聴いた。プロテスタント教会で聴いたオルガン音楽やクリスマスオラトリオ。Project Gutenbergよりバッハの本からspaCyによるNLPでバッハの人脈図をつくってみた。[Thu Vu](https://www.youtube.com/@Thuvu5)さんのYouTube上動画で勉強しながらつくった。
-
-<img src="spaCy/bach_network.jpg" width=800>
-
 - [spaCyでNLPインスタンス生成](spaCy/spacy.ipynb)
 - [spaCy and networkx](spaCy/spaCy_networkx.ipynb) ... 最後に"bach_network.html"向けJavaScript出力
 - [キーフレーズ抽出](spaCy/key_phrases.ipynb)
 - [感情分析](spaCy/sentiment.ipynb)
 - [何故regexで国名抽出するときにNERで前処理する必要があるか？](spaCy/NER_with_regex.ipynb)
+
+パシフィコ横浜で開催されたEdgeTech+2023展示会でO'Reillyの[実践 自然言語処理](https://www.oreilly.co.jp/books/9784873119724/)を購入。展示会で買うと20%ディスカウントで良い。この本でspaCyの存在を知った。NLP実践のための良書。この本をとかっかりにNLPの勉強を本格的に開始。spaCy、マーケティングの仕事で結構使える。APIがシンプルで良い。認識精度上げたければTransformerモデル使うことも出来る。
+
+spaCyはAPIが綺麗で使いやすい。spaCyの開発者はドイツのベルリン在住者が多い。ドイツらしいシステマティックなAPI？
+
+25年前、私もドイツのベルリンに住んていた。ベルリンってドイツ北東部に位置するので、バッハの音楽を沢山聴いた。プロテスタント教会で聴いたオルガン音楽やクリスマスオラトリオ。Project Gutenbergよりバッハの本からspaCyによるNLPでバッハの人脈図をつくってみた。[Thu Vu](https://www.youtube.com/@Thuvu5)さんのYouTube上動画で勉強しながらつくった。
 
 ある程度慣れたら、このコースで網羅的に学習する：[Advanced NLP with spaCy](https://course.spacy.io/en)。add_extension(), nlp.pipe()など、NLP実践時には必須。
 
@@ -80,7 +80,13 @@ networkxだとブラウザ上での表現ができないので、networkxのデ�
 - vis.jsでビジュアリゼーション処理
 
 以下のHTMLファイルは、Bach Network上のノードをクリックすると、その人物のWikipediaを開くもの。これ、結構使える！
-- [vis.js最初の第一歩: Bach Network](https://araobp.github.io/learning-nlp/bach_network.html)
+- [Bach Network](https://araobp.github.io/learning-nlp/bach_network.html)
+
+<img src="docs/bach_network_all.jpg" width=500>
+
+<img src="docs/bach_network_select_node.jpg" width=500>
+
+<img src="docs/bach_network_subgraph.jpg" width=500>
 
 ### Tools
 

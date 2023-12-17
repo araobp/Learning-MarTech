@@ -18,7 +18,7 @@ Powerpoint/PDF
 画像
 ```
 
-たぶん、こういうのにLLMのユーザインタフェースを加えたものが、[Gatner Hype Cycle 2023](https://www.gartner.com/en/articles/what-s-new-in-the-2023-gartner-hype-cycle-for-emerging-technologies)の黎明期に位置付けられたグラフデータサイエンスかも。。。確率論で回答を生成するのではなく、ナレッジグラフからデータ生成する(説明可能なAI)。
+たぶん、こういうのにLLMのユーザインタフェースを加えたものが、Gatner Hype Cycle 2023 Emerging Technologies の黎明期に位置付けられたグラフデータサイエンスかも。。。確率論で回答を生成するのではなく、ナレッジグラフからデータ生成する(説明可能なAI)。
 
 ## Jupyter Notebook
 

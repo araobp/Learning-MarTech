@@ -20,6 +20,8 @@ Powerpoint/PDF
 
 たぶん、こういうのにLLMのユーザインタフェースを加えたものが、Gatner Hype Cycle 2023 Emerging Technologies の黎明期に位置付けられたグラフデータサイエンスかも。。。確率論で回答を生成するのではなく、ナレッジグラフからデータ生成する(説明可能なAI)。
 
+元ネットワークエンジニアの私としては、むしろ、SQLデータベースよりもネットワークグラフでデータを扱うのが自然。SDN(Software Defined Networking)は最初から分散型のNoSQLデータベース使ってた。Cassandra上にネットワークグラフのデータを乗せたり。
+
 ## Jupyter Notebook
 
 ### pandas

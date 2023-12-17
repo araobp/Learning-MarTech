@@ -1,21 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
-
+<!-- Author: https://github.com/araobp -->
 <head>
   <title>Bach Network</title>
+  
   <meta charset="utf-8">
-  <link href="https://fonts.cdnfonts.com/css/germania-one" rel="stylesheet">
+  
   <script src="graphology.min.js"></script>
   <script>
-    //const graph = new graphology.Graph();
     const { UndirectedGraph, DirectedGraph } = graphology;
   </script>
   <script src="graphology-library.min.js"></script>
-  <script>
-    //const density = graphologyLibrary.metrics.graph.density(graph);
-  </script>
   <script src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"></script>
   <script src="graph_data.js"></script>
+
+  <link href="https://fonts.cdnfonts.com/css/germania-one" rel="stylesheet">
+  
   <style type="text/css">
     #container {
       width: 90%;
@@ -73,9 +73,9 @@
     </div>
     <div id="mynetwork"></div>
   </div>
+
   <script>
     selectedNode = null;
-
     const setSelectedNode = (text) => {
       selectedNode = text;
       p = document.getElementById("selectedNode");
@@ -103,46 +103,27 @@
       createVisNetwork(graph);  
     }
 
-
-  </script>
-
-  <script>
-
     // graphology instance
     data = { nodes: nodes, edges: edges };
     const graph = UndirectedGraph.from(data);
-    //const sub = graphologyLibrary.operators.subgraph(graph, ['Handel', 'Johann Sebastian Bach']);
-    // Some procedures with graphology.js
-    // ...
-    // ...
 
-
-    //console.log(node_list);
-    //console.log(edge_list);
-
-    // vis.js
-
+    // Graph visualization with vis.js
     const createVisNetwork = graph => {
 
-      // graphology.js to vis.js
+      // Export graph data from graphology.js to vis.js
       const node_list = graph.mapNodes((node, attr) => {
         return { id: node, label: node, value: attr.value };
       });
-
       const edge_list = graph.mapEdges((edge, attr, source, target) => {
         return { from: source, to: target, value: attr.value };
       });
-
       var nodes = new vis.DataSet(node_list);
       var edges = new vis.DataSet(edge_list);
-
-      var container = document.getElementById('mynetwork');
 
       var data = {
         nodes: nodes,
         edges: edges
       };
-
       var options = {
         nodes: {
           shape: "dot",
@@ -156,6 +137,7 @@
         },
       };
 
+      var container = document.getElementById('mynetwork');
       var network = new vis.Network(container, data, options);
 
       network.on('click', properties => {
@@ -167,7 +149,6 @@
 
       network.on('doubleClick', properties => {
         var nodeId = properties.nodes[0];
-        // alert(properties.nodes[0]);
 
         node = network.body.nodes[nodeId];
         node.setOptions({
@@ -188,6 +169,7 @@
 
     createVisNetwork(graph);
     setSelectedNode(null);
+
   </script>
 </body>
 

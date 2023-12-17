@@ -2,7 +2,7 @@
 
 <a href="https://araobp.github.io/learning-nlp/bach_network.html"><img src="docs/bach_network_all.jpg" width=600></a>
 
-## 自習のためのNotebook
+## Jupyter Notebook
 
 ### pandas
 

@@ -96,7 +96,7 @@ networkxだとブラウザ上での表現ができないので、networkxのデ�
 <img src="docs/bach_network_subgraph.jpg" width=500>
 
 ---
-## 個人的見解
+## マーケティング部門データ利活用に対する個人的見解
 
 SaaSのCRM/SFA/MAに限界を感じる部分あり。いろいろな意味で、SaaSだと非構造化データをうまく扱えない。技術的な理由、秘密区分上の理由、組織構造上の理由など。
 

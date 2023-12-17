@@ -63,12 +63,6 @@ LLMの勉強しようと書籍店で"大規模言語モデル入門"を購入。
 - [ChatGPTへネガポジコメント生成させChatGPTへネガポジ分析させる。精度がよくないので、他の手法でネガポジ分析させるため、ネガポジコメント文章を出力](./transformers/positive_negative.ipynb)
 - [Tranformersでネガポジ分析など基本処理](transformers/TransformersBasics.ipynb)
 
-### Tools
-
-マーケティング部門にある非構造化データといえば、エクセルの顧客コメント資料、パワポやPDFの資料、そして、画像や動画コンテンツ。これらをAIで分析すれば有用な何かが得られるはず。
-
-- [PowerPointとPDFからデータ抽出](tools/ppt_pdf.ipynb)
-
 
 ## ブラウザインタフェース
 
@@ -114,6 +108,19 @@ networkxだとブラウザ上での表現ができないので、networkxのデ�
 #### [Shortest Path](https://graphology.github.io/standard-library/shortest-path.html) 
 
 マーケティングの観点では、何と何が最短距離で関連しているか探すのに使える。元ネットワークエンジニアの私としてはOPSF(OPen Shortest path Fast)を連想する。
+
+## Entity Linking
+
+このプロジェクトでは、NERで抽出されたキーワードを Wikipedia (Knowledge Baseとしての) の該当ページへ hyperlink でリンクする程度の Entity Linking しか実現しない。
+
+しかし、マーケティング部門では、製品紹介資料や客先向けプレゼン資料などから Knowledge Graph を構築出来ると良い。このプロジェクトでは、その手法については掘り下げないが、以下のツールなどを組み合わせて実現出来ること確認済み。
+
+### Tools
+
+マーケティング部門にある非構造化データといえば、エクセルの顧客コメント資料、パワポやPDFの資料、そして、画像や動画コンテンツ。これらをAIで分析すれば有用な何かが得られるはず。
+
+- [PowerPointとPDFからデータ抽出](tools/ppt_pdf.ipynb)
+
 
 ---
 ## マーケティング部門データ利活用に対する個人的見解

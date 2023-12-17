@@ -42,7 +42,7 @@ spaCyはAPIが綺麗で使いやすい。spaCyの開発者はドイツのベル�
 
 25年前、私もドイツのベルリンに住んていた。ベルリンってドイツ北東部に位置するので、バッハの音楽を沢山聴いた。プロテスタント教会で聴いたオルガン音楽やクリスマスオラトリオ。Project Gutenbergよりバッハの本からspaCyによるNLPでバッハの人脈図をつくってみた。[Thu Vu](https://www.youtube.com/@Thuvu5)さんのYouTube上動画で勉強しながらつくった。
 
-<img src="spaCy/bach_network.jpg" width=800>
+<img src="docs/bach_network_all.jpg" width=800>
 
 - [spaCyでNLPインスタンス生成](spaCy/spacy.ipynb)
 - [spaCy and networkx](spaCy/spaCy_networkx.ipynb) ... 最後に"bach_network.html"向けJavaScript出力
@@ -80,7 +80,13 @@ networkxだとブラウザ上での表現ができないので、networkxのデ�
 - vis.jsでビジュアリゼーション処理
 
 以下のHTMLファイルは、Bach Network上のノードをクリックすると、その人物のWikipediaを開くもの。これ、結構使える！
-- [vis.js最初の第一歩: Bach Network](https://araobp.github.io/learning-nlp/bach_network.html)
+- [Bach Network](https://araobp.github.io/learning-nlp/bach_network.html)
+
+<img src="docs/bach_network_all.jpg" width=500>
+
+<img src="docs/bach_network_select_node.jpg" width=500>
+
+<img src="docs/bach_network_subgraph.jpg" width=500>
 
 ### Tools
 

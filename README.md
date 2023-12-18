@@ -22,6 +22,8 @@ Powerpoint/PDF
 
 元ネットワークエンジニアの私としては、むしろ、SQLデータベースよりもネットワークグラフでデータを扱うのが自然。SDN(Software Defined Networking)は最初から分散型のNoSQLデータベース使ってた。Cassandra上にネットワークグラフのデータを乗せたり。
 
+なお、グラフDBとしてneo4j使いたいが、ここでは、敢えて使わず、networkxやgraphology.jsで代用。その心は、ある程度のプロトタイピングでその効果を実証しないと、お金は付いてこないということ。最初はゼロ円で開発を始める。
+
 ## Jupyter Notebook
 
 ### pandas

@@ -120,14 +120,15 @@ networkxだとブラウザ上での表現ができないので、networkxのデ�
 - VoC/VoE
 - 製品紹介資料
 - パワポ/PDF資料
+- 写真
 
 ### Tools
 
 マーケティング部門にある非構造化データといえば、エクセルの顧客コメント資料、パワポやPDFの資料、そして、画像や動画コンテンツ。これらをAIで分析すれば有用な何かが得られるはず。
 
-- [PowerPointとPDFからデータ抽出](tools/ppt_pdf.ipynb)
-- [言語認識](tools/LanguageIdentification.ipynb)
-- [Image Captioning](tools/ImageCaptioning.ipynb)
+- [PowerPointとPDFからデータ抽出](tools/ppt_pdf.ipynb) ... スライドがある程度構造化されていれば関係抽出しやすいが。。。
+- [言語認識](tools/LanguageIdentification.ipynb) ... 文章が短いと誤認識が起こる。
+- [Image Captioning](tools/ImageCaptioning.ipynb) ... 認識性能の高さに驚いた！生成されたキャプションをNLPにかけて利用してみたい。
 
 ---
 ## マーケティング部門データ利活用に対する個人的見解

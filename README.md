@@ -127,6 +127,7 @@ networkxだとブラウザ上での表現ができないので、networkxのデ�
 
 - [PowerPointとPDFからデータ抽出](tools/ppt_pdf.ipynb)
 - [言語認識](tools/LanguageIdentification.ipynb)
+- [Image Captioning](tools/ImageCaptioning.ipynb)
 
 ---
 ## マーケティング部門データ利活用に対する個人的見解

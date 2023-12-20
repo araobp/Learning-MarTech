@@ -2,6 +2,8 @@
 
 <a href="https://araobp.github.io/learning-nlp/bach_network.html"><img src="docs/bach_network_all.jpg" width=600></a>
 
+モチベーション維持：Bach人脈図生成してみたら、[主よ，人の望みの喜びよ](http://shop.zen-on.co.jp/p/911278)の楽譜を買ってピアノを弾き始めた。
+
 ## ここで自習するワークフロー
 
 ```
@@ -9,9 +11,9 @@
 マーケティング部門においては、非構造化データのデータ利活用が進んでいないのが最大の課題。
 自然言語処理(NLP)やグラフ理論を適用した非構造化データのデータ利活用を考える。
 
-....... Jupyter Notebook上でドメイン固有の各種処理 .......   ................. ブラウザ上で処理 ...........................
-        ......... spaCy ............   ... networkx ..  ......... graphology.js ........   ....... vis.js ..........
-[原文]=>[トークン化]=>[固有表現認識(NER)]=>[ナレッジグラフ化]=>[インメモリグラフDB]=>[サブグラフ抽出]=>[可視化]=>[Entity Linking]
+....... Jupyter Notebook上でドメイン固有の各種処理 ......   ................. ブラウザ上で処理 ..........................
+        ......... spaCy ............   .. networkx ..  ......... graphology.js ........   ....... vis.js .........
+[原文]=>[トークン化]=>[固有表現認識(NER)]=>[ネットワーク化]=>[インメモリグラフDB]=>[サブグラフ抽出]=>[可視化]=>[Entity Linking]
 任意のドキュメント
 Excel/CSV         
 Powerpoint/PDF
@@ -21,6 +23,8 @@ Powerpoint/PDF
 たぶん、こういうのにLLMのユーザインタフェースを加えたものが、Gatner Hype Cycle 2023 Emerging Technologies の黎明期に位置付けられたグラフデータサイエンスかも。。。確率論で回答を生成するのではなく、ナレッジグラフからデータ生成する(説明可能なAI)。
 
 元ネットワークエンジニアの私としては、むしろ、SQLデータベースよりもネットワークグラフでデータを扱うのが自然。SDN(Software Defined Networking)は最初から分散型のNoSQLデータベース使ってた。Cassandra上にネットワークグラフのデータを乗せたり。
+
+なお、グラフDBとして[neo4j](https://neo4j.com/)使いたいが、ここでは、敢えて使わず、networkxやgraphology.jsで代用。その心は、ある程度のプロトタイピングでその効果を実証しないと、お金は付いてこないということ。最初はゼロ円で開発を始める。全てローカルPC上、かつデータベースレスで動作させる。
 
 ## Jupyter Notebook
 
@@ -39,10 +43,11 @@ NLP自習の第１歩、NLP何たるかを知るためNLTKからNLP始めた。�
 ### spaCy
 
 - [spaCyでNLPインスタンス生成](spaCy/spacy.ipynb)
-- [spaCy and networkx](spaCy/spaCy_networkx.ipynb) ... 最後に"bach_network.html"向けJavaScript出力
 - [キーフレーズ抽出](spaCy/key_phrases.ipynb)
 - [感情分析](spaCy/sentiment.ipynb)
 - [何故regexで国名抽出するときにNERで前処理する必要があるか？](spaCy/NER_with_regex.ipynb)
+- [spaCy and networkx](spaCy/spaCy_networkx.ipynb) ... 最後に"bach_network.html"向けJavaScript出力
+- [関係抽出] Work in progress, 上記のbach networkはsliding windowのNERでPERSON抽出しただけで、センテンスベースの関係抽出が出来ていない。
 
 パシフィコ横浜で開催されたEdgeTech+2023展示会でO'Reillyの[実践 自然言語処理](https://www.oreilly.co.jp/books/9784873119724/)を購入。展示会で買うと20%ディスカウントで良い。この本でspaCyの存在を知った。NLP実践のための良書。この本をとかっかりにNLPの勉強を本格的に開始。spaCy、マーケティングの仕事で結構使える。APIがシンプルで良い。認識精度上げたければTransformerモデル使うことも出来る。
 

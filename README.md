@@ -139,6 +139,16 @@ networkxだとブラウザ上での表現ができないので、networkxのデ�
 - [言語認識](tools/LanguageIdentification.ipynb) ... 文章が短いと誤認識が起こる。
 - [Image Captioning](tools/ImageCaptioning.ipynb) ... 認識性能の高さに驚いた！生成されたキャプションをNLPにかけて利用してみたい。
 
+## 最後にライセンスの話
+
+NLP関連では無償でも営利目的での利用を禁じるものが多い。
+
+非営利の意味が解説されている：
+- [クリエイティブ・コモンズとは？意味やクリエイティブ・コモンズ・ライセンスの利用法を解説](https://blog.hubspot.jp/marketing/copyright-creativecommons#:~:text=%E3%80%8CNC%E3%80%8D%EF%BC%88%E9%9D%9E%E5%96%B6%E5%88%A9%EF%BC%89,%E3%82%89%E3%82%8C%E3%82%8B%E5%8F%AF%E8%83%BD%E6%80%A7%E3%81%8C%E3%81%82%E3%82%8A%E3%81%BE%E3%81%99%E3%80%82)
+- [営利目的」とは？意味・具体例と「商用利用」「非営利」も解説](https://biz.trans-suite.jp/54496)
+
+データ整理などの業務効率化に使う分には問題なさそう。利益を得るための活動をしてはならない。
+
 ---
 ## マーケティング部門データ利活用に対する個人的見解
 

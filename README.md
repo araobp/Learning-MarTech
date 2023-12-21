@@ -46,8 +46,7 @@ NLP自習の第１歩、NLP何たるかを知るためNLTKからNLP始めた。�
 - [キーフレーズ抽出](spaCy/key_phrases.ipynb)
 - [感情分析](spaCy/sentiment.ipynb)
 - [何故regexで国名抽出するときにNERで前処理する必要があるか？](spaCy/NER_with_regex.ipynb)
-- [spaCy and networkx](spaCy/spaCy_networkx.ipynb) ... 最後に"bach_network.html"向けJavaScript出力
-- [関係抽出] Work in progress, 上記のbach networkはsliding windowのNERでPERSON抽出しただけで、センテンスベースの関係抽出が出来ていない。
+- [spaCy and networkx](spaCy/spaCy_networkx.ipynb) ... 最後に"bach_network.html"向けJavaScript出力。（注）Bach networkはsliding windowのNERでPERSON抽出しただけで、センテンスベースの関係抽出が出来ていない。
 
 パシフィコ横浜で開催されたEdgeTech+2023展示会でO'Reillyの[実践 自然言語処理](https://www.oreilly.co.jp/books/9784873119724/)を購入。展示会で買うと20%ディスカウントで良い。この本でspaCyの存在を知った。NLP実践のための良書。この本をとかっかりにNLPの勉強を本格的に開始。spaCy、マーケティングの仕事で結構使える。APIがシンプルで良い。認識精度上げたければTransformerモデル使うことも出来る。
 
@@ -114,6 +113,17 @@ networkxだとブラウザ上での表現ができないので、networkxのデ�
 
 マーケティングの観点では、何と何が最短距離で関連しているか探すのに使える。元ネットワークエンジニアの私としてはOPSF(OPen Shortest path Fast)を連想する。
 
+## 関係抽出
+
+ナレッジグラフ生成に必要となる関係抽出、以下のモデルを試してみたが、性能がかなり良い。
+- https://huggingface.co/ibm/knowgl-large
+
+問題は、特定ドメイン固有の専門用語では関係抽出がうまく行かないこと。専用モデルの学習が必要になる。また、学習に必要十分なデータを揃えられない。
+
+また、ここでは、ナレッジグラフ連動の検索エンジンを開発しているわけではなく、情報の整理やグルーピングをやりたいだけ。spaCyの範囲で出来る手法はないか？
+
+最低限、ノード間依存関係とエッジのweightが必要。Weightの方、感情分析結果も反映させたい（ネットワークルーティングでいうコストに相当）。その程度ならspaCyのDependencyMatcherで実現出来ないか？探究中。。。
+
 ## Entity Linking
 
 このプロジェクトでは、NERで抽出されたキーワードを Wikipedia (Knowledge Baseとしての) の該当ページへ hyperlink でリンクする程度の Entity Linking しか実現しない。
@@ -134,6 +144,16 @@ networkxだとブラウザ上での表現ができないので、networkxのデ�
 - [PowerPointとPDFからデータ抽出](tools/ppt_pdf.ipynb) ... スライドがある程度構造化されていれば関係抽出しやすいが。。。
 - [言語認識](tools/LanguageIdentification.ipynb) ... 文章が短いと誤認識が起こる。
 - [Image Captioning](tools/ImageCaptioning.ipynb) ... 認識性能の高さに驚いた！生成されたキャプションをNLPにかけて利用してみたい。
+
+## 最後にライセンスの話
+
+NLP関連では無償でも営利目的での利用を禁じるものが多い。
+
+非営利の意味が解説されている：
+- [クリエイティブ・コモンズとは？意味やクリエイティブ・コモンズ・ライセンスの利用法を解説](https://blog.hubspot.jp/marketing/copyright-creativecommons#:~:text=%E3%80%8CNC%E3%80%8D%EF%BC%88%E9%9D%9E%E5%96%B6%E5%88%A9%EF%BC%89,%E3%82%89%E3%82%8C%E3%82%8B%E5%8F%AF%E8%83%BD%E6%80%A7%E3%81%8C%E3%81%82%E3%82%8A%E3%81%BE%E3%81%99%E3%80%82)
+- [営利目的」とは？意味・具体例と「商用利用」「非営利」も解説](https://biz.trans-suite.jp/54496)
+
+データ整理などの業務効率化に使う分には問題なさそう。利益を得るための活動をしてはならない。
 
 ---
 ## マーケティング部門データ利活用に対する個人的見解

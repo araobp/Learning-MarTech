@@ -65,6 +65,25 @@ spaCyを実践で使ってみると、NERがとても使えることが分かっ
 
 The most renowned Clavier composers of that day were Froberger,50 Fischer,51 Johann Caspar Kerl,52 Pachelbel,53 Buxtehude,54 Bruhns,55 [pg 11]and Böhm.56 Johann Christoph possessed a book containing several pieces by these masters, and Bach begged earnestly for it, but without effect. Refusal increasing his determination, he laid his plans to get the book without his brother's knowledge. It was kept on a book-shelf which had a latticed front. Bach's hands were small. Inserting them, he got hold of the book, rolled it up, and drew it out. As he was not allowed a candle, he could only copy it on moonlight nights, and it was six months before he finished his heavy task. As soon as it was completed he looked forward to using in secret a treasure won by so much labour. But his brother found the copy and took it from him without pity, nor did Bach recover it until his brother's death soon after.
 
+この文章を見る限り、本当は以下のようなネットワークでなければならない。上の二つの手法、両方とも完全に正確ではない。正確に関係抽出するにはどうしたら良いのか？私にとての今後の課題。
+```
+Froberger ---------------+-------- Johann Christoph Bach ------- Johann Sebastian Bach
+                         |
+Fischer -----------------+
+                         |
+Johann Caspar Kerl ------+
+                         |
+Pachelbel ---------------+
+                         |
+Buxtehude ---------------+
+                         |
+Bruhns ------------------+
+                         |
+Böhm --------------------+
+```
+
+ちなみに、上記ブクステフーデはオルガン演奏の名手で、リューベックの教会でオルガニストを務めた人物。バッハはリューベックまで聴きに行った。その石碑が境界内にある。私も、それを見に、リューベックまで何度か行った。
+
 ### Transformers
 
 LLMの勉強しようと書籍店で"大規模言語モデル入門"を購入。NLPの知識なく、いきなりこれを理解するのは無理。O'Reillyの"実践 自然言語処理"で勉強してからこの本を読む。これまで実践してきた音声処理や画像処理系AI(DNN/CNN)の経験が役にたちそう。AIって何？学習って何？学習ってすごく面倒で大変！その辺、十分に経験してきたので。

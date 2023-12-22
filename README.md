@@ -65,11 +65,12 @@ spaCyを実践で使ってみると、NERがとても使えることが分かっ
 
 The most renowned Clavier composers of that day were Froberger,50 Fischer,51 Johann Caspar Kerl,52 Pachelbel,53 Buxtehude,54 Bruhns,55 [pg 11]and Böhm.56 Johann Christoph possessed a book containing several pieces by these masters, and Bach begged earnestly for it, but without effect. Refusal increasing his determination, he laid his plans to get the book without his brother's knowledge. It was kept on a book-shelf which had a latticed front. Bach's hands were small. Inserting them, he got hold of the book, rolled it up, and drew it out. As he was not allowed a candle, he could only copy it on moonlight nights, and it was six months before he finished his heavy task. As soon as it was completed he looked forward to using in secret a treasure won by so much labour. But his brother found the copy and took it from him without pity, nor did Bach recover it until his brother's death soon after.
 
-この文章を見る限り、本当は以下のようなネットワークでなければならない。上の二つの手法、両方とも完全に正確ではない。正確に関係抽出するにはどうしたら良いのか？私にとての今後の課題。
+この文章を見る限り、本当は以下のようなネットワークでなければならない。上の二つの手法、両方とも完全に正確ではない。
+
 ```
-Froberger ---------------+-------- Johann Christoph Bach ------- Johann Sebastian Bach
-                         |
-Fischer -----------------+
+Froberger ---------------+---------+--------- Johann Christoph Bach ------- Johann Sebastian Bach
+                         |         |                                                 |
+Fischer -----------------+         +-------------------------------------------------+
                          |
 Johann Caspar Kerl ------+
                          |
@@ -81,6 +82,13 @@ Bruhns ------------------+
                          |
 Böhm --------------------+
 ```
+
+正確に関係抽出するにはどうしたら良いのか？私にとての今後の課題。名前が列挙されている場合には、それをノードのグループと捉え、少し離れて記述される名前(ノード)とエッジで結ぶ方が良いのかもしれない。
+- パラグラウ内でスライディングウィンドウをかけてNamed Entity抽出。
+- センテンス内でNamed Entityが列挙された場合、それをグループと捉える。グループ内のNamed Enitity間はエッジで結ばない。
+- そのグループ内の個々のNamed Entityを、少し離れたNamed Entityとエッジで結ぶ。
+
+上記手法、パワポ資料へNERかけてネットワークつくるときにも使えそう。スライドのタイトルとテキストボックス内のNamed Entity群をエッジで結ぶ。しかし、それには、NERに向いたパワポ資料作成が求められる。
 
 ちなみに、上記ブクステフーデはオルガン演奏の名手で、リューベックの教会でオルガニストを務めた人物。バッハはリューベックまで聴きに行った。それを記念した石碑が教会内にある。私も、それを見に、リューベックまで何度か行った。そういえばリューベックに有名なお菓子[Marzipan](https://en.wikipedia.org/wiki/Marzipan)があって、それを日本に買って帰った。日本人の口には合わなかたが。。。と頭の中で連想してしまう。これが、人間の脳内にあるナレッジグラフ。
 

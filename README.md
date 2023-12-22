@@ -59,7 +59,12 @@ spaCyを実践で使ってみると、NERがとても使えることが分かっ
 - [感情分析](spaCy/sentiment.ipynb)
 - [何故regexで国名抽出するときにNERで前処理する必要があるか？](spaCy/NER_with_regex.ipynb)
 - [spaCy and networkx](spaCy/spaCy_networkx.ipynb) ... 最後に"bach_network.html"向けJavaScript出力。（注）Bach networkはスライディングウィンドウのNERでPERSON抽出しただけで、センテンスベースの関係抽出が出来ていない。
-- [spaCy and networkx2](spaCy/spaCy_networkx2.ipynb) ... こちらでは、名前のペアをセンテンスから抽出する方法を採用。スライディングウィンドウで抽出する方法と大差ない結果となったが、こちらの方が現実に沿っているようい見える。
+- [spaCy and networkx2](spaCy/spaCy_networkx2.ipynb) ... こちらでは、名前のペアをセンテンスから抽出する方法を採用。スライディングウィンドウで抽出する方法と大差ない結果となったが、こちらの方では PachelbelとJohann Christophの関係を抽出出来ていない。
+
+以下、バッハの本にも書かれている有名なくだり：
+```
+The most renowned Clavier composers of that day were Froberger,50 Fischer,51 Johann Caspar Kerl,52 Pachelbel,53 Buxtehude,54 Bruhns,55 [pg 11]and Böhm.56 Johann Christoph possessed a book containing several pieces by these masters, and Bach begged earnestly for it, but without effect. Refusal increasing his determination, he laid his plans to get the book without his brother's knowledge. It was kept on a book-shelf which had a latticed front. Bach's hands were small. Inserting them, he got hold of the book, rolled it up, and drew it out. As he was not allowed a candle, he could only copy it on moonlight nights, and it was six months before he finished his heavy task. As soon as it was completed he looked forward to using in secret a treasure won by so much labour. But his brother found the copy and took it from him without pity, nor did Bach recover it until his brother's death soon after.
+```
 
 ### Transformers
 

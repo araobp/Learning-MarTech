@@ -44,12 +44,6 @@ NLP自習の第１歩、NLP何たるかを知るためNLTKからNLP始めた。�
 
 ### spaCy
 
-- [spaCyでNLPインスタンス生成](spaCy/spacy.ipynb)
-- [キーフレーズ抽出](spaCy/key_phrases.ipynb)
-- [感情分析](spaCy/sentiment.ipynb)
-- [何故regexで国名抽出するときにNERで前処理する必要があるか？](spaCy/NER_with_regex.ipynb)
-- [spaCy and networkx](spaCy/spaCy_networkx.ipynb) ... 最後に"bach_network.html"向けJavaScript出力。（注）Bach networkはsliding windowのNERでPERSON抽出しただけで、センテンスベースの関係抽出が出来ていない。
-
 パシフィコ横浜で開催されたEdgeTech+2023展示会でO'Reillyの[実践 自然言語処理](https://www.oreilly.co.jp/books/9784873119724/)を購入。展示会で買うと20%ディスカウントで良い。この本でspaCyの存在を知った。NLP実践のための良書。この本をとかっかりにNLPの勉強を本格的に開始。spaCy、マーケティングの仕事で結構使える。APIがシンプルで良い。認識精度上げたければTransformerモデル使うことも出来る。
 
 spaCyはAPIが綺麗で使いやすい。spaCyの開発者はドイツのベルリン在住者が多い。ドイツらしいシステマティックなAPI？
@@ -59,6 +53,12 @@ spaCyはAPIが綺麗で使いやすい。spaCyの開発者はドイツのベル�
 ある程度慣れたら、このコースで網羅的に学習する：[Advanced NLP with spaCy](https://course.spacy.io/en)。add_extension(), nlp.pipe()など、NLP実践時には必須。
 
 ある程度spaCyを実践で使ってみると、NERがとても使えることが分かった。しかし、うまく認識してくれない固有表現も多い。役職名や会社に固有な製品名など。その辺を改善するには、spaCyを再トレーニングする必要あり。ただし、自然言語処理は８０％の精度と言っている人たちが多い。状況によっては、辞書とPhraseMatcherで固有表現抽出の方が精度高くて良いかも。その場合、辞書のメンテナンスが重要になる。
+
+- [spaCyでNLPインスタンス生成](spaCy/spacy.ipynb)
+- [キーフレーズ抽出](spaCy/key_phrases.ipynb)
+- [感情分析](spaCy/sentiment.ipynb)
+- [何故regexで国名抽出するときにNERで前処理する必要があるか？](spaCy/NER_with_regex.ipynb)
+- [spaCy and networkx](spaCy/spaCy_networkx.ipynb) ... 最後に"bach_network.html"向けJavaScript出力。（注）Bach networkはsliding windowのNERでPERSON抽出しただけで、センテンスベースの関係抽出が出来ていない。
 
 ### Transformers
 

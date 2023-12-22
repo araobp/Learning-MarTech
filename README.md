@@ -180,6 +180,12 @@ networkxだとブラウザ上での表現ができないので、networkxのデ�
 
 多くのデータソースから固有表現を拾い上げることで、Named Entity Disambiguation (NED)も実現出来る。
 
+## TF-IDF (Work in progress)
+
+Betweennessを尺度にして、グラフからサブグラフを抽出したい。
+
+Named Entityのネットワークを生成してみると、ある単語の頻度がやたら多くて目立つ場合がある。例えば自社名。自社名は重要だが、betweennessが突出して大きくなってしまうのを避けたい。TF-IDF(Term Frequency - Inverse Document Frequency)でうまく調整出来ないか？検討してみたい。
+
 ### Tools
 
 マーケティング部門にある非構造化データといえば、エクセルの顧客コメント資料、パワポやPDFの資料、そして、画像や動画コンテンツ。これらをAIで分析すれば有用な何かが得られるはず。

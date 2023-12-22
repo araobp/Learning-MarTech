@@ -1,6 +1,6 @@
 # マーケティング部門エンジニアとしてのNLP(自然言語処理)自習
 
-注）本プロジェクトは、自然言語処理の経験がなかった私個人としての自習用プロジェクト。
+注）本プロジェクトは、自然言語処理の経験がなかった私個人としての自習用プロジェクト。2023年10月下旬より開始。
 
 <a href="https://araobp.github.io/learning-nlp/bach_network.html"><img src="docs/bach_network_all.jpg" width=600></a>
 

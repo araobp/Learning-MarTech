@@ -1,5 +1,7 @@
 # マーケティング部門エンジニアとしてのNLP(自然言語処理)自習
 
+注）本プロジェクトは、自然言語処理の経験がなかった私個人としての自習用プロジェクト。
+
 <a href="https://araobp.github.io/learning-nlp/bach_network.html"><img src="docs/bach_network_all.jpg" width=600></a>
 
 モチベーション維持：Bach人脈図生成してみたら、[主よ，人の望みの喜びよ](http://shop.zen-on.co.jp/p/911278)の楽譜を買ってピアノを弾き始めた。

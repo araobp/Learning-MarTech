@@ -1,18 +1,18 @@
 # マーケティング部門エンジニアとしてのNLP(自然言語処理)自習
 
-注）本プロジェクトは、自然言語処理の経験がなかった私個人としての自習用プロジェクト。
+<h6>注）私はフルスタックなプロトタイピングが本業。ハード、ソフトから3DCGまで、何でもお金をかけずアジャイルにつくる。本プロジェクトは、自然言語処理の経験がなかった私個人が、週末夜間に自己研鑽として進める自習用プロジェクト。2023年10月下旬より開始。日本は祝日が多いので自習に使える時間は沢山ある。</h6>
 
 <a href="https://araobp.github.io/learning-nlp/bach_network.html"><img src="docs/bach_network_all.jpg" width=600></a>
 
-モチベーション維持：Bach人脈図生成してみたら、[主よ，人の望みの喜びよ](http://shop.zen-on.co.jp/p/911278)の楽譜を買ってピアノを弾き始めた。
+<h6>モチベーション維持：Bach人脈図生成してみたら、<a href="http://shop.zen-on.co.jp/p/911278">主よ，人の望みの喜びよ</a>の楽譜を買ってピアノを弾き始めた。</h6>
 
 ## ここで自習するワークフロー
 
-```
-企業におけるデータサイエンスはドメイン固有の知識/経験の上で成り立っている。
-マーケティング部門においては、非構造化データのデータ利活用が進んでいないのが最大の課題。
-ここでは、自然言語処理(NLP)やグラフ理論を適用した非構造化データのデータ利活用を考える。
+マーケティング部門においては、非構造化データのデータ利活用が進んでいないのが最大の課題。ここでは、自然言語処理(NLP)やグラフ理論を適用した非構造化データのデータ利活用を考える。
 
+企業におけるデータサイエンスはドメイン固有の知識/経験の上で成り立っているのに注意。だから、ある特定分野で幅広い業務経験を積む必要あり。それがないとデータのモデリングやデータ分析処理のプロセス設計が出来ない。
+
+```
 ....... Jupyter Notebook上でドメイン固有の各種処理 ......   ................. ブラウザ上で処理 ..........................
         ......... spaCy ............   .. networkx ..  ......... graphology.js ........   ....... vis.js .........
 [原文]=>[トークン化]=>[固有表現認識(NER)]=>[ネットワーク化]=>[インメモリグラフDB]=>[サブグラフ抽出]=>[可視化]=>[Entity Linking]
@@ -48,7 +48,7 @@ NLP自習の第１歩、NLP何たるかを知るためNLTKからNLP始めた。�
 
 spaCyはAPIが綺麗で使いやすい。spaCyの開発者はドイツのベルリン在住者が多い。ドイツらしいシステマティックなAPI？
 
-25年前、私もドイツのベルリンに住んていた。ベルリンってドイツ北東部に位置するので、バッハの音楽を沢山聴いた。プロテスタント教会で聴いたオルガン音楽やクリスマスオラトリオ。Project Gutenbergより入手したバッハの本から、spaCyによるNLPでバッハの人脈図をつくってみた。[Thu Vu](https://www.youtube.com/@Thuvu5)さんのYouTube上動画を参考にした。
+25年前、私もドイツのベルリンに住んていた。ベルリンってドイツ北東部に位置するので、バッハの音楽を沢山聴いた。プロテスタント教会で聴いたオルガン音楽やクリスマスオラトリオ。Project Gutenbergより入手した[バッハの本](https://www.gutenberg.org/cache/epub/35041/pg35041-images.html)から、spaCyによるNLPでバッハの人脈図をつくってみた。[Thu Vu](https://www.youtube.com/@Thuvu5)さんのYouTube上動画を参考にした。
 
 ある程度慣れたら、このコースで網羅的に学習する：[Advanced NLP with spaCy](https://course.spacy.io/en)。add_extension(), nlp.pipe()など、NLP実践時には必須。
 
@@ -59,7 +59,49 @@ spaCyを実践で使ってみると、NERがとても使えることが分かっ
 - [感情分析](spaCy/sentiment.ipynb)
 - [何故regexで国名抽出するときにNERで前処理する必要があるか？](spaCy/NER_with_regex.ipynb)
 - [spaCy and networkx](spaCy/spaCy_networkx.ipynb) ... 最後に"bach_network.html"向けJavaScript出力。（注）Bach networkはスライディングウィンドウのNERでPERSON抽出しただけで、センテンスベースの関係抽出が出来ていない。
-- [spaCy and networkx2](spaCy/spaCy_networkx2.ipynb) ... こちらでは、名前のペアをセンテンスから抽出する方法を採用。スライディングウィンドウで抽出する方法と大差ない結果となったが、こちらの方が現実に沿っているようい見える。
+- [spaCy and networkx2](spaCy/spaCy_networkx2.ipynb) ... こちらでは、名前のペアをセンテンスから抽出する方法を採用。スライディングウィンドウで抽出する方法と大差ない結果となったが、こちらの方では PachelbelとJohann Christophの関係等を抽出出来ていない。
+
+以下、バッハの本にも書かれている有名なくだり：
+
+The most renowned Clavier composers of that day were Froberger,50 Fischer,51 Johann Caspar Kerl,52 Pachelbel,53 Buxtehude,54 Bruhns,55 [pg 11]and Böhm.56 Johann Christoph possessed a book containing several pieces by these masters, and Bach begged earnestly for it, but without effect. Refusal increasing his determination, he laid his plans to get the book without his brother's knowledge. It was kept on a book-shelf which had a latticed front. Bach's hands were small. Inserting them, he got hold of the book, rolled it up, and drew it out. As he was not allowed a candle, he could only copy it on moonlight nights, and it was six months before he finished his heavy task. As soon as it was completed he looked forward to using in secret a treasure won by so much labour. But his brother found the copy and took it from him without pity, nor did Bach recover it until his brother's death soon after.
+
+この文章を見る限り、本当は以下のようなネットワークでなければならない。上の二つの手法、両方とも完全に正確ではない。
+
+```
+Froberger ---------------+---------+--------- Johann Christoph Bach ------- Johann Sebastian Bach
+                         |         |                                                 |
+Fischer -----------------+         +-------------------------------------------------+
+                         |
+Johann Caspar Kerl ------+
+                         |
+Pachelbel ---------------+
+                         |
+Buxtehude ---------------+
+                         |
+Bruhns ------------------+
+                         |
+Böhm --------------------+
+```
+
+正確に関係抽出するにはどうしたら良いのか？私にとって、今後の課題。名前が列挙されている場合には、それをノードのグループと捉え、少し離れて記述される名前(ノード)とエッジで結ぶ方が良いのかもしれない。
+- パラグラウ内でスライディングウィンドウをかけてNamed Entity抽出。
+- センテンス内でNamed Entityが列挙された場合、それをグループと捉える。グループ内のNamed Enitity間はエッジで結ばない。
+- そのグループ内の個々のNamed Entityを、少し離れたNamed Entityとエッジで結ぶ。
+
+上記手法、パワポ資料へNERかけてネットワークつくるときにも使えそう。スライドのタイトルとテキストボックス内のNamed Entity群をエッジで結ぶ。しかし、それには、NERに向いたパワポ資料作成が求められる。
+
+ちなみに、上記ブクステフーデはオルガン演奏の名手で、リューベックの教会でオルガニストを務めた人物。バッハはリューベックまで聴きに行った。それを記念した石碑が教会内にある。私も、それを見に、リューベックまで何度か行った。そういえばリューベックに有名なお菓子[Marzipan](https://en.wikipedia.org/wiki/Marzipan)があって、それを日本に買って帰った。日本人の口には合わなかたが。。。と頭の中で連想してしまう。これが、人間の脳内にあるナレッジグラフ。
+
+```
+            日本人
+              | 口に合わない
+　　　　　　Marzipan
+              |
+      +- リューベック -+
+      |              |
+      |              |
+ブクステフーデ ------ バッハ
+```
 
 ### Transformers
 
@@ -137,6 +179,12 @@ networkxだとブラウザ上での表現ができないので、networkxのデ�
 - 写真
 
 多くのデータソースから固有表現を拾い上げることで、Named Entity Disambiguation (NED)も実現出来る。
+
+## TF-IDF (Work in progress)
+
+Betweennessを尺度にして、グラフからサブグラフを抽出したい。
+
+Named Entityのネットワークを生成してみると、ある単語の頻度がやたら多くて目立つ場合がある。例えば自社名。自社名は重要だが、betweennessが突出して大きくなってしまうのを避けたい。TF-IDF(Term Frequency - Inverse Document Frequency)でうまく調整出来ないか？検討してみたい。
 
 ### Tools
 

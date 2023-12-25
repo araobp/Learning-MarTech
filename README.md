@@ -60,7 +60,6 @@ spaCyを実践で使ってみると、NERがとても使えることが分かっ
 - [何故regexで国名抽出するときにNERで前処理する必要があるか？](spaCy/NER_with_regex.ipynb)
 - [spaCy and networkx](spaCy/spaCy_networkx.ipynb) ... 最後に"bach_network.html"向けJavaScript出力。（注）Bach networkはスライディングウィンドウのNERでPERSON抽出しただけで、センテンスベースの関係抽出が出来ていない。
 - [spaCy and networkx2](spaCy/spaCy_networkx2.ipynb) ... こちらでは、名前のペアをセンテンスから抽出する方法を採用。スライディングウィンドウで抽出する方法と大差ない結果となったが、こちらの方では PachelbelとJohann Christophの関係等を抽出出来ていない。
-- [人名列挙の探索](spaCy/finding_group.ipynb) ... spaCyの Dependecy Tree で列挙される人名を探索。文の中で、列挙される人名間の関係は薄いはず。
 
 以下、バッハの本にも書かれている有名なくだり：
 
@@ -103,6 +102,13 @@ Böhm --------------------+
       |              |
 ブクステフーデ ------ バッハ
 ```
+
+以下、spaCyのDepedencyTree探索のノートブック。DependencyTreeを探索するるアルゴリズム、結構、難しい。
+- [人名列挙の探索](spaCy/finding_group.ipynb) ... spaCyの Dependecy Tree で列挙される人名を探索。文の中で、列挙される人名間の関係は薄いはず。conjの関係で人名をつなぐことで人名列挙を探索する。
+
+以下の記事から学ぶ (Work in progress)
+- [Natural Language Processing — Dependency Parsing](https://towardsdatascience.com/natural-language-processing-dependency-parsing-cf094bbbe3f7)
+- [Knowledge graphs from complex text](https://medium.com/inspiredbrilliance/knowledge-graphs-from-complex-text-eb009aeed48e)
 
 ### Transformers
 

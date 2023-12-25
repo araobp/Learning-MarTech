@@ -107,7 +107,8 @@ Böhm --------------------+
 - [人名列挙の探索](spaCy/finding_group.ipynb) ... spaCyの Dependecy Tree で列挙される人名を探索。文の中で、列挙される人名間の関係は薄いはず。conjの関係で人名をつなぐことで人名列挙を探索する。
 
 以下の記事から学ぶ (Work in progress)
-[Knowledge graphs from complex text](https://medium.com/inspiredbrilliance/knowledge-graphs-from-complex-text-eb009aeed48e)
+- [Natural Language Processing — Dependency Parsing](https://towardsdatascience.com/natural-language-processing-dependency-parsing-cf094bbbe3f7)
+- [Knowledge graphs from complex text](https://medium.com/inspiredbrilliance/knowledge-graphs-from-complex-text-eb009aeed48e)
 
 ### Transformers
 

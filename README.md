@@ -106,6 +106,9 @@ Böhm --------------------+
 以下、spaCyのDepedencyTree探索のノートブック。DependencyTreeを探索するるアルゴリズム、結構、難しい。
 - [人名列挙の探索](spaCy/finding_group.ipynb) ... spaCyの Dependecy Tree で列挙される人名を探索。文の中で、列挙される人名間の関係は薄いはず。conjの関係で人名をつなぐことで人名列挙を探索する。
 
+以下の記事から学ぶ (Work in progress)
+[Knowledge graphs from complex text](https://medium.com/inspiredbrilliance/knowledge-graphs-from-complex-text-eb009aeed48e)
+
 ### Transformers
 
 LLMの勉強しようと書籍店で"大規模言語モデル入門"を購入。NLPの知識なく、いきなりこれを理解するのは無理。O'Reillyの"実践 自然言語処理"で勉強してからこの本を読む。これまで実践してきた音声処理や画像処理系AI(DNN/CNN)の経験が役にたちそう。AIって何？学習って何？学習ってすごく面倒で大変！その辺、十分に経験してきたので。

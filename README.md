@@ -105,7 +105,10 @@ Böhm --------------------+
 以下、spaCyのDepedencyTree探索のノートブック。DependencyTreeを探索するるアルゴリズム、結構、難しい。数日がかりで関数作成成功。
 - [人名列挙の探索](spaCy/finding_group.ipynb) ... spaCyの Dependecy Tree で列挙される人名を探索。文の中で、列挙される人名間の関係は薄いはず。conjの関係で人名をつなぐことで人名列挙を探索する。列挙された名前の間のnode pair間weightは2/len(group),その他は1とする。
 
-以下の記事から学ぶ (Work in progress)
+以下が最終的な成果
+- [spaCy and networkx3](spaCy/spaCy_networkx3.ipynb)
+
+Edgeの部分の関係も抽出したい。以下の記事で勉強中 (Work in progress)
 - [Natural Language Processing — Dependency Parsing](https://towardsdatascience.com/natural-language-processing-dependency-parsing-cf094bbbe3f7)
 - [Knowledge graphs from complex text](https://medium.com/inspiredbrilliance/knowledge-graphs-from-complex-text-eb009aeed48e)
 

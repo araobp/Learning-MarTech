@@ -1,6 +1,6 @@
 # マーケティング部門エンジニアとしてのNLP(自然言語処理)自習
 
-<h6>注）私はフルスタックなプロトタイピングが本業。ハード、ソフトから3DCGまで、何でもお金をかけずアジャイルにつくる。本プロジェクトは、自然言語処理の経験がなかった私個人が、週末夜間に自己研鑽として進める自習用プロジェクト。2023年10月下旬より開始。日本は祝日が多いので自習に使える時間は沢山ある。</h6>
+<h6>注）私の本業はフルスタックなプロトタイピング。ハード、ソフトから3DCGまで、何でもお金をかけずアジャイルにつくる。本プロジェクトは、自然言語処理の経験がなかった私個人が、週末夜間に自己研鑽として進める自習用プロジェクト。2023年10月下旬より開始。日本は祝日が多いので自習に使える時間は沢山ある。</h6>
 
 <a href="https://araobp.github.io/learning-nlp/bach_network.html"><img src="docs/bach_network_all.jpg" width=600></a>
 
@@ -84,9 +84,8 @@ Böhm --------------------+
 ```
 
 正確に関係抽出するにはどうしたら良いのか？私にとって、今後の課題。名前が列挙されている場合には、それをノードのグループと捉え、少し離れて記述される名前(ノード)とエッジで結ぶ方が良いのかもしれない。
-- パラグラウ内でスライディングウィンドウをかけてNamed Entity抽出。
-- センテンス内でNamed Entityが列挙された場合、それをグループと捉える。グループ内のNamed Enitity間はエッジで結ばない。
-- そのグループ内の個々のNamed Entityを、少し離れたNamed Entityとエッジで結ぶ。
+- パラグラウ内でNamed Entity抽出。
+- Named Entityが列挙された場合、それをグループと捉える。グループ内のNamed Enitity間のエッジweightが弱くなるように調整する。
 
 上記手法、パワポ資料へNERかけてネットワークつくるときにも使えそう。スライドのタイトルとテキストボックス内のNamed Entity群をエッジで結ぶ。しかし、それには、NERに向いたパワポ資料作成が求められる。
 
@@ -103,8 +102,8 @@ Böhm --------------------+
 ブクステフーデ ------ バッハ
 ```
 
-以下、spaCyのDepedencyTree探索のノートブック。DependencyTreeを探索するるアルゴリズム、結構、難しい。
-- [人名列挙の探索](spaCy/finding_group.ipynb) ... spaCyの Dependecy Tree で列挙される人名を探索。文の中で、列挙される人名間の関係は薄いはず。conjの関係で人名をつなぐことで人名列挙を探索する。
+以下、spaCyのDepedencyTree探索のノートブック。DependencyTreeを探索するるアルゴリズム、結構、難しい。数日がかりで関数作成成功。
+- [人名列挙の探索](spaCy/finding_group.ipynb) ... spaCyの Dependecy Tree で列挙される人名を探索。文の中で、列挙される人名間の関係は薄いはず。conjの関係で人名をつなぐことで人名列挙を探索する。列挙された名前の間のnode pair間weightは2/len(group),その他は1とする。
 
 以下の記事から学ぶ (Work in progress)
 - [Natural Language Processing — Dependency Parsing](https://towardsdatascience.com/natural-language-processing-dependency-parsing-cf094bbbe3f7)

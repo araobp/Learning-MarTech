@@ -142,8 +142,6 @@ networkxだとブラウザ上での表現ができないので、networkxのデ�
 
 <img src="docs/bach_network_all.jpg" width=500>
 
-<img src="docs/bach_network_select_node.jpg" width=500>
-
 <img src="docs/bach_network_subgraph.jpg" width=500>
 
 ### graphology.js や graphlogy standard library で使えそうなメソッド

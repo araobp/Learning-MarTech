@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <!-- Author: https://github.com/araobp -->
+
 <head>
   <title>Bach Network</title>
-  
+
   <meta charset="utf-8">
-  
+
   <script src="graphology.min.js"></script>
   <script>
     const { UndirectedGraph, DirectedGraph } = graphology;
@@ -15,7 +16,7 @@
   <script src="graph_data.js"></script>
 
   <link href="https://fonts.cdnfonts.com/css/germania-one" rel="stylesheet">
-  
+
   <style type="text/css">
     #container {
       width: 90%;
@@ -54,7 +55,7 @@
       font-size: 1.3rem;
       margin-right: 2px;
       vertical-align: bottom;
-      display:inline-block;
+      display: inline-block;
       font-family: 'Germania One', sans-serif;
     }
   </style>
@@ -75,6 +76,14 @@
   </div>
 
   <script>
+    // graphology.js instance
+    // このインスタンスはコピーしながら使い回しする。
+    data = { nodes: nodes, edges: edges };
+    //console.log(data);
+
+    const G = UndirectedGraph.from(data);
+
+    // 選択ノード
     selectedNode = null;
     const setSelectedNode = (text) => {
       selectedNode = text;
@@ -86,29 +95,45 @@
       }
     }
 
+    // Weightを閾値としてEdgeをフィルターしたグラフを生成
+    const filteredGraph = (graph, weight_threshold) => {
+      // Weightを閾値としてEdgeをフィルター
+      graph.mapEdges(key => {
+        console.log(key);
+        console.log(graph.getEdgeAttribute(key, 'value'));
+        if (graph.getEdgeAttribute(key, 'value') < weight_threshold) {
+          graph.dropEdge(key);
+          console.log(key);
+        }
+      });
+    }
+
+    // 選択されたノードに隣接するノードのみを含むグラフを生成
     const showNeighbors = () => {
       console.log(`selectedNode: ${selectedNode}`);
       if (selectedNode !== null) {
-        neighbors = graph.neighbors(selectedNode);
+        neighbors = G.neighbors(selectedNode);
         neighbors.push(selectedNode);
-        const sub = graphologyLibrary.operators.subgraph(graph, neighbors);
+        const sub = graphologyLibrary.operators.subgraph(G, neighbors);
         createVisNetwork(sub);
       }
     }
 
+    // 隣接ノード選択条件をクリアしグラフ再描画
     const reset = () => {
       setSelectedNode(null);
       data = { nodes: nodes, edges: edges };
-      const graph = UndirectedGraph.from(data);
-      createVisNetwork(graph);  
+      //G = UndirectedGraph.from(data);
+      createVisNetwork(G.copy());
     }
 
-    // graphology instance
-    data = { nodes: nodes, edges: edges };
-    const graph = UndirectedGraph.from(data);
+    const WEIGHT_THRESHOLD = 1.0
 
     // Graph visualization with vis.js
     const createVisNetwork = graph => {
+
+      // Filter edges with weight threshold
+      filteredGraph(graph, WEIGHT_THRESHOLD);
 
       // Export graph data from graphology.js to vis.js
       const node_list = graph.mapNodes((node, attr) => {
@@ -167,7 +192,7 @@
       });
     }
 
-    createVisNetwork(graph);
+    createVisNetwork(G.copy());
     setSelectedNode(null);
 
   </script>

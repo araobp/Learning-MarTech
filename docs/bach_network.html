@@ -112,7 +112,7 @@
 
       // Export graph data from graphology.js to vis.js
       const node_list = graph.mapNodes((node, attr) => {
-        return { id: node, label: node, value: attr.value };
+        return { id: node, label: node, value: attr.value, color: attr.color };
       });
       const edge_list = graph.mapEdges((edge, attr, source, target) => {
         return { from: source, to: target, value: attr.value };

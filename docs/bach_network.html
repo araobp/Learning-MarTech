@@ -123,7 +123,7 @@
 
       // エッジがないノードを削除
       g.forEachNode(key => {
-        if (g.degree(key) == 0) {
+        if (g.degree(key) === 0) {
           g.dropNode(key);
         }
       });
@@ -149,6 +149,8 @@
     }
 
     // グループメンバーのみのグラフを生成
+    // 注意）Edge weight threshold を大きな値にした時、エッジなしノードが表示される場合がある。
+    // これは、他のグループのノードへエッジがあるためで、正常な動作。
     const showGroupMembersOnly = () => {
       if (selectedNode !== null) {
         graph = filterGraphByWeight();

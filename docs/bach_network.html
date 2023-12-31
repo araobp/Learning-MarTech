@@ -74,7 +74,7 @@
       <label id="selectedNode" for="neighbors"></label>
       <button class="button" type="button" name="neighbors" onclick="showNeighbors()">Neighbors</button>
       <button class="button" type="button" onclick="reset()">Reset</button>
-      <div style="margin-left: 10px; margin-right: 3px; font-family: sans-serif; font-size: 0.8rem;">Edge Weight:</div>
+      <div style="margin-left: 10px; margin-right: 3px; font-family: sans-serif; font-size: 0.8rem; width: 20em;">Edge weight threshold:</div>
       <select name="threshold" id="threshold" onchange="filterGraph(this)">
         <option value="3">3</option>
         <option value="2">2</option>
@@ -91,14 +91,12 @@
     // graphology.js instance
     // このインスタンスはコピーしながら使い回しする。
     data = { nodes: nodes, edges: edges };
-    //console.log(data);
-
     const G = UndirectedGraph.from(data);
 
     var WEIGHT_THRESHOLD = 1
 
     // 選択ノード
-    selectedNode = null;
+    var selectedNode = null;
     const setSelectedNode = (text) => {
       selectedNode = text;
       p = document.getElementById("selectedNode");
@@ -114,10 +112,8 @@
 
       // Weightを閾値としてEdgeをフィルター
       graph.forEachEdge(key => {
-        //console.log(graph.getEdgeAttribute(key, 'value'));
         if (graph.getEdgeAttribute(key, 'value') < weight_threshold) {
           graph.dropEdge(key);
-          // console.log(key);
         }
       });
 
@@ -125,39 +121,42 @@
       graph.forEachNode(key => {
         if (graph.degree(key) == 0) {
           graph.dropNode(key);
-          // console.log(key);
         }
       });
     }
 
     const filterGraph = option => {
       WEIGHT_THRESHOLD = option.value;
+      lastOperation();
     }
 
     // 選択されたノードに隣接するノードのみを含むグラフを生成
     const showNeighbors = () => {
-      //console.log(`selectedNode: ${selectedNode}`);
       if (selectedNode !== null) {
-        neighbors = G.neighbors(selectedNode);
+        graph = G.copy()
+        filterGraphByWeight(graph, WEIGHT_THRESHOLD);
+        neighbors = graph.neighbors(selectedNode);
         neighbors.push(selectedNode);
         const sub = graphologyLibrary.operators.subgraph(G, neighbors);
         createVisNetwork(sub);
       }
+      lastOperation = showNeighbors;
     }
 
     // 隣接ノード選択条件をクリアしグラフ再描画
     const reset = () => {
       setSelectedNode(null);
-      data = { nodes: nodes, edges: edges };
-      //G = UndirectedGraph.from(data);
-      createVisNetwork(G.copy());
+      graph = G.copy()
+      // Filter edges with weight threshold
+      filterGraphByWeight(graph, WEIGHT_THRESHOLD);
+      createVisNetwork(graph);
+      lastOperation = reset;
     }
+
+    var lastOperation = reset;
 
     // Graph visualization with vis.js
     const createVisNetwork = graph => {
-
-      // Filter edges with weight threshold
-      filterGraphByWeight(graph, WEIGHT_THRESHOLD);
 
       // Export graph data from graphology.js to vis.js
       const node_list = graph.mapNodes((node, attr) => {

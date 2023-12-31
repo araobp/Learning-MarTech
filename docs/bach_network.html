@@ -74,6 +74,7 @@
       <label id="selectedNode" for="neighbors"></label>
       <button class="button" type="button" onclick="showNeighbors()">Neighbors</button>
       <button class="button" type="button" onclick="showGroupMembersOnly()">Group</button>
+      <!-- <button class="button" type="button" onclick="showBFS()">Depth1</button> -->     
       <button class="button" type="button" onclick="showAll()">Reset</button>
       <div style="margin-left: 10px; margin-right: 3px; font-family: sans-serif; font-size: 0.8rem; width: 20em;">Edge weight threshold:</div>
       <select name="threshold" id="threshold" onchange="filterGraph(this)">
@@ -141,7 +142,7 @@
         graph = filterGraphByWeight();
         neighbors = graph.neighbors(selectedNode);
         neighbors.push(selectedNode);
-        const sub = graphologyLibrary.operators.subgraph(G, neighbors);
+        const sub = graphologyLibrary.operators.subgraph(graph, neighbors);
         createVisNetwork(sub);
         lastOperation = showNeighbors;
       }
@@ -152,12 +153,30 @@
       if (selectedNode !== null) {
         graph = filterGraphByWeight();
         groupNum = graph.getNodeAttribute(selectedNode, 'group')
-        const groupMembers = graph.filterNodes(key => G.getNodeAttribute(key, 'group') === groupNum);
-        const sub = graphologyLibrary.operators.subgraph(G, groupMembers);
+        const groupMembers = graph.filterNodes(key => graph.getNodeAttribute(key, 'group') === groupNum);
+        const sub = graphologyLibrary.operators.subgraph(graph, groupMembers);
         createVisNetwork(sub);
         lastOperation = showGroupMembersOnly;
       }
     }
+
+    // 選択されたノードからトラバーサル
+    /*
+    const showBFS = () => {
+      if (selectedNode !== null) {
+        bfsNodes = [];
+        graph = filterGraphByWeight();
+        graphologyLibrary.traversal.bfsFromNode(graph, selectedNode, (node, attr, depth) => {
+          console.log(node);
+          bfsNodes.push(node);
+          return depth >= 1;
+        });
+        const sub = graphologyLibrary.operators.subgraph(graph, bfsNodes);
+        createVisNetwork(sub);
+        lastOperation = showBFS;
+      }
+    }
+    */
 
     // 隣接ノード選択条件をクリアしグラフ再描画
     const showAll = () => {
@@ -202,6 +221,12 @@
 
       var container = document.getElementById('mynetwork');
       var network = new vis.Network(container, data, options);
+
+      if (selectedNode !== null) {
+        network.setSelection({
+          nodes: [selectedNode]
+        });
+      }
 
       network.on('click', properties => {
         text = properties.nodes[0];

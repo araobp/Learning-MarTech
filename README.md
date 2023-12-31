@@ -279,6 +279,7 @@ NLP教科書
 
 ## Transformersのモデル保存場所
 
+Macの場合
 ```
 /Users/<username>/.cache/huggingface/hub
 ```

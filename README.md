@@ -108,6 +108,8 @@ Böhm --------------------+
 以下が最終的な成果
 - [spaCy and networkx3](spaCy/spaCy_networkx3.ipynb)
 
+このネットワークは J.S.Bach を中心とし、Louvainアルゴリズムで３つのグループに分けられた：Bachの家族、Bach以前の有名な音楽家集団、その他。
+
 Edgeの部分の関係も抽出したい。以下の記事で勉強中 (Work in progress)
 - [Natural Language Processing — Dependency Parsing](https://towardsdatascience.com/natural-language-processing-dependency-parsing-cf094bbbe3f7)
 - [Knowledge graphs from complex text](https://medium.com/inspiredbrilliance/knowledge-graphs-from-complex-text-eb009aeed48e)

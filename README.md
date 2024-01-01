@@ -98,7 +98,7 @@ Böhm --------------------+
 ```
 
 以下、spaCyのDepedencyTree探索のノートブック。DependencyTreeを探索するるアルゴリズム、結構、難しい。数日がかりで関数作成成功。
-- [人名列挙の探索](spaCy/finding_group.ipynb) ... spaCyの Dependecy Tree で列挙される人名を探索。文の中で、列挙される人名間の関係は薄いはず。conjの関係で人名をつなぐことで人名列挙を探索する。列挙された名前の間のnode pair間weightは2/len(group),その他は1とする。
+- [人名列挙の探索](spaCy/finding_group.ipynb) ... spaCyの Dependecy Tree で列挙される人名を探索。文の中で、列挙される人名間の関係は薄いはず。conjの関係で人名をつなぐことで人名列挙を探索する。列挙された名前の間のnode pair間weightは2/len(グループ内の人数),その他は1とする。
 
 以下が最終的な成果
 - [spaCy and networkx3](spaCy/spaCy_networkx3.ipynb)

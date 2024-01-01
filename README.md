@@ -1,10 +1,9 @@
 # マーケティング部門エンジニアとしてのNLP(自然言語処理)自習
 
-<h6>注）私の本業はフルスタックなプロトタイピング。ハード、ソフトから3DCGまで、何でもお金をかけずアジャイルにつくる。本プロジェクトは、自然言語処理の経験がなかった私個人が、週末夜間に自己研鑽として進める自習用プロジェクト。2023年10月下旬より開始。日本は祝日が多いので自習に使える時間は沢山ある。</h6>
+<h6>注）私の本業はフルスタックなプロトタイピング。ハード、ソフトから3DCGまで、何でもお金をかけずアジャイルにつくる。本プロジェクトは、自然言語処理の経験がなかった私個人が、週末夜間に自己研鑽として進める自習用プロジェクト。2023年10月下旬より開始。</h6>
 
 <a href="https://araobp.github.io/learning-nlp/bach_network.html"><img src="docs/bach_network_all.jpg" width=600></a>
-
-<h6>モチベーション維持：Bach人脈図生成してみたら、<a href="http://shop.zen-on.co.jp/p/911278">主よ，人の望みの喜びよ</a>の楽譜を買ってピアノを弾き始めた。</h6>
+<h6>画像をクリックして起動</h6>
 
 ## ここで自習するワークフロー
 
@@ -138,13 +137,6 @@ networkxだとブラウザ上での表現ができないので、networkxのデ�
 よって、以下の組み合わせにした：
 - [graphology.js](https://graphology.github.io/)でグラフ理論の処理
 - vis.jsでビジュアリゼーション処理
-
-以下のHTMLファイルは、Bach Network上のノードをクリックすると、その人物のWikipediaを開くもの。これ、結構使える！
-- [Bach Network](https://araobp.github.io/learning-nlp/bach_network.html)
-
-<img src="docs/bach_network_all.jpg" width=500>
-
-<img src="docs/bach_network_subgraph.jpg" width=500>
 
 ### graphology.js や graphlogy standard library で使えそうなメソッド
 

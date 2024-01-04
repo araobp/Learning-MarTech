@@ -1,10 +1,9 @@
 # マーケティング部門エンジニアとしてのNLP(自然言語処理)自習
 
-<h6>注）私の本業はフルスタックなプロトタイピング。ハード、ソフトから3DCGまで、何でもお金をかけずアジャイルにつくる。本プロジェクトは、自然言語処理の経験がなかった私個人が、週末夜間に自己研鑽として進める自習用プロジェクト。2023年10月下旬より開始。日本は祝日が多いので自習に使える時間は沢山ある。</h6>
+<h6>注）私の本業はフルスタックなプロトタイピング。ハード、ソフトから3DCGまで、何でもお金をかけずアジャイルにつくる。本プロジェクトは、自然言語処理の経験がなかった私個人が、週末夜間に自己研鑽として進める自習用プロジェクト。2023年10月下旬より開始。</h6>
 
 <a href="https://araobp.github.io/learning-nlp/bach_network.html"><img src="docs/bach_network_all.jpg" width=600></a>
-
-<h6>モチベーション維持：Bach人脈図生成してみたら、<a href="http://shop.zen-on.co.jp/p/911278">主よ，人の望みの喜びよ</a>の楽譜を買ってピアノを弾き始めた。</h6>
+<h6>画像をクリックして起動</h6>
 
 ## ここで自習するワークフロー
 
@@ -22,11 +21,7 @@ Powerpoint/PDF
 画像
 ```
 
-たぶん、こういうのにLLMのユーザインタフェースを加えたものが、Gatner Hype Cycle 2023 Emerging Technologies の黎明期に位置付けられたグラフデータサイエンスかも。。。確率論で回答を生成するのではなく、ナレッジグラフから回答生成する説明可能なAI。
-
-元ネットワークエンジニアの私としては、むしろ、SQLデータベースよりもネットワークグラフでデータを扱うのが自然。SDN(Software Defined Networking)では、Cassandra上にネットワークグラフのデータを乗せたりして、クラウド分散型のNoSQLデータベース使っていた。
-
-なお、ナレッジベースとしてPostgreSQLや各種オブジェクトストレージ、グラフDBとして[neo4j](https://neo4j.com/)を使いたいが、ここでは、敢えて使わず、networkxやgraphology.jsで代用。その心は、ある程度のプロトタイピングでその効果を実証しないと、お金は付いてこないということ。最初はゼロ円で開発を始める。全てローカルPC上、かつデータベースレスで動作させる。ユーザ向けウエブインタフェースもReact等のフレームワークを使わず、Vanilla JSで作る。初期のプロトタイピングでは、コストを最小化するため、全てをローカル動作に集約させる。
+なお、ナレッジベースとしてPostgreSQLや各種オブジェクトストレージ、グラフDBとして[neo4j](https://neo4j.com/)を使いたいが、ここでは、敢えて使わず、networkxやgraphology.jsで代用。全てローカルPC上、かつデータベースレスで動作させる。ユーザ向けウエブインタフェースもReact等のフレームワークを使わず、Vanilla JSで作る。初期のプロトタイピングでは、コストを最小化するため、全てをローカル動作に集約させる。
 
 ## Jupyter Notebook
 
@@ -58,7 +53,7 @@ spaCyを実践で使ってみると、NERがとても使えることが分かっ
 - [キーフレーズ抽出](spaCy/key_phrases.ipynb)
 - [感情分析](spaCy/sentiment.ipynb)
 - [何故regexで国名抽出するときにNERで前処理する必要があるか？](spaCy/NER_with_regex.ipynb)
-- [spaCy and networkx](spaCy/spaCy_networkx.ipynb) ... 最後に"bach_network.html"向けJavaScript出力。（注）Bach networkはスライディングウィンドウのNERでPERSON抽出しただけで、センテンスベースの関係抽出が出来ていない。
+- [spaCy and networkx](spaCy/spaCy_networkx.ipynb) ... 最後に"bach_network.html"向けJavaScript出力。（注）Bach networkはスライディングウィンドウのNERでPERSON抽出しただけで、センテンスベースやパラグラフベースでの関係抽出が出来ていない。
 - [spaCy and networkx2](spaCy/spaCy_networkx2.ipynb) ... こちらでは、名前のペアをセンテンスから抽出する方法を採用。スライディングウィンドウで抽出する方法と大差ない結果となったが、こちらの方では PachelbelとJohann Christophの関係等を抽出出来ていない。
 
 以下、バッハの本にも書かれている有名なくだり：
@@ -84,16 +79,14 @@ Böhm --------------------+
 ```
 
 正確に関係抽出するにはどうしたら良いのか？私にとって、今後の課題。名前が列挙されている場合には、それをノードのグループと捉え、少し離れて記述される名前(ノード)とエッジで結ぶ方が良いのかもしれない。
-- パラグラウ内でNamed Entity抽出。
+- パラグラフ内でNamed Entity抽出。
 - Named Entityが列挙された場合、それをグループと捉える。グループ内のNamed Enitity間のエッジweightが弱くなるように調整する。
 
-上記手法、パワポ資料へNERかけてネットワークつくるときにも使えそう。スライドのタイトルとテキストボックス内のNamed Entity群をエッジで結ぶ。しかし、それには、NERに向いたパワポ資料作成が求められる。
-
-ちなみに、上記ブクステフーデはオルガン演奏の名手で、リューベックの教会でオルガニストを務めた人物。バッハはリューベックまで聴きに行った。それを記念した石碑が教会内にある。私も、それを見に、リューベックまで何度か行った。そういえばリューベックに有名なお菓子[Marzipan](https://en.wikipedia.org/wiki/Marzipan)があって、それを日本に買って帰った。日本人の口には合わなかたが。。。と頭の中で連想してしまう。これが、人間の脳内にあるナレッジグラフ。
+ちなみに、上記ブクステフーデはオルガン演奏の名手で、リューベックの教会でオルガニストを務めた人物。バッハはリューベックまで聴きに行った。それを記念した石碑が教会内にある。私も、それを見に、リューベックまで何度か行った。そういえばリューベックに有名なお菓子[Marzipan](https://en.wikipedia.org/wiki/Marzipan)があって、私も大好きだったので、日本へ帰省時のお土産として買って帰った。しかし、たまたま、それを食べた日本人の口には合わなかたが。。。と頭の中で連想してしまう。これが、人間の脳内にあるナレッジグラフ。
 
 ```
-            日本人
-              | 口に合わない
+       たたたま食べた日本人
+              | 口に合わなかった
 　　　　　　Marzipan
               |
       +- リューベック -+
@@ -103,7 +96,7 @@ Böhm --------------------+
 ```
 
 以下、spaCyのDepedencyTree探索のノートブック。DependencyTreeを探索するるアルゴリズム、結構、難しい。数日がかりで関数作成成功。
-- [人名列挙の探索](spaCy/finding_group.ipynb) ... spaCyの Dependecy Tree で列挙される人名を探索。文の中で、列挙される人名間の関係は薄いはず。conjの関係で人名をつなぐことで人名列挙を探索する。列挙された名前の間のnode pair間weightは2/len(group),その他は1とする。
+- [人名列挙の探索](spaCy/finding_group.ipynb) ... spaCyの Dependecy Tree で列挙される人名を探索。文の中で、列挙される人名間の関係は薄いはず。conjの関係で人名をつなぐことで人名列挙を探索する。列挙された名前の間のnode pair間weightは2/len(グループ内の人数),その他は1とする。
 
 以下が最終的な成果
 - [spaCy and networkx3](spaCy/spaCy_networkx3.ipynb)
@@ -138,13 +131,6 @@ networkxだとブラウザ上での表現ができないので、networkxのデ�
 よって、以下の組み合わせにした：
 - [graphology.js](https://graphology.github.io/)でグラフ理論の処理
 - vis.jsでビジュアリゼーション処理
-
-以下のHTMLファイルは、Bach Network上のノードをクリックすると、その人物のWikipediaを開くもの。これ、結構使える！
-- [Bach Network](https://araobp.github.io/learning-nlp/bach_network.html)
-
-<img src="docs/bach_network_all.jpg" width=500>
-
-<img src="docs/bach_network_subgraph.jpg" width=500>
 
 ### graphology.js や graphlogy standard library で使えそうなメソッド
 

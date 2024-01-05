@@ -6,20 +6,25 @@
   <title>Bach Network</title>
 
   <meta charset="utf-8">
-
+  
+  <!-- graphology.js and vis.js -->
   <script src="graphology.min.js"></script>
   <script>
     const { UndirectedGraph, DirectedGraph } = graphology;
   </script>
   <script src="graphology-library.min.js"></script>
   <script src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"></script>
+  
+  <!-- Import data from Jupyter Notebook -->
   <script src="graph_data.js"></script>
-
+  <script src="paragraphs.js"></script>
+  
+  <!-- Web font -->
   <link href="https://fonts.cdnfonts.com/css/germania-one" rel="stylesheet">
 
   <style type="text/css">
     #container {
-      width: 90%;
+      width: 95vw;
       height: 90vh;
     }
 
@@ -29,7 +34,6 @@
     }
 
     #buttons {
-      width: auto;
       margin-bottom: 3px;
       padding-left: 3px;
       padding-right: 3px;
@@ -41,10 +45,28 @@
       align-items: center;
     }
 
+    #main {
+      display: flex;
+      flex-flow: row;
+    }
+
     #mynetwork {
-      width: auto;
-      height: 80%;
+      width: 60%;
+      height: 70vh;
+      margin-right: 3px;
       border: 1px solid lightgray;
+      background-color: white;
+    }
+
+    #paragraph {
+      width: 40%;
+      height: 70vh;
+      padding-left: 5px;
+      border: 1px solid lightgray;
+      overflow-x: hidden;
+      overflow-y: scroll;
+      text-align: left;
+      background-color: #FFFCF4;
     }
 
     .button {
@@ -64,19 +86,20 @@
   </style>
 </head>
 
-<body>
+<body style="background-color:azure;">
   <div id="container">
     <div id="text">
       <h1>Bach Nework</h1>
-      <p>Click to select a node. Double click to open Wikipedia.</p>
+      <p>Click on a node or an edge. Double click on a node to open its Wikipedia page.</p>
     </div>
     <div id="buttons">
       <label id="selectedNode" for="neighbors"></label>
       <button class="button" type="button" onclick="showNeighbors()">Neighbors</button>
       <button class="button" type="button" onclick="showGroupMembersOnly()">Group</button>
-      <!-- <button class="button" type="button" onclick="showBFS()">Depth1</button> -->     
+      <!-- <button class="button" type="button" onclick="showBFS()">Depth1</button> -->
       <button class="button" type="button" onclick="showAll()">Reset</button>
-      <div style="margin-left: 10px; margin-right: 3px; font-family: sans-serif; font-size: 0.8rem; width: 20em;">Edge weight threshold:</div>
+      <div style="margin-left: 10px; margin-right: 3px; font-family: sans-serif; font-size: 0.8rem; width: 20em;">Edge
+        weight threshold:</div>
       <select name="threshold" id="threshold" onchange="filterGraph(this)">
         <option value="3">3</option>
         <option value="2.5">2.5</option>
@@ -87,7 +110,12 @@
         <option value="0">0</option>
       </select>
     </div>
-    <div id="mynetwork"></div>
+    <div id="main">
+      <div id="mynetwork"></div>
+      <div id="paragraph">...</div>  
+    </div>
+    <a style="font-size: 0.8rem;" href= "https://www.gutenberg.org/ebooks/35041">Source: "Johann Sebastian Bach: His Life, Art, and Work by Johann Nikolaus Forkel
+      Book Cover"</a>
   </div>
 
   <script>
@@ -200,7 +228,7 @@
         return { id: node, label: node, value: attr.value, color: attr.color };
       });
       const edge_list = graph.mapEdges((edge, attr, source, target) => {
-        return { from: source, to: target, value: attr.value };
+        return { from: source, to: target, value: attr.value, pIdx: attr.pIdx };
       });
       var nodes = new vis.DataSet(node_list);
       var edges = new vis.DataSet(edge_list);
@@ -232,9 +260,30 @@
       }
 
       network.on('click', properties => {
-        text = properties.nodes[0];
-        if (text !== undefined) {
-          setSelectedNode(text);
+        if (properties.nodes !== undefined && properties.nodes.length > 0) {
+          const nodeId = properties.nodes[0];
+          setSelectedNode(nodeId);
+        }
+        if (properties.edges !== undefined) {
+          const para = document.getElementById('paragraph');
+          var pIdxs = new Set();
+          properties.edges.forEach(edgeId => {
+            const edge = edges.get(edgeId);
+            const from = edge.from;
+            const weight = edge.value;
+            const to = edge.to;
+            const pIdx = edge.pIdx;
+            pIdx.forEach(pIdx => pIdxs.add(pIdx));
+          });
+          var text = '';
+
+          // Reference: https://stackoverflow.com/questions/1063007/how-to-sort-an-array-of-integers-correctly
+          pIdxs = Array.from(pIdxs).sort(function (a, b) {  return a - b;  });
+
+          pIdxs.forEach(pIdx => {
+            text += pIdx + ': ' + paragraphs[pIdx] + '\n\n';
+          });
+          para.innerText = text;
         }
       });
 

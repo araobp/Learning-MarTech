@@ -1,5 +1,7 @@
 # マーケティング部門エンジニアとしてのNLP(自然言語処理)自習
 
+2024/1/5: このプロジェクトは完了し、一部の成果は https://github.com/araobp/bach-network で開発継続。
+
 <h6>注）私の本業はフルスタックなプロトタイピング。ハード、ソフトから3DCGまで、何でもお金をかけずアジャイルにつくる。本プロジェクトは、自然言語処理の経験がなかった私個人が、週末夜間に自己研鑽として進める自習用プロジェクト。2023年10月下旬より開始。</h6>
 
 <a href="https://araobp.github.io/learning-nlp/bach_network.html"><img src="docs/bach_network_all.jpg" width=600></a>

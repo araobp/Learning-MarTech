@@ -1,7 +1,5 @@
 # マーケティング部門エンジニアとしてのNLP(自然言語処理)自習
 
-2024/1/5: このプロジェクトは完了し、一部の成果は https://github.com/araobp/bach-network で開発継続。
-
 <h6>注）私の本業はフルスタックなプロトタイピング。ハード、ソフトから3DCGまで、何でもお金をかけずアジャイルにつくる。本プロジェクトは、自然言語処理の経験がなかった私個人が、週末夜間に自己研鑽として進める自習用プロジェクト。2023年10月下旬より開始。</h6>
 
 <a href="https://araobp.github.io/learning-nlp/bach_network.html"><img src="docs/bach_network_all.jpg" width=600></a>
@@ -40,6 +38,8 @@ NLP自習の第１歩、NLP何たるかを知るためNLTKからNLP始めた。�
 - [NLTK Basics](NLTK_Basics.ipynb)
 
 ### spaCy
+
+注）2024/1/5: バッハネットワークは1/5より https://github.com/araobp/bach-network で開発継続し、このリポジトリ内では1/5以降は更新しない。
 
 パシフィコ横浜で開催されたEdgeTech+2023展示会でO'Reillyの[実践 自然言語処理](https://www.oreilly.co.jp/books/9784873119724/)を購入。展示会で買うと20%ディスカウントで良い。この本でspaCyの存在を知った。NLP実践のための良書。この本をとかっかりにNLPの勉強を本格的に開始。spaCy、マーケティングの仕事で結構使える。APIがシンプルで良い。認識精度上げたければTransformerモデル使うことも出来る。
 

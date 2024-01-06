@@ -39,6 +39,8 @@ NLP自習の第１歩、NLP何たるかを知るためNLTKからNLP始めた。�
 
 ### spaCy
 
+注）2024/1/5: バッハネットワークは1/5より https://github.com/araobp/bach-network で開発継続し、このリポジトリ内では1/5以降は更新しない。
+
 パシフィコ横浜で開催されたEdgeTech+2023展示会でO'Reillyの[実践 自然言語処理](https://www.oreilly.co.jp/books/9784873119724/)を購入。展示会で買うと20%ディスカウントで良い。この本でspaCyの存在を知った。NLP実践のための良書。この本をとかっかりにNLPの勉強を本格的に開始。spaCy、マーケティングの仕事で結構使える。APIがシンプルで良い。認識精度上げたければTransformerモデル使うことも出来る。
 
 spaCyはAPIが綺麗で使いやすい。spaCyの開発者はドイツのベルリン在住者が多い。ドイツらしいシステマティックなAPI？
@@ -181,7 +183,7 @@ Betweennessを尺度にして、グラフからサブグラフを抽出したい
 
 Named Entityのネットワークを生成してみると、ある単語の頻度がやたら多くて目立つ場合がある。例えば自社名。自社名は重要だが、betweennessが突出して大きくなってしまうのを避けたい。TF-IDF(Term Frequency - Inverse Document Frequency)でうまく調整出来ないか？検討してみたい。
 
-### Tools
+## Tools
 
 マーケティング部門にある非構造化データといえば、エクセルの顧客コメント資料、パワポやPDFの資料、そして、画像や動画コンテンツ。これらをAIで分析すれば有用な何かが得られるはず。
 
@@ -189,6 +191,7 @@ Named Entityのネットワークを生成してみると、ある単語の頻�
 - [言語認識](tools/LanguageIdentification.ipynb) ... 文章が短いと誤認識が起こる。
 - [Image Captioning](tools/ImageCaptioning.ipynb) ... 認識性能の高さに驚いた！生成されたキャプションをNLPにかけて利用してみたい。
 - [Matplotlib color map を HTML color listへ変換](tools/Colormap.ipynb) ... Networkのcommunity色分け用
+- [Webスクレイピング](tools/WebScraping.ipynb) ... マーケティング部門所属エンジニアに必須なスキル (Work in Progress)
 
 ## 最後にライセンスの話
 

@@ -191,6 +191,7 @@ Named Entityのネットワークを生成してみると、ある単語の頻�
 - [言語認識](tools/LanguageIdentification.ipynb) ... 文章が短いと誤認識が起こる。
 - [Image Captioning](tools/ImageCaptioning.ipynb) ... 認識性能の高さに驚いた！生成されたキャプションをNLPにかけて利用してみたい。
 - [Matplotlib color map を HTML color listへ変換](tools/Colormap.ipynb) ... Networkのcommunity色分け用
+- [Webスクレイピング](tools/WebScraping.ipynb) ... マーケティング部門所属エンジニアに必須なスキル (Work in Progress)
 
 ## 最後にライセンスの話
 

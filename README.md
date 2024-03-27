@@ -175,6 +175,7 @@ Named Entityのネットワークを生成してみると、ある単語の頻�
 - [Image Captioning](tools/ImageCaptioning.ipynb) ... 認識性能の高さに驚いた！生成されたキャプションをNLPにかけて利用してみたい。
 - [Matplotlib color map を HTML color listへ変換](tools/Colormap.ipynb) ... Networkのcommunity色分け用
 - [Webスクレイピング](tools/WebScraping.ipynb) ... マーケティング部門所属エンジニアに必須なスキル。今回は Project Gutenberg の本(web版)からパラグラフ抽出を試みる。
+- [YAML Database] ... 大量のドキュメントへNLP処理を行う際、その処理結果を保存するための簡易データベースを開発。
 
 ## 最後にライセンスの話
 

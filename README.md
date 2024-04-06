@@ -29,7 +29,7 @@
 
 ETLの手段としてはモダンExcel(PowerQuery/PowerPivot)も考えられるが、2023年夏にモダンExcelを評価した結果、データサイズが大きくなるとパフォーマンス低下、スクリプティング言語が特殊すぎる、マイクロソフトがExcelでPython採用の方向。よって、PythonでETLを行いSQLiteへデータ集約する。
 
-- [SQLite3基本操作](sql/sqlite3_basics.ipynb)
+=> [SQL](sql)
 
 ### NLTK
 

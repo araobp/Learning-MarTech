@@ -1,5 +1,12 @@
 # SQL
 
+## Notebook
+
+=> [sqlite3_basics.ipynb](sqlite3_basics.ipynb)
+
+## DBBrower for SQLite
+
+<img src="DBBrowser.jpg" width=900>
 
 ## リンク
 

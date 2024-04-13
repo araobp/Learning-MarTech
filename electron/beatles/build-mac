@@ -1,0 +1,11 @@
+const builder = require('electron-builder');
+
+builder.build({
+    config: {
+        'appId': 'com.github.araobp.learning-nlp.beatles',
+        'mac':{
+            'target': 'zip',
+        }
+    }
+});
+

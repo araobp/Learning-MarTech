@@ -1,0 +1,59 @@
+<!--index.html-->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'unsafe-inline'; style-src 'unsafe-inline'">
+    <title>The Beatles</title>
+  </head>
+  <body>
+    <h1>The Beatles</h1>
+
+    <p>Dumps from the tables on SQLite database</p>
+
+    <h2>Members</h2>
+    <ul id="members"></ul>
+
+    <h2>Instruments</h2>
+    <ul id="instruments"></ul>
+
+    <h2>Properties</h2>
+    <ul id="properties"></ul>
+
+    <script>
+      const sqlite3 = require("sqlite3");
+      const db = new sqlite3.Database("./beatles.db");
+
+      const members = document.getElementById('members');
+      const instruments = document.getElementById('instruments');
+      const properties = document.getElementById('properties');
+
+      db.each("select * from members", (err, row) => {
+        console.log(`${row.name} ${row.height}`);
+        const li = document.createElement(('li'));
+        li.setAttribute('style', 'color: blue')
+        li.innerText = `${row.member_id}, ${row.name}, ${row.height}cm`;
+        members.appendChild(li);
+      });
+
+      db.each("select * from instruments", (err, row) => {
+        console.log(`${row.name} ${row.height}`);
+        const li = document.createElement(('li'));
+        li.setAttribute('style', 'color: blue')
+        li.innerText = `${row.instrument_id}, ${row.maker}, ${row.model}`;
+        instruments.appendChild(li);
+      });
+
+      db.each("select * from properties", (err, row) => {
+        console.log(`${row.name} ${row.height}`);
+        const li = document.createElement(('li'));
+        li.setAttribute('style', 'color: blue')
+        li.innerText = `${row.property_id}, ${row.member_id}, ${row.instrument_id}`;
+        properties.appendChild(li);
+      });
+
+    </script>
+
+  </body>
+</html>

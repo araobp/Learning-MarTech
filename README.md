@@ -33,6 +33,10 @@ ETLの手段としてはモダンExcel(PowerQuery/PowerPivot)も考えられる�
 
 => [SQL](sql)
 
+データ可視化アプリを開発基盤としてElectronを検討する。
+
+=> [Electron](electron)
+
 ### NLTK
 
 NLP自習の第１歩、NLP何たるかを知るためNLTKからNLP始めた。しかし、後で、今はAI使ったNLPが主流だと知った。仕事でNLTK使う機会はないが、NLPの勉強始める時はNLTKから始めた方が良い。

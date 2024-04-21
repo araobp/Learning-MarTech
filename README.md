@@ -2,19 +2,20 @@
 
 ## Single Executable Applications
 
-MarTech実装しユーザへ公開するための基盤が必要。
+MarTech活用でマーケ向け成果が出たとしても、それをユーザへ利用してもらうための基盤が必要。
 
-クラウド上でJavaのフレームワーク使った実装も良いが、予算ゼロな小規模活動ではそうも行かず。
+クラウド上でJavaのフレームワーク使った実装も良いが、予算ゼロで草の根的な小規模活動ではそうも行かず。
 
 データサイエンス環境で都合の良いのは、Node.jsかPythonの２択。
 
 - Node.js系の Electron を試したがヘビー過ぎて採用を断念。
 - Node.js系の SEAを試したが完成度がまだ低いので断念。
+両者とも、Node.js組み込まれるのでExecutableのサイズがヘビーになる。
 
-PyInstallerは軽くて良い！Flaskと固めてもExecutableサイズ小さい。
+一方y、PyInstallerは軽くて良い！Flaskと固めてもExecutableサイズ小さい。
 - PythonのPyInstallerとFlaskでは？試験開始 => [PyInstaller](PyInstaller)
 
-結論：PyInstaller使う、バックエンドはFlaskとSQLite、フロントエンドはブラウザとTkinterを使う。
+小集団活動向け結論：PyInstaller使う、バックエンドはFlaskとSQLite、フロントエンドはブラウザとTkinterを使う。
 
 ## pandas
 

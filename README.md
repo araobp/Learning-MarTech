@@ -2,6 +2,8 @@
 
 ## pandas
 
+毎日、pandasを使って仕事中。。。
+
 - [Titanicデータセット](etc/Titanic.ipynb)
 
 ## SQLite

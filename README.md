@@ -18,7 +18,7 @@ MarTech活用でマーケ向け成果が出たとしても、それをユーザ�
 小集団活動向け結論:
 - Jupyter Notebook上の成果をSQLiteへ展開したりJSON化したり
 - バックエンドはFlaskとSQLiteとTkinterで作りPyInstallerでExecutableにする
-- フロントエンドはブラウザ
+- フロントエンドはブラウザ(HTML5)でつくり、バックエンドと協調動作させるかJSONデータ読みこんでスタンドアロンで動作させる。
 
 ## pandas
 

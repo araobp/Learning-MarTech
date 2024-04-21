@@ -100,24 +100,22 @@ NLP開発環境 & NLPライブラリ
 
 https://huggingface.co/docs/transformers
 
+Transformersのモデル保存場所
+
+Macの場合
+```
+/Users/<username>/.cache/huggingface/hub
+```
+
+モデルのサイズが大きいので、用済み後は必要に応じ削除する。
+
 ### GiNZA
 
 spaCy及びTransformers上で動作する日本語NLP。日本語TokenizerであるSudachiPy採用。
-
 https://megagonlabs.github.io/ginza/
 
-### ChatGPT
+私は仕事でGiNZAを使っていない。英語と日本語両方扱う必要あるので。
 
-数ヶ月使ってみて、生成や要約は得意だけど分類は苦手そう。毎度、出力される結果が異なり、期待しない結果が出力される時も多く、私にとっては使いにくい。ChatGPTはアシスタントとして使うと良い。機械的な自然言語処理には他の手法、出力される結果に一貫性あるものを適用したい。
-
-### ソーシャルネットワーク
-
-spaCyのNLP結果をソーシャルグラフに乗せたい。マーケティングでは、誰が他の誰と繋がっているか、誰が何と繋がっているかが重要。グラフDBといえばneo4jだが、何か軽量動作するものはないか？昔使ったPythonのnetworkxをとりあえず使ってみて感触を掴む。
-
-参考
-- [Network of The Witcher | Relationship Extraction & Network Analysis with Spacy & NetworkX](https://youtu.be/fAHkJ_Dhr50)
-- [How to create an Undirected Graph using Python](https://youtu.be/rldKl1CNx-A)
-  
 ## 購入した教科書
 
 NLP教科書
@@ -126,22 +124,6 @@ NLP教科書
 
 日本語LLMの参考として
 - [大規模言語モデル入門](https://gihyo.jp/book/2023/978-4-297-13633-8)
-
-## 学習/実行環境
-
-- MacBook Air 16GB RAMモデル
-- Google Colab
-
-※ Windows PC 8GB RAMモデルでも大半は動作する。
-
-## Transformersのモデル保存場所
-
-Macの場合
-```
-/Users/<username>/.cache/huggingface/hub
-```
-
-モデルのサイズが大きいので、用済み後は必要に応じ削除する。
 
 ## その他参考
 

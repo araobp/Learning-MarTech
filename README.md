@@ -1,5 +1,17 @@
 # MarTech自習ノート
 
+## Single Executable Applications
+
+MarTech実装しユーザへ公開するための基盤が必要。
+
+クラウド上でJavaのフレームワーク使った実装も良いが、予算ゼロな小規模活動ではそうも行かず。
+
+データサイエンス環境で都合の良いのは、Node.jsかPythonの２択。
+
+- Node.js系の Electron を試したがヘビー過ぎて採用を断念。
+- Node.js系の SEAを試したが完成度がまだ低いので断念。
+- PythonのPyInstallerとFlaskでは？試験開始 => [PyInstaller]
+
 ## pandas
 
 毎日、pandasを使って仕事中。。。

@@ -1,28 +1,26 @@
 # MarTech自習ノート
 
-## Jupyter Notebook
-
-### pandas
+## pandas
 
 - [Titanicデータセット](etc/Titanic.ipynb)
 
-### SQLite
+## SQLite
 
 SQLiteは埋め込み型のローカルデータベースなので、データの更新も検索もかなり高速。PandasとSQLiteの親和性も高く、中〜小規模なデータサイエンス活動にはうってつけ。
 
 - [SQL](sql)
 
-### NLTK
+## NLTK
 
 NLP自習の第１歩、NLP何たるかを知るためNLTKからNLP始めた。しかし、後で、今はAI使ったNLPが主流だと知った。仕事でNLTK使う機会はないが、NLPの勉強始める時はNLTKから始めた方が良い。
 
 - [NLTK Basics](NLTK_Basics.ipynb)
 
-### spaCy
+## spaCy
 
 - [spaCy](spaCy)
 
-### Transformers
+## Transformers
 
 LLMの勉強しようと書籍店で"大規模言語モデル入門"を購入。NLPの知識なく、いきなりこれを理解するのは無理。O'Reillyの"実践 自然言語処理"で勉強してからこの本を読む。これまで実践してきた音声処理や画像処理系AI(DNN/CNN)の経験が役にたちそう。AIって何？学習って何？学習ってすごく面倒で大変！その辺、十分に経験してきたので。
 

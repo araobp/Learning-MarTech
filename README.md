@@ -1,147 +1,63 @@
-# マーケティング部門エンジニアとしてのNLP(自然言語処理)自習
+# MarTech自習ノート
 
-## ここで自習するワークフロー
+## pandas
 
-マーケティング部門においては、非構造化データの利活用が進んでいないのが最大の課題。ここでは、自然言語処理(NLP)やグラフ理論を適用した非構造化データのデータ利活用を考える。
-
-## Jupyter Notebook
-
-### pandas
+毎日、pandasを使って仕事中。。。
 
 - [Titanicデータセット](etc/Titanic.ipynb)
 
-### SQLite
+## SQLite
 
 SQLiteは埋め込み型のローカルデータベースなので、データの更新も検索もかなり高速。PandasとSQLiteの親和性も高く、中〜小規模なデータサイエンス活動にはうってつけ。
 
 - [SQL](sql)
 
-SQLiteへ集約したデータを可視化する手段としてElectronを検討したが、動作が重い、メモリ消費量が大きい、ビルドが面倒など、適しないと判断した。その他、Node.jsのSEAも試したが、まだ、SEAは完成度が低い。SEAの今後に期待したい。
+## NLTK
 
-- [Electron](electron)
-
-MVP段階では、SQLiteへ集約したデータを目的に応じJSONで切り出し、それをHTML5で可視化するのがベストと判断。
-
-### NLTK
-
-NLP自習の第１歩、NLP何たるかを知るためNLTKからNLP始めた。しかし、後で、今はAI使ったNLPが主流だと知った。仕事でNLTK使う機会はないが、NLPの勉強始める時はNLTKから始めた方が良い。
+NLP自習の第１歩、NLP何たるかを知るためNLTKからNLP始めた。しかし、後で、今はAI使ったNLP(例えばspaCy)が主流だと知った。仕事でNLTK使う機会はないが、NLPの勉強始める時はNLTKから始めた方が良い。
 
 - [NLTK Basics](NLTK_Basics.ipynb)
 
-### spaCy
+## spaCy
 
-注）2024/1/5: バッハネットワークは1/5より https://github.com/araobp/bach-network で開発継続し、このリポジトリ内では1/5以降は更新しない。
+もはや、これ抜きで、私の仕事は成立せず。定量化できない非構造化データに眠っているお宝を拾い上げるための手段。
 
-パシフィコ横浜で開催されたEdgeTech+2023展示会でO'Reillyの[実践 自然言語処理](https://www.oreilly.co.jp/books/9784873119724/)を購入。展示会で買うと20%ディスカウントで良い。この本でspaCyの存在を知った。NLP実践のための良書。この本をとかっかりにNLPの勉強を本格的に開始。spaCy、マーケティングの仕事で結構使える。APIがシンプルで良い。認識精度上げたければTransformerモデル使うことも出来る。
+- [spaCy](spaCy)
 
-spaCyはAPIが綺麗で使いやすい。spaCyの開発者はドイツのベルリン在住者が多い。ドイツらしいシステマティックなAPI？
+## Transformers
 
-25年前、私もドイツのベルリンに住んていた。ベルリンってドイツ北東部に位置するので、バッハの音楽を沢山聴いた。プロテスタント教会で聴いたオルガン音楽やクリスマスオラトリオ。Project Gutenbergより入手した[バッハの本](https://www.gutenberg.org/cache/epub/35041/pg35041-images.html)から、spaCyによるNLPでバッハの人脈図をつくってみた。[Thu Vu](https://www.youtube.com/@Thuvu5)さんのYouTube上動画を参考にした。
-
-ある程度慣れたら、このコースで網羅的に学習する：[Advanced NLP with spaCy](https://course.spacy.io/en)。add_extension(), nlp.pipe()など、NLP実践時には必須。
-
-spaCyを実践で使ってみると、NERがとても使えることが分かった。しかし、うまく認識してくれない固有表現も多い。役職名や会社に固有な製品名など。その辺を改善するには、spaCyを再学習させる必要あり。ただし、自然言語処理は８０％の精度と言っている人たちが多い。状況によっては、辞書とPhraseMatcherで固有表現抽出の方が精度高くて良いかも。その場合、辞書の定期的なメンテナンスが重要になる。再学習のコストと辞書メンテナンスのコストを天秤にかけて、どちらが良いか考える必要あり。
-
-- [spaCyでNLPインスタンス生成](spaCy/spacy.ipynb)
-- [キーフレーズ抽出](spaCy/key_phrases.ipynb)
-- [感情分析](spaCy/sentiment.ipynb)
-- [何故regexで国名抽出するときにNERで前処理する必要があるか？](spaCy/NER_with_regex.ipynb)
-- [spaCy and networkx](spaCy/spaCy_networkx.ipynb) ... 最後に"bach_network.html"向けJavaScript出力。（注）Bach networkはスライディングウィンドウのNERでPERSON抽出しただけで、センテンスベースやパラグラフベースでの関係抽出が出来ていない。
-- [spaCy and networkx2](spaCy/spaCy_networkx2.ipynb) ... こちらでは、名前のペアをセンテンスから抽出する方法を採用。スライディングウィンドウで抽出する方法と大差ない結果となったが、こちらの方では PachelbelとJohann Christophの関係等を抽出出来ていない。
-
-以下、バッハの本にも書かれている有名なくだり：
-
-The most renowned Clavier composers of that day were Froberger,50 Fischer,51 Johann Caspar Kerl,52 Pachelbel,53 Buxtehude,54 Bruhns,55 [pg 11]and Böhm.56 Johann Christoph possessed a book containing several pieces by these masters, and Bach begged earnestly for it, but without effect. Refusal increasing his determination, he laid his plans to get the book without his brother's knowledge. It was kept on a book-shelf which had a latticed front. Bach's hands were small. Inserting them, he got hold of the book, rolled it up, and drew it out. As he was not allowed a candle, he could only copy it on moonlight nights, and it was six months before he finished his heavy task. As soon as it was completed he looked forward to using in secret a treasure won by so much labour. But his brother found the copy and took it from him without pity, nor did Bach recover it until his brother's death soon after.
-
-この文章を見る限り、本当は以下のようなネットワークでなければならない。上の二つの手法、両方とも完全に正確ではない。
-
-```
-Froberger ---------------+---------+--------- Johann Christoph Bach ------- Johann Sebastian Bach
-                         |         |                                                 |
-Fischer -----------------+         +-------------------------------------------------+
-                         |
-Johann Caspar Kerl ------+
-                         |
-Pachelbel ---------------+
-                         |
-Buxtehude ---------------+
-                         |
-Bruhns ------------------+
-                         |
-Böhm --------------------+
-```
-
-正確に関係抽出するにはどうしたら良いのか？私にとって、今後の課題。名前が列挙されている場合には、それをノードのグループと捉え、少し離れて記述される名前(ノード)とエッジで結ぶ方が良いのかもしれない。
-- パラグラフ内でNamed Entity抽出。
-- Named Entityが列挙された場合、それをグループと捉える。グループ内のNamed Enitity間のエッジweightが弱くなるように調整する。
-
-ちなみに、上記ブクステフーデはオルガン演奏の名手で、リューベックの教会でオルガニストを務めた人物。バッハはリューベックまで聴きに行った。それを記念した石碑が教会内にある。私も、それを見に、リューベックまで何度か行った。そういえばリューベックに有名なお菓子[Marzipan](https://en.wikipedia.org/wiki/Marzipan)があって、私も大好きだったので、日本へ帰省時のお土産として買って帰った。しかし、たまたま、それを食べた日本人の口には合わなかたが。。。と頭の中で連想してしまう。これが、人間の脳内にあるナレッジグラフ。
-
-```
-       たたたま食べた日本人
-              | 口に合わなかった
-　　　　　　Marzipan
-              |
-      +- リューベック -+
-      |              |
-      |              |
-ブクステフーデ ------ バッハ
-```
-
-以下、spaCyのDepedencyTree探索のノートブック。DependencyTreeを探索するるアルゴリズム、結構、難しい。数日がかりで関数作成成功。
-- [人名列挙の探索](spaCy/finding_group.ipynb) ... spaCyの Dependecy Tree で列挙される人名を探索。文の中で、列挙される人名間の関係は薄いはず。conjの関係で人名をつなぐことで人名列挙を探索する。列挙された名前の間のnode pair間weightは2/len(グループ内の人数),その他は1とする。
-
-以下が最終的な成果
-- [spaCy and networkx3](spaCy/spaCy_networkx3.ipynb)
-
-このネットワークは J.S.Bach を中心とし、Louvainアルゴリズムで３つのグループに分けられた：Bachの家族、Bach以前の有名な音楽家集団、その他。
-
-Edgeの部分の関係も抽出したい。以下の記事で勉強中 (Work in progress)
-- [Natural Language Processing — Dependency Parsing](https://towardsdatascience.com/natural-language-processing-dependency-parsing-cf094bbbe3f7)
-- [Knowledge graphs from complex text](https://medium.com/inspiredbrilliance/knowledge-graphs-from-complex-text-eb009aeed48e)
-
-### Transformers
-
-LLMの勉強しようと書籍店で"大規模言語モデル入門"を購入。NLPの知識なく、いきなりこれを理解するのは無理。O'Reillyの"実践 自然言語処理"で勉強してからこの本を読む。これまで実践してきた音声処理や画像処理系AI(DNN/CNN)の経験が役にたちそう。AIって何？学習って何？学習ってすごく面倒で大変！その辺、十分に経験してきたので。
-
-学習済み感情分析モデルがHugging Faceのサイトに沢山あり。マーケティング部門では感情分析がかなり重要。
+学習済み感情分析モデルがHugging Faceのサイトに沢山あり。
 
 - [ChatGPTへネガポジコメント生成させChatGPTへネガポジ分析させる。精度がよくないので、他の手法でネガポジ分析させるため、ネガポジコメント文章を出力](./transformers/positive_negative.ipynb)
 - [Tranformersでネガポジ分析など基本処理](transformers/TransformersBasics.ipynb)
 
+## PDF
+
+マーケティング部門にある非構造化データといえば、エクセルの顧客コメント資料、パワポやPDFの資料、そして、画像や動画コンテンツ。これらをAIで分析すれば有用な何かが得られるはず。
+
+- [PowerPointとPDFからデータ抽出](tools/ppt_pdf.ipynb) ... スライドがある程度構造化されていれば関係抽出しやすいが。。。
+
+## その他ツール
+
+- [言語認識](tools/LanguageIdentification.ipynb) ... 文章が短いと誤認識が起こる。
+- [Image Captioning](tools/ImageCaptioning.ipynb) ... 認識性能の高さに驚いた！生成されたキャプションをNLPにかけて利用してみたい。
+- [Matplotlib color map を HTML color listへ変換](tools/Colormap.ipynb) ... Networkのcommunity色分け用
+- [Webスクレイピング](tools/WebScraping.ipynb) ... マーケティング部門所属エンジニアに必須なスキル。今回は Project Gutenberg の本(web版)からパラグラフ抽出を試みる。
+- [YAML Database](tools/YAML_database.ipynb) ... 大量のドキュメントへNLP処理を行う際、その処理結果を保存するための簡易データベースを開発。
+
 ## ブラウザインタフェース
 
-自分がつくったものを、他のメンバーへ使ってもらわないと意味がない。プログラミング知識ない、Python触ったことない、それを前提に考えると、ブラウザから操作できるインタエースを提供する必要ある。
+仕事では、自分がつくったものを他のメンバーへ使ってもらう手段として、ブラウザから操作できるインタフェースを提供。
 
 ### vis.js/graphology.js
 
-networkxだとブラウザ上での表現ができないので、networkxのデータを[vis.js](https://visjs.org/)へ取り込む必要あり。[pyvis](https://pyvis.readthedocs.io/en/latest/)もあるがvis.jsの機能をフルサポートしておらず、私にとっては都合が悪い。ここでは、pyvisとは逆で、vis.jsを埋め込んだHTML5からnetworx上のデータを取り込むアプローチを探る。JavaScriptのスクリプトを書けば実現できる。 
-
-しかし、vis.jsは可視化はできるがグラフ理論実装されておらず、実践上では不都合が出てきた。ブラウザ上の操作でサブグラフをつくれるようなライブラリが必要。
+Pythonで処理したnetworkxデータを[vis.js](https://visjs.org/)へ取り込みたい。しかし、vis.jsは可視化はできるがグラフ理論実装されておらず、実践上では不都合が出てきた。ブラウザ上の操作でサブグラフをつくれるようなライブラリが必要。
 
 [Cytoscape.js](https://js.cytoscape.org/)にはグラフ理論とビジュアリゼーションの両方が含まれていて良いが、少し評価してみたところビジュアリゼーションが弱い。vis.jsの方がインパクトあり。
 
 よって、以下の組み合わせにした：
 - [graphology.js](https://graphology.github.io/)でグラフ理論の処理
 - vis.jsでビジュアリゼーション処理
-
-### graphology.js や graphlogy standard library で使えそうなメソッド
-
-#### [Subgraph](https://graphology.github.io/standard-library/operators.html#subgraph)
-
-グラフから一部を切り出すのに使える。元ネットワークエンジニアの私としてはSubnetなりVPNなりVLANを意味する。
-
-#### [Neigbors](https://graphology.github.io/iteration.html#neighbors-array)
-
-あるキーワードと直接関連ある他のキーワードをリストアップするのに使える。元ネットワークエンジニアの私としては隣接ノード(Adjacent Node)を意味する。
-
-#### [BFS](https://graphology.github.io/standard-library/traversal.html#bfs)
-
-あるキーワードと関連ある（直接/間接）他のキーワードを、半径を指定してリストアップするのに使える。
-
-#### [Shortest Path](https://graphology.github.io/standard-library/shortest-path.html) 
-
-マーケティングの観点では、何と何が最短距離で関連しているか探すのに使える。元ネットワークエンジニアの私としてはOPSF(OPen Shortest path Fast)を連想する。
 
 ## 関係抽出
 
@@ -154,39 +70,11 @@ networkxだとブラウザ上での表現ができないので、networkxのデ�
 
 最低限、ノード間依存関係とエッジのweightが必要。Weightの方、感情分析結果も反映させたい（ネットワークルーティングでいうコストに相当）。その程度ならspaCyのDependencyMatcherで実現出来ないか？探究中。。。
 
-## Entity Linking
-
-このプロジェクトでは、NERで抽出されたキーワードを Wikipedia (Knowledge Baseとしての) の該当ページへ hyperlink でリンクする程度の Entity Linking しか実現しない。
-
-しかし、マーケティング部門では、製品紹介資料や客先向けプレゼン資料などから Knowledge Graph を構築出来ると良い。このプロジェクトでは、その手法については掘り下げないが、以下のツールなどを組み合わせて実現出来ること確認済み。
-
-マーケティング部門であれば、以下のデータから固有表現抽出や関係抽出を行える。パワポ/PDF資料では関係抽出が難しいかもしれない。
-- CRM/SFA/MA
-- VoC/VoE
-- その他資料
-- 写真
-
-多くのデータソースから固有表現を拾い上げることで、Named Entity Disambiguation (NED)も実現出来る。
-
 ## TF-IDF (Work in progress)
 
 Betweennessを尺度にして、グラフからサブグラフを抽出したい。
 
 Named Entityのネットワークを生成してみると、ある単語の頻度がやたら多くて目立つ場合がある。例えば自社名。自社名は重要だが、betweennessが突出して大きくなってしまうのを避けたい。TF-IDF(Term Frequency - Inverse Document Frequency)でうまく調整出来ないか？検討してみたい。
-
-## PDF
-
-マーケティング部門にある非構造化データといえば、エクセルの顧客コメント資料、パワポやPDFの資料、そして、画像や動画コンテンツ。これらをAIで分析すれば有用な何かが得られるはず。
-
-- [PowerPointとPDFからデータ抽出](tools/ppt_pdf.ipynb) ... スライドがある程度構造化されていれば関係抽出しやすいが。。。
-
-## Tools
-
-- [言語認識](tools/LanguageIdentification.ipynb) ... 文章が短いと誤認識が起こる。
-- [Image Captioning](tools/ImageCaptioning.ipynb) ... 認識性能の高さに驚いた！生成されたキャプションをNLPにかけて利用してみたい。
-- [Matplotlib color map を HTML color listへ変換](tools/Colormap.ipynb) ... Networkのcommunity色分け用
-- [Webスクレイピング](tools/WebScraping.ipynb) ... マーケティング部門所属エンジニアに必須なスキル。今回は Project Gutenberg の本(web版)からパラグラフ抽出を試みる。
-- [YAML Database](tools/YAML_database.ipynb) ... 大量のドキュメントへNLP処理を行う際、その処理結果を保存するための簡易データベースを開発。
 
 ## 最後にライセンスの話
 
@@ -212,24 +100,22 @@ NLP開発環境 & NLPライブラリ
 
 https://huggingface.co/docs/transformers
 
+Transformersのモデル保存場所
+
+Macの場合
+```
+/Users/<username>/.cache/huggingface/hub
+```
+
+モデルのサイズが大きいので、用済み後は必要に応じ削除する。
+
 ### GiNZA
 
 spaCy及びTransformers上で動作する日本語NLP。日本語TokenizerであるSudachiPy採用。
-
 https://megagonlabs.github.io/ginza/
 
-### ChatGPT
+私は仕事でGiNZAを使っていない。英語と日本語両方扱う必要あるので。
 
-数ヶ月使ってみて、生成や要約は得意だけど分類は苦手そう。毎度、出力される結果が異なり、期待しない結果が出力される時も多く、私にとっては使いにくい。ChatGPTはアシスタントとして使うと良い。機械的な自然言語処理には他の手法、出力される結果に一貫性あるものを適用したい。
-
-### ソーシャルネットワーク
-
-spaCyのNLP結果をソーシャルグラフに乗せたい。マーケティングでは、誰が他の誰と繋がっているか、誰が何と繋がっているかが重要。グラフDBといえばneo4jだが、何か軽量動作するものはないか？昔使ったPythonのnetworkxをとりあえず使ってみて感触を掴む。
-
-参考
-- [Network of The Witcher | Relationship Extraction & Network Analysis with Spacy & NetworkX](https://youtu.be/fAHkJ_Dhr50)
-- [How to create an Undirected Graph using Python](https://youtu.be/rldKl1CNx-A)
-  
 ## 購入した教科書
 
 NLP教科書
@@ -238,22 +124,6 @@ NLP教科書
 
 日本語LLMの参考として
 - [大規模言語モデル入門](https://gihyo.jp/book/2023/978-4-297-13633-8)
-
-## 学習/実行環境
-
-- MacBook Air 16GB RAMモデル
-- Google Colab
-
-※ Windows PC 8GB RAMモデルでも大半は動作する。
-
-## Transformersのモデル保存場所
-
-Macの場合
-```
-/Users/<username>/.cache/huggingface/hub
-```
-
-モデルのサイズが大きいので、用済み後は必要に応じ削除する。
 
 ## その他参考
 

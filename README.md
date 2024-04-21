@@ -10,7 +10,11 @@ MarTech実装しユーザへ公開するための基盤が必要。
 
 - Node.js系の Electron を試したがヘビー過ぎて採用を断念。
 - Node.js系の SEAを試したが完成度がまだ低いので断念。
+
+PyInstallerは軽くて良い！Flaskと固めてもExecutableサイズ小さい。
 - PythonのPyInstallerとFlaskでは？試験開始 => [PyInstaller](PyInstaller)
+
+結論：PyInstaller使う、バックエンドはFlaskとSQLite、フロントエンドはブラウザとTkinterを使う。
 
 ## pandas
 

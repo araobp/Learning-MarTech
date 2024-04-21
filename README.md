@@ -15,7 +15,10 @@ MarTech活用でマーケ向け成果が出たとしても、それをユーザ�
 一方y、PyInstallerは軽くて良い！Flaskと固めてもExecutableサイズ小さい。
 - PythonのPyInstallerとFlaskでは？試験開始 => [PyInstaller](PyInstaller)
 
-小集団活動向け結論：PyInstaller使う、バックエンドはFlaskとSQLite、フロントエンドはブラウザとTkinterを使う。
+小集団活動向け結論:
+- Jupyter Notebook上の成果をSQLiteへ展開したりJSON化したり
+- バックエンドはFlaskとSQLiteとTkinterで作りPyInstallerでExecutableにする
+- フロントエンドはブラウザ
 
 ## pandas
 

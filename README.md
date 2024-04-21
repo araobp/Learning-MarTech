@@ -26,46 +26,38 @@ NLP自習の第１歩、NLP何たるかを知るためNLTKからNLP始めた。�
 
 ## Transformers
 
-LLMの勉強しようと書籍店で"大規模言語モデル入門"を購入。NLPの知識なく、いきなりこれを理解するのは無理。O'Reillyの"実践 自然言語処理"で勉強してからこの本を読む。これまで実践してきた音声処理や画像処理系AI(DNN/CNN)の経験が役にたちそう。AIって何？学習って何？学習ってすごく面倒で大変！その辺、十分に経験してきたので。
-
-学習済み感情分析モデルがHugging Faceのサイトに沢山あり。マーケティング部門では感情分析がかなり重要。
+学習済み感情分析モデルがHugging Faceのサイトに沢山あり。
 
 - [ChatGPTへネガポジコメント生成させChatGPTへネガポジ分析させる。精度がよくないので、他の手法でネガポジ分析させるため、ネガポジコメント文章を出力](./transformers/positive_negative.ipynb)
 - [Tranformersでネガポジ分析など基本処理](transformers/TransformersBasics.ipynb)
 
+## PDF
+
+マーケティング部門にある非構造化データといえば、エクセルの顧客コメント資料、パワポやPDFの資料、そして、画像や動画コンテンツ。これらをAIで分析すれば有用な何かが得られるはず。
+
+- [PowerPointとPDFからデータ抽出](tools/ppt_pdf.ipynb) ... スライドがある程度構造化されていれば関係抽出しやすいが。。。
+
+## その他ツール
+
+- [言語認識](tools/LanguageIdentification.ipynb) ... 文章が短いと誤認識が起こる。
+- [Image Captioning](tools/ImageCaptioning.ipynb) ... 認識性能の高さに驚いた！生成されたキャプションをNLPにかけて利用してみたい。
+- [Matplotlib color map を HTML color listへ変換](tools/Colormap.ipynb) ... Networkのcommunity色分け用
+- [Webスクレイピング](tools/WebScraping.ipynb) ... マーケティング部門所属エンジニアに必須なスキル。今回は Project Gutenberg の本(web版)からパラグラフ抽出を試みる。
+- [YAML Database](tools/YAML_database.ipynb) ... 大量のドキュメントへNLP処理を行う際、その処理結果を保存するための簡易データベースを開発。
+
 ## ブラウザインタフェース
 
-自分がつくったものを、他のメンバーへ使ってもらわないと意味がない。プログラミング知識ない、Python触ったことない、それを前提に考えると、ブラウザから操作できるインタエースを提供する必要ある。
+仕事では、自分がつくったものを他のメンバーへ使ってもらう手段として、ブラウザから操作できるインタフェースを提供。
 
 ### vis.js/graphology.js
 
-networkxだとブラウザ上での表現ができないので、networkxのデータを[vis.js](https://visjs.org/)へ取り込む必要あり。[pyvis](https://pyvis.readthedocs.io/en/latest/)もあるがvis.jsの機能をフルサポートしておらず、私にとっては都合が悪い。ここでは、pyvisとは逆で、vis.jsを埋め込んだHTML5からnetworx上のデータを取り込むアプローチを探る。JavaScriptのスクリプトを書けば実現できる。 
-
-しかし、vis.jsは可視化はできるがグラフ理論実装されておらず、実践上では不都合が出てきた。ブラウザ上の操作でサブグラフをつくれるようなライブラリが必要。
+Pythonで処理したnetworkxデータを[vis.js](https://visjs.org/)へ取り込みたい。しかし、vis.jsは可視化はできるがグラフ理論実装されておらず、実践上では不都合が出てきた。ブラウザ上の操作でサブグラフをつくれるようなライブラリが必要。
 
 [Cytoscape.js](https://js.cytoscape.org/)にはグラフ理論とビジュアリゼーションの両方が含まれていて良いが、少し評価してみたところビジュアリゼーションが弱い。vis.jsの方がインパクトあり。
 
 よって、以下の組み合わせにした：
 - [graphology.js](https://graphology.github.io/)でグラフ理論の処理
 - vis.jsでビジュアリゼーション処理
-
-### graphology.js や graphlogy standard library で使えそうなメソッド
-
-#### [Subgraph](https://graphology.github.io/standard-library/operators.html#subgraph)
-
-グラフから一部を切り出すのに使える。元ネットワークエンジニアの私としてはSubnetなりVPNなりVLANを意味する。
-
-#### [Neigbors](https://graphology.github.io/iteration.html#neighbors-array)
-
-あるキーワードと直接関連ある他のキーワードをリストアップするのに使える。元ネットワークエンジニアの私としては隣接ノード(Adjacent Node)を意味する。
-
-#### [BFS](https://graphology.github.io/standard-library/traversal.html#bfs)
-
-あるキーワードと関連ある（直接/間接）他のキーワードを、半径を指定してリストアップするのに使える。
-
-#### [Shortest Path](https://graphology.github.io/standard-library/shortest-path.html) 
-
-マーケティングの観点では、何と何が最短距離で関連しているか探すのに使える。元ネットワークエンジニアの私としてはOPSF(OPen Shortest path Fast)を連想する。
 
 ## 関係抽出
 
@@ -78,39 +70,11 @@ networkxだとブラウザ上での表現ができないので、networkxのデ�
 
 最低限、ノード間依存関係とエッジのweightが必要。Weightの方、感情分析結果も反映させたい（ネットワークルーティングでいうコストに相当）。その程度ならspaCyのDependencyMatcherで実現出来ないか？探究中。。。
 
-## Entity Linking
-
-このプロジェクトでは、NERで抽出されたキーワードを Wikipedia (Knowledge Baseとしての) の該当ページへ hyperlink でリンクする程度の Entity Linking しか実現しない。
-
-しかし、マーケティング部門では、製品紹介資料や客先向けプレゼン資料などから Knowledge Graph を構築出来ると良い。このプロジェクトでは、その手法については掘り下げないが、以下のツールなどを組み合わせて実現出来ること確認済み。
-
-マーケティング部門であれば、以下のデータから固有表現抽出や関係抽出を行える。パワポ/PDF資料では関係抽出が難しいかもしれない。
-- CRM/SFA/MA
-- VoC/VoE
-- その他資料
-- 写真
-
-多くのデータソースから固有表現を拾い上げることで、Named Entity Disambiguation (NED)も実現出来る。
-
 ## TF-IDF (Work in progress)
 
 Betweennessを尺度にして、グラフからサブグラフを抽出したい。
 
 Named Entityのネットワークを生成してみると、ある単語の頻度がやたら多くて目立つ場合がある。例えば自社名。自社名は重要だが、betweennessが突出して大きくなってしまうのを避けたい。TF-IDF(Term Frequency - Inverse Document Frequency)でうまく調整出来ないか？検討してみたい。
-
-## PDF
-
-マーケティング部門にある非構造化データといえば、エクセルの顧客コメント資料、パワポやPDFの資料、そして、画像や動画コンテンツ。これらをAIで分析すれば有用な何かが得られるはず。
-
-- [PowerPointとPDFからデータ抽出](tools/ppt_pdf.ipynb) ... スライドがある程度構造化されていれば関係抽出しやすいが。。。
-
-## Tools
-
-- [言語認識](tools/LanguageIdentification.ipynb) ... 文章が短いと誤認識が起こる。
-- [Image Captioning](tools/ImageCaptioning.ipynb) ... 認識性能の高さに驚いた！生成されたキャプションをNLPにかけて利用してみたい。
-- [Matplotlib color map を HTML color listへ変換](tools/Colormap.ipynb) ... Networkのcommunity色分け用
-- [Webスクレイピング](tools/WebScraping.ipynb) ... マーケティング部門所属エンジニアに必須なスキル。今回は Project Gutenberg の本(web版)からパラグラフ抽出を試みる。
-- [YAML Database](tools/YAML_database.ipynb) ... 大量のドキュメントへNLP処理を行う際、その処理結果を保存するための簡易データベースを開発。
 
 ## 最後にライセンスの話
 

@@ -12,12 +12,12 @@ spaCyはAPIが綺麗で使いやすい。spaCyの開発者はドイツのベル�
 
 spaCyを実践で使ってみると、NERがとても使えることが分かった。しかし、うまく認識してくれない固有表現も多い。役職名や会社に固有な製品名など。その辺を改善するには、spaCyを再学習させる必要あり。ただし、自然言語処理は８０％の精度と言っている人たちが多い。状況によっては、辞書とPhraseMatcherで固有表現抽出の方が精度高くて良いかも。その場合、辞書の定期的なメンテナンスが重要になる。再学習のコストと辞書メンテナンスのコストを天秤にかけて、どちらが良いか考える必要あり。
 
-- [spaCyでNLPインスタンス生成](spaCy/spacy.ipynb)
-- [キーフレーズ抽出](spaCy/key_phrases.ipynb)
-- [感情分析](spaCy/sentiment.ipynb)
-- [何故regexで国名抽出するときにNERで前処理する必要があるか？](spaCy/NER_with_regex.ipynb)
-- [spaCy and networkx](spaCy/spaCy_networkx.ipynb) ... 最後に"bach_network.html"向けJavaScript出力。（注）Bach networkはスライディングウィンドウのNERでPERSON抽出しただけで、センテンスベースやパラグラフベースでの関係抽出が出来ていない。
-- [spaCy and networkx2](spaCy/spaCy_networkx2.ipynb) ... こちらでは、名前のペアをセンテンスから抽出する方法を採用。スライディングウィンドウで抽出する方法と大差ない結果となったが、こちらの方では PachelbelとJohann Christophの関係等を抽出出来ていない。
+- [spaCyでNLPインスタンス生成](spacy.ipynb)
+- [キーフレーズ抽出](key_phrases.ipynb)
+- [感情分析](sentiment.ipynb)
+- [何故regexで国名抽出するときにNERで前処理する必要があるか？](NER_with_regex.ipynb)
+- [spaCy and networkx](spaCy_networkx.ipynb) ... 最後に"bach_network.html"向けJavaScript出力。（注）Bach networkはスライディングウィンドウのNERでPERSON抽出しただけで、センテンスベースやパラグラフベースでの関係抽出が出来ていない。
+- [spaCy and networkx2](spaCy_networkx2.ipynb) ... こちらでは、名前のペアをセンテンスから抽出する方法を採用。スライディングウィンドウで抽出する方法と大差ない結果となったが、こちらの方では PachelbelとJohann Christophの関係等を抽出出来ていない。
 
 以下、バッハの本にも書かれている有名なくだり：
 
@@ -59,10 +59,10 @@ Böhm --------------------+
 ```
 
 以下、spaCyのDepedencyTree探索のノートブック。DependencyTreeを探索するるアルゴリズム、結構、難しい。数日がかりで関数作成成功。
-- [人名列挙の探索](spaCy/finding_group.ipynb) ... spaCyの Dependecy Tree で列挙される人名を探索。文の中で、列挙される人名間の関係は薄いはず。conjの関係で人名をつなぐことで人名列挙を探索する。列挙された名前の間のnode pair間weightは2/len(グループ内の人数),その他は1とする。
+- [人名列挙の探索](finding_group.ipynb) ... spaCyの Dependecy Tree で列挙される人名を探索。文の中で、列挙される人名間の関係は薄いはず。conjの関係で人名をつなぐことで人名列挙を探索する。列挙された名前の間のnode pair間weightは2/len(グループ内の人数),その他は1とする。
 
 以下が最終的な成果
-- [spaCy and networkx3](spaCy/spaCy_networkx3.ipynb)
+- [spaCy and networkx3](spaCy_networkx3.ipynb)
 
 このネットワークは J.S.Bach を中心とし、Louvainアルゴリズムで３つのグループに分けられた：Bachの家族、Bach以前の有名な音楽家集団、その他。
 

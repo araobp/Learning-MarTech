@@ -1,25 +1,23 @@
 # MarTech自習ノート
 
-## Single Executable Applications (試験開始)
+## 小規模活動には Single Executable Applications が向いている(試験開始)
 
-MarTech活用でマーケ向け成果が出たとしても、それをユーザへ利用してもらうための基盤が必要。
+良くあるパターンとして、データサイエンティストがJupter Notebook上でデータ分析だけやって、それでお終い。それだと、現場で成果を活用してもらえない。
 
-クラウド上でJavaのフレームワーク使った実装も良いが、予算ゼロで草の根的な小規模活動ではそうも行かず。
+現場で活用してもらうには、成果を容易に活用できるUIを提供する必要がある。一般的にはウエブアプリの形で成果を利用してもらうことになる。
 
-データサイエンス環境で都合の良いのは、Node.jsかPythonの２択。
+JavaのSpringフレームワーク使ったClient-Server実装のウエブアプリが良いが、予算ゼロで草の根的な小規模活動ではそうも行かず。コストを最低にするには、単一の実行形式アプリへ成果をまとめるのが良い。
+
+そうすると、データサイエンス環境で都合の良いのは、Node.jsかPythonの２択。
 
 - Node.js系の Electron を試したがヘビー過ぎて採用を断念。
 - Node.js系の SEAを試したが完成度がまだ低いので断念。
-両者とも、Node.js組み込まれるのでExecutableのサイズがヘビーになる。
-
-一方y、PyInstallerは軽くて良い！Flaskと固めてもExecutableサイズ小さい。
+- Python系のPyInstallerとFlaskの組み合わせ。実行形式は軽量動作、かつ、Jupyter Notebook上で書いたコードが再利用できて良い。
 
 小集団活動向け結論:
-- Jupyter Notebook上の成果をSQLiteへ展開
-- バックエンドはFlaskとSQLiteで作りPyInstallerでExecutableにする.
-- フロントエンドはブラウザ(HTML5)でつくり、バックエンドと協調動作させるかJSONデータ読みこんでスタンドアロンで動作させる。
-
-となると、フロントエンドの開発効率化のためにVue.jsを使いたくなる。
+- Jupyter Notebook上でのデータ処理結果をSQLiteへ集約。
+- バックエンドはFlaskとSQLiteで作りPyInstallerでExecutableにする。
+- フロントエンドはブラウザ(HTML5, VanillaJS)でつくるが、出来るだけバックエンド側に処理させる。複雑なロジックをPythonで書くことでメンテナンス性向上。
 
 ## pandas
 

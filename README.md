@@ -1,6 +1,6 @@
 # MarTech自習ノート
 
-## Single Executable Applications
+## Single Executable Applications (試験開始)
 
 MarTech活用でマーケ向け成果が出たとしても、それをユーザへ利用してもらうための基盤が必要。
 
@@ -13,12 +13,13 @@ MarTech活用でマーケ向け成果が出たとしても、それをユーザ�
 両者とも、Node.js組み込まれるのでExecutableのサイズがヘビーになる。
 
 一方y、PyInstallerは軽くて良い！Flaskと固めてもExecutableサイズ小さい。
-- PythonのPyInstallerとFlaskでは？試験開始 => [PyInstaller](PyInstaller)
 
 小集団活動向け結論:
-- Jupyter Notebook上の成果をSQLiteへ展開したりJSON化したり
-- バックエンドはFlaskとSQLiteとTkinterで作りPyInstallerでExecutableにする
+- Jupyter Notebook上の成果をSQLiteへ展開
+- バックエンドはFlaskとSQLiteで作りPyInstallerでExecutableにする.
 - フロントエンドはブラウザ(HTML5)でつくり、バックエンドと協調動作させるかJSONデータ読みこんでスタンドアロンで動作させる。
+
+となると、フロントエンドの開発効率化のためにVue.jsを使いたくなる。
 
 ## pandas
 

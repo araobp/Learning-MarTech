@@ -1,24 +1,5 @@
 # MarTech自習ノート
 
-## 小規模活動には Single Executable Applications が向いている(試験開始)
-
-良くあるパターンとして、データサイエンティストがJupter Notebook上でデータ分析だけやって、それでお終い。それだと、現場で成果を活用してもらえない。
-
-現場で活用してもらうには、成果を容易に活用できるUIを提供する必要がある。一般的にはウエブアプリの形で成果を利用してもらうことになる。
-
-JavaのSpringフレームワーク使ったClient-Server実装のウエブアプリが良いが、予算ゼロで草の根的な小規模活動ではそうも行かず。コストを最低にするには、単一の実行形式アプリへ成果をまとめるのが良い。
-
-そうすると、データサイエンス環境で都合の良いのは、Node.jsかPythonの２択。
-
-- Node.js系の Electron を試したがヘビー過ぎて採用を断念。
-- Node.js系の SEAを試したが完成度がまだ低いので断念。
-- Python系のPyInstallerとFlaskの組み合わせ。実行形式は軽量動作、かつ、Jupyter Notebook上で書いたコードが再利用できて良い。
-
-小集団活動向け結論:
-- Jupyter Notebook上でのデータ処理結果をSQLiteへ集約。
-- バックエンドはFlaskとSQLiteで作りPyInstallerでExecutableにする。
-- フロントエンドはブラウザ(HTML5, VanillaJS)でつくるが、出来るだけバックエンド側に処理させる。複雑なロジックをPythonで書くことでメンテナンス性向上。
-
 ## pandas
 
 毎日、pandasを使って仕事中。。。

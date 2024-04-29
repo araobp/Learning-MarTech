@@ -55,6 +55,13 @@ NLP自習の第１歩、NLP何たるかを知るためNLTKからNLP始めた。�
 - [PDFテキストハイライト実験](pdf_highlight/PDF_text_highlight.ipynb)
 - [経済産業省の通商白書を全文検索するAPIサーバの計画](pdf_highlight/ApiServerDesign.ipynb)
 
+## Salesforce
+
+一時期Salesforce SEだったので、Salesforceを技術的に勉強するためにつくったアプリ。今でも使っている。
+- [My Photos](https://github.com/araobp/myphotos)
+
+Salesforce独自フレームワークや独自言語を覚えなければならない。SaaSの特性上、一度に処理できるデータ量の制約あり。。。
+
 ## その他ツール
 
 - [言語認識](tools/LanguageIdentification.ipynb) ... 文章が短いと誤認識が起こる。

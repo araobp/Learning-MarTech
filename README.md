@@ -57,10 +57,13 @@ NLP自習の第１歩、NLP何たるかを知るためNLTKからNLP始めた。�
 
 ## Salesforce
 
+Salesforce独自フレームワークや独自言語を覚えなければならない。SaaSの特性上、一度に処理できるデータ量の制約あり。。。
+
 一時期Salesforce SEだったので、Salesforceを技術的に勉強するためにつくったアプリ。今でも使っている。
 - [My Photos](https://github.com/araobp/myphotos)
 
-Salesforce独自フレームワークや独自言語を覚えなければならない。SaaSの特性上、一度に処理できるデータ量の制約あり。。。
+メタバースってCRMで儲かるのだが、誰も理解してくれない。。。メタバース語るなら、フルスタックで勉強してね！最近はChatGPT流行ってきたし。。。
+- [Unity Chat](https://github.com/araobp/unity-chat)
 
 ## その他ツール
 

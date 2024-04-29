@@ -131,14 +131,18 @@ https://megagonlabs.github.io/ginza/
 
 私は仕事でGiNZAを使っていない。英語と日本語両方扱う必要あるので。
 
-## 購入した教科書
+## 購入した教科書（購入順）
+
+日本語LLMの参考として
+- [大規模言語モデル入門](https://gihyo.jp/book/2023/978-4-297-13633-8)
 
 NLP教科書
 - [実践 自然言語処理](https://www.oreilly.co.jp/books/9784873119724/)
 -- [サンプルコード](https://github.com/oreilly-japan/practical-nlp-ja)
 
-日本語LLMの参考として
-- [大規模言語モデル入門](https://gihyo.jp/book/2023/978-4-297-13633-8)
+マーケティングの教科書
+- [コトラーのマーケティング5.0](https://publications.asahi.com/product/23523.html)
+
 
 ## その他参考
 

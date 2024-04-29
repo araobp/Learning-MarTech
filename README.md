@@ -1,16 +1,14 @@
-# MarTech自習ノート
+# MarTech(Marketing Technolgies)自習ノート
+
+コトラーのマーケティング5.0にあるように、マーケティングにおける技術の重要性が増してきた。マーケティング部門所属エンジニアの私はMarTechの自習を習慣化。。。
+
+職場では中性能のラップトップPCで業務完結させる必要あり、ここで自習するものも普通のPCで動作するもの。
 
 ## pandas
 
 毎日、pandasを使って仕事中。。。
 
 - [Titanicデータセット](etc/Titanic.ipynb)
-
-## SQLite
-
-SQLiteは埋め込み型のローカルデータベースなので、データの更新も検索もかなり高速。PandasとSQLiteの親和性も高く、中〜小規模なデータサイエンス活動にはうってつけ。
-
-- [SQL](sql)
 
 ## NLTK
 
@@ -31,6 +29,12 @@ NLP自習の第１歩、NLP何たるかを知るためNLTKからNLP始めた。�
 - [ChatGPTへネガポジコメント生成させChatGPTへネガポジ分析させる。精度がよくないので、他の手法でネガポジ分析させるため、ネガポジコメント文章を出力](./transformers/positive_negative.ipynb)
 - [Tranformersでネガポジ分析など基本処理](transformers/TransformersBasics.ipynb)
 
+## SQLite
+
+2024年の3月から仕事で盛んに使うようになった。SQLiteは埋め込み型のローカルデータベースなので、データの更新も検索もかなり高速。PandasとSQLiteの親和性も高く、中〜小規模なデータサイエンス活動にはうってつけ。
+
+- [SQL](sql)
+
 ## PDF
 
 マーケティング部門にある非構造化データといえば、エクセルの顧客コメント資料、パワポやPDFの資料、そして、画像や動画コンテンツ。これらをAIで分析すれば有用な何かが得られるはず。
@@ -39,8 +43,10 @@ NLP自習の第１歩、NLP何たるかを知るためNLTKからNLP始めた。�
 
 ## PDFテキストハイライト
 
-FlaskでPDFテキストハイライトサーバーを動作させる実験。こんなに簡単に出来てしまった！
-- [PDFテキストハイライト実験](pdf_highlight)
+2024年GW自習活動はPDF全文検索とテキストハイライトに決めた。
+
+- [PDFテキストハイライト実験](pdf_highlight/PDF_text_highlight.ipynb)
+- [経済産業省の通商白書を全文検索するAPIサーバの計画](pdf_highlight/ApiServerDesign.ipynb)
 
 ## その他ツール
 

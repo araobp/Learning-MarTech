@@ -37,6 +37,11 @@ NLP自習の第１歩、NLP何たるかを知るためNLTKからNLP始めた。�
 
 - [PowerPointとPDFからデータ抽出](tools/ppt_pdf.ipynb) ... スライドがある程度構造化されていれば関係抽出しやすいが。。。
 
+## PDFテキストハイライト
+
+FlaskでPDFテキストハイライトサーバーを動作させる実験。こんなに簡単に出来てしまった！
+- [PDFテキストハイライト実験](pdf_highlight)
+
 ## その他ツール
 
 - [言語認識](tools/LanguageIdentification.ipynb) ... 文章が短いと誤認識が起こる。

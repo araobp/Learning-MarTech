@@ -1,8 +1,12 @@
 # MarTech(Marketing Technolgies)自習ノート
 
-コトラーのマーケティング5.0にあるように、マーケティングにおける技術の重要性が増してきた。マーケティング部門所属エンジニアの私はMarTechの自習を習慣化。。。
+コトラーのマーケティング5.0にあるように、マーケティングにおける技術の重要性が増してきた。テクノロジー抜きにマーケティングを語れない時代へ。テクノロジーでマーケティングを差別化することは、他社に対する事業差別化に直結する。
 
-職場では中性能のラップトップPCで業務完結させる必要あり、ここで自習するものも普通のPCで動作するもの。
+マーケティング部門所属エンジニアの私は、2023年夏よりMarTechの自習を習慣化。。。
+
+最初は費用ゼロで始めるので、何でも一人で全部こなさなければならない。フルスタックエンジニアの世界。実務を通して学ぶことの多さを実感。一つ一つ、習得していく。
+
+職場では中性能のラップトップPCを使い費用ゼロで業務完結させる必要あり、ここで自習するものも普通のPCで動作するもの、かつ、無償で利用できるものに限定する。
 
 ## pandas
 
@@ -21,6 +25,9 @@ NLP自習の第１歩、NLP何たるかを知るためNLTKからNLP始めた。�
 もはや、これ抜きで、私の仕事は成立せず。定量化できない非構造化データに眠っているお宝を拾い上げるための手段。
 
 - [spaCy](spaCy)
+
+私の趣味の世界でつくったアプリ
+- [Bach Network](https://github.com/araobp/bach-network)
 
 ## Transformers
 
@@ -47,6 +54,16 @@ NLP自習の第１歩、NLP何たるかを知るためNLTKからNLP始めた。�
 
 - [PDFテキストハイライト実験](pdf_highlight/PDF_text_highlight.ipynb)
 - [経済産業省の通商白書を全文検索するAPIサーバの計画](pdf_highlight/ApiServerDesign.ipynb)
+
+## Salesforce
+
+Salesforce独自フレームワークや独自言語を覚えなければならない。SaaSの特性上、一度に処理できるデータ量の制約あり。。。
+
+一時期Salesforce SEだったので、Salesforceを技術的に勉強するためにつくったアプリ。今でも使っている。
+- [My Photos](https://github.com/araobp/myphotos)
+
+メタバースってCRMで儲かるのだが、誰も理解してくれない。。。メタバース語るなら、フルスタックで勉強してね！最近はChatGPT流行ってきたし。。。
+- [Unity Chat](https://github.com/araobp/unity-chat)
 
 ## その他ツール
 
@@ -127,14 +144,18 @@ https://megagonlabs.github.io/ginza/
 
 私は仕事でGiNZAを使っていない。英語と日本語両方扱う必要あるので。
 
-## 購入した教科書
+## 購入した教科書（購入順）
+
+日本語LLMの参考として
+- [大規模言語モデル入門](https://gihyo.jp/book/2023/978-4-297-13633-8)
 
 NLP教科書
 - [実践 自然言語処理](https://www.oreilly.co.jp/books/9784873119724/)
 -- [サンプルコード](https://github.com/oreilly-japan/practical-nlp-ja)
 
-日本語LLMの参考として
-- [大規模言語モデル入門](https://gihyo.jp/book/2023/978-4-297-13633-8)
+マーケティングの教科書
+- [コトラーのマーケティング5.0](https://publications.asahi.com/product/23523.html)
+
 
 ## その他参考
 

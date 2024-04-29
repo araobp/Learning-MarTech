@@ -39,8 +39,10 @@ NLP自習の第１歩、NLP何たるかを知るためNLTKからNLP始めた。�
 
 ## PDFテキストハイライト
 
-FlaskでPDFテキストハイライトサーバーを動作させる実験。こんなに簡単に出来てしまった！
-- [PDFテキストハイライト実験](pdf_highlight)
+2024年GW自習活動はPDF全文検索とテキストハイライトに決めた。
+
+- [PDFテキストハイライト実験](PDF_text_highlight.ipynb)
+- [経済産業省の通商白書を全文検索するAPIサーバの計画](ApiServerDesign.ipynb)
 
 ## その他ツール
 

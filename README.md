@@ -6,12 +6,6 @@
 
 - [Titanicデータセット](etc/Titanic.ipynb)
 
-## SQLite
-
-SQLiteは埋め込み型のローカルデータベースなので、データの更新も検索もかなり高速。PandasとSQLiteの親和性も高く、中〜小規模なデータサイエンス活動にはうってつけ。
-
-- [SQL](sql)
-
 ## NLTK
 
 NLP自習の第１歩、NLP何たるかを知るためNLTKからNLP始めた。しかし、後で、今はAI使ったNLP(例えばspaCy)が主流だと知った。仕事でNLTK使う機会はないが、NLPの勉強始める時はNLTKから始めた方が良い。
@@ -30,6 +24,12 @@ NLP自習の第１歩、NLP何たるかを知るためNLTKからNLP始めた。�
 
 - [ChatGPTへネガポジコメント生成させChatGPTへネガポジ分析させる。精度がよくないので、他の手法でネガポジ分析させるため、ネガポジコメント文章を出力](./transformers/positive_negative.ipynb)
 - [Tranformersでネガポジ分析など基本処理](transformers/TransformersBasics.ipynb)
+
+## SQLite
+
+2024年の3月から仕事で盛んに使うようになった。SQLiteは埋め込み型のローカルデータベースなので、データの更新も検索もかなり高速。PandasとSQLiteの親和性も高く、中〜小規模なデータサイエンス活動にはうってつけ。
+
+- [SQL](sql)
 
 ## PDF
 

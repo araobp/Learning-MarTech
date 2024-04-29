@@ -26,6 +26,9 @@ NLP自習の第１歩、NLP何たるかを知るためNLTKからNLP始めた。�
 
 - [spaCy](spaCy)
 
+私の趣味の世界でつくったアプリ
+- [Bach Network](https://github.com/araobp/bach-network)
+
 ## Transformers
 
 学習済み感情分析モデルがHugging Faceのサイトに沢山あり。

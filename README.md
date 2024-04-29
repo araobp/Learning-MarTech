@@ -1,4 +1,6 @@
-# MarTech自習ノート
+# MarTech(Marketing Technolgies)自習ノート
+
+コトラーのマーケティング5.0にあるように、マーケティングにおける技術の重要性が増してきた。マーケティング部門所属エンジニアの私はMarTechの自習を習慣化。。。
 
 ## pandas
 

@@ -10,7 +10,7 @@ app = Flask(__name__)
 @app.route("/")
 def hello_world():
   return "<p>Hello, World!</p>"
-  
+
 @app.route("/highlight_test/<string:keyword>")
 def highlight_test(keyword):
   resp = requests.get('https://www.soumu.go.jp/johotsusintokei/whitepaper/ja/r05/pdf/n4700000.pdf')
@@ -26,3 +26,4 @@ def highlight_test(keyword):
     mimetype='application/pdf',
     as_attachment=False,
     download_name='test.pdf')
+

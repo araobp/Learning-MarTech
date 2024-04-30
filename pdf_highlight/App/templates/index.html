@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>サーチ</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+  <h2>sources</h2>
+  <div>
+    <ul id="sources"></ul>
+  </div>
+  <script>
+    const url = 'http://127.0.0.1:5000/sources';
+    const getSources = async () => {
+      const response = await fetch(url);
+      const sources = await response.json();
+      console.log(`getSources: ${JSON.stringify(sources)}`);
+      ul_sources = document.getElementById('sources');
+      sources.forEach(source => {
+        const li = document.createElement('li');
+        li.innerHTML = `<a href=${source[0]}>${source[1]}</a>: ${source[2]}`
+        ul_sources.append(li);
+      })
+    }
+
+    getSources();
+
+  </script>
+
+</body>
+
+</html>

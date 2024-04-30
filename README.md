@@ -52,10 +52,12 @@ NLP自習の第１歩、NLP何たるかを知るためNLTKからNLP始めた。�
 
 2024年GW自習活動はPDF全文検索とテキストハイライトに決めた。
 
-[アーキテクチャー](https://docs.google.com/presentation/d/e/2PACX-1vT43IcCwEF3m27u_PwFEFjDMfFkqCZukqz485mm3Nsb-B7YTappdcZ-5lBnXVimDdqls0LkbXSlgtmp/pub?start=false&loop=false&delayms=3000)
-
 - [PDFテキストハイライト実験](pdf_highlight/PDF_text_highlight.ipynb)
 - [経済産業省の通商白書を全文検索するAPIサーバの計画](pdf_highlight/ApiServerDesign.ipynb)
+
+処理したデータを職場の同僚へウエブブラウザを介して見せたいとする。[Streamlit](https://streamlit.io/)も気になるが、JavaScript系のライブラリを使いたいのでFlaskでAPIサーバ作ることにした。
+
+[アーキテクチャー](https://docs.google.com/presentation/d/e/2PACX-1vT43IcCwEF3m27u_PwFEFjDMfFkqCZukqz485mm3Nsb-B7YTappdcZ-5lBnXVimDdqls0LkbXSlgtmp/pub?start=false&loop=false&delayms=3000)
 
 ## Salesforce
 

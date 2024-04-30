@@ -57,7 +57,7 @@ NLP自習の第１歩、NLP何たるかを知るためNLTKからNLP始めた。�
 
 処理したデータを職場の同僚へウエブブラウザを介して見せたいとする。[Streamlit](https://streamlit.io/)も気になるが、JavaScript系のライブラリを使いたいのでFlaskでAPIサーバ作ることにした。
 
-[アーキテクチャー](https://docs.google.com/presentation/d/e/2PACX-1vT43IcCwEF3m27u_PwFEFjDMfFkqCZukqz485mm3Nsb-B7YTappdcZ-5lBnXVimDdqls0LkbXSlgtmp/pub?start=false&loop=false&delayms=3000)
+- [アーキテクチャー図](https://docs.google.com/presentation/d/e/2PACX-1vT43IcCwEF3m27u_PwFEFjDMfFkqCZukqz485mm3Nsb-B7YTappdcZ-5lBnXVimDdqls0LkbXSlgtmp/pub?start=false&loop=false&delayms=3000)
 
 ## Salesforce
 

@@ -50,6 +50,8 @@ NLP自習の第１歩、NLP何たるかを知るためNLTKからNLP始めた。�
 
 ## PDFテキストハイライト
 
+注意：この自習活動は[pdf-searchレポジトリ](https://github.com/araobp/pdf-search)へスピンアウト。これ以上、こちらは更新しない。
+
 2024年GW自習活動はPDF全文検索とテキストハイライトに決めた。
 
 - [PDFテキストハイライト実験](pdf_highlight/PDF_text_highlight.ipynb)

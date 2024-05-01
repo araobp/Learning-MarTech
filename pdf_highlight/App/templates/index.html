@@ -22,7 +22,7 @@
       Keywords: <input id="search" type="text">
       <input type="button" onclick="searchPDF()" value="Search">
     </form>
-    <table id="search_result_table" class="table table-bordered">
+    <table id="search_result_table" class="table table-bordered mt-3">
     </table>
   </div>
 
@@ -47,42 +47,43 @@
   </script>
 
   <script>
+    const search = async (base_url, keywords) => {
+      const path = encodeURI(`/search?base_url=${base_url}&keywords=${keywords}`);
+      const response = await fetch(API_BASE_URL + path);
+      const searchResult = await response.json();
+      console.log(`getSearchResult: ${JSON.stringify(searchResult)}`);
+
+      const searchResultTable = document.getElementById('search_result_table');
+      searchResultTable.innerHTML = '';
+      const tr = document.createElement('tr')
+
+      const header = ['link_id', 'page', 'text'];
+      header.forEach(e => {
+        const th = document.createElement('th');
+        th.innerText = e;
+        tr.append(th);
+      });
+      const thead = document.createElement('thead');
+      thead.setAttribute('class', 'thead-dark');
+      thead.append(tr);
+      searchResultTable.append(thead);
+
+      const tbody = document.createElement('tbody');
+      searchResult.forEach(e => {
+        const tr = document.createElement('tr');
+        e.forEach(ee => {
+          const td = document.createElement('td');
+          td.innerText = ee
+          tr.append(td);
+        })
+        tbody.append(tr);
+      })
+      searchResultTable.append(tbody);
+    }
+
     const searchPDF = () => {
       const keywords = document.getElementById('search').value;
-
-      (async () => {
-        const path = encodeURI(`/search?base_url=${base_url}&keywords=${keywords}`);
-        const response = await fetch(API_BASE_URL + path);
-        const searchResult = await response.json();
-        console.log(`getSearchResult: ${JSON.stringify(searchResult)}`);
-
-        const searchResultTable = document.getElementById('search_result_table');
-        const tr = document.createElement('tr')
-
-        const header = ['link_id', 'page', 'text'];
-        header.forEach(e => {
-          const th = document.createElement('th');
-          th.innerText = e;
-          tr.append(th);
-        });
-        const thead = document.createElement('thead');
-        thead.append(tr);
-        searchResultTable.append(thead);
-
-
-        const tbody = document.createElement('tbody');
-        searchResult.forEach(e => {
-          const tr = document.createElement('tr');
-          e.forEach(ee => {
-            const td = document.createElement('td');
-            td.innerText = ee
-            tr.append(td);
-          })
-          tbody.append(tr);
-        })
-        searchResultTable.append(tbody);
-      })();
-
+      search(base_url, keywords);
     }
   </script>
 

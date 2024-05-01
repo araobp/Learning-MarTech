@@ -13,12 +13,12 @@ def index():
 
 @main.route('/sources')
 def sources():
-  sources = models.get_sources()
+  sources = models.select_sources()
   return jsonify(sources)
 
 @main.route('/search')
 def search():
   base_url = request.args.get('base_url', default = None, type = str)
   keywords = request.args.get('keywords', default = None, type=str)
-  keywords_ = [e.strip() for e in keywords.split(',')]
-  return jsonify(keywords_)
+  return jsonify(models.select_texts(base_url, keywords))
+

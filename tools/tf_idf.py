@@ -26,11 +26,11 @@ class TfIdf:
   
   def cos_sim(self, y):
     sim = []
-    for yy in range(len(data)):
+    for yy in range(len(self.data)):
       AdB = 0.0
       A2 = 0.0
       B2 = 0.0
-      for xx in range(len(data[0])):
+      for xx in range(len(self.data[0])):
         a = self.data[y][xx]
         b = self.data[yy][xx]
         AdB += a * b

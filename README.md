@@ -30,9 +30,9 @@ NLP自習の第１歩、NLP何たるかを知るためNLTKからNLP始めた。�
 - [ChatGPTへネガポジコメント生成させChatGPTへネガポジ分析させる。精度がよくないので、他の手法でネガポジ分析させるため、ネガポジコメント文章を出力](./transformers/positive_negative.ipynb)
 - [Tranformersでネガポジ分析など基本処理](transformers/TransformersBasics.ipynb)
 
-## Clustering
+## Clustering VoC
 
-- [Clustering](clustering)
+- [Clustering VoC](clustering/ClusteringVoC.ipynb)
 
 ## SQLite
 

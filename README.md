@@ -32,6 +32,8 @@ NLP自習の第１歩、NLP何たるかを知るためNLTKからNLP始めた。�
 
 ## Clustering VoC
 
+VoCを埋め込みで数値化し, K-meansでクラスタリングし, t-SNEで埋め込みの次元を削減してクラスタリングの結果を可視化する。
+
 - [Clustering VoC](clustering/ClusteringVoC.ipynb)
 
 ## SQLite

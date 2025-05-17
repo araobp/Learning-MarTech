@@ -74,6 +74,17 @@ Salesforce独自フレームワークや独自言語を覚えなければなら�
 メタバースってCRMで儲かるのだが、誰も理解してくれない。。。メタバース語るなら、フルスタックで勉強してね！最近はChatGPT流行ってきたし。。。
 - [Unity Chat](https://github.com/araobp/unity-chat)
 
+## UI
+
+Jupyter Notebookでデータ分析して、レポート書いてお終い。。。だと、仕事は半分も出来ていない。
+データをインタラクティブに可視化して見せるため、UI/UXは重要な要素。
+
+2D UI向けフレームワークとして、私は、SvelteKitとBootstrapを使っている。これら、仕事では、大変重宝している。
+- [SvelteKit AI](https://github.com/araobp/sveltekit-ai)
+
+3D UI向けフレームワークとして、仕事ではUnityをずっと使ってきたが、最近はライセンスフリーなGodotを勉強中。
+- [Godot Showroom](https://github.com/araobp/godot-showroom)
+
 ## その他ツール
 
 - [言語認識](tools/LanguageIdentification.ipynb) ... 文章が短いと誤認識が起こる。
